@@ -1,6 +1,6 @@
 import React from "react";
-import { acronMedium } from "@/app/layout";
 import { cn } from "@/lib/utils";
+import { acron } from "@/lib/custom-fonts";
 
 export default function AcornText({
   children,
@@ -10,7 +10,7 @@ export default function AcornText({
   className?: string;
 }) {
   return (
-    <p className={cn("text-light-green", acronMedium.className, className)}>
+    <p className={cn("text-light-green", acron.className, className)}>
       {children}
     </p>
   );

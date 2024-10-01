@@ -1,7 +1,6 @@
 import Title from "@/components/shared/title";
 import Image from "next/image";
 import React from "react";
-import { motion } from "framer-motion";
 import { MotionDiv } from "@/components/framer-motion/motion-div";
 
 export default function Hero() {

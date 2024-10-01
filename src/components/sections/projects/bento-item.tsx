@@ -1,10 +1,11 @@
 import React from "react";
-import { acronMedium } from "@/app/layout";
 import Image from "next/image";
 import { cn } from "@/lib/utils";
+import { acron } from "@/lib/custom-fonts";
+import { Project } from "@/lib/types";
 
 type Props = {
-  data: any;
+  data: Project;
   className?: string;
 };
 
@@ -32,7 +33,7 @@ export default function BentoItem({ data, className }: Props) {
           {data?.description.toUpperCase()}
         </p>
         <h2
-          className={`text-[30px] lg:text-[45px] text-end ${acronMedium.className}`}
+          className={`text-[30px] lg:text-[45px] text-end ${acron.className}`}
         >
           {data?.title}
         </h2>

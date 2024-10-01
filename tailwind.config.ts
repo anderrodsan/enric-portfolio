@@ -9,6 +9,10 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        acron: ["var(--font-acron-medium)"],
+        product: ["var(--font-product-sans-medium)"],
+      },
       colors: {
         background: "hsl(var(--strong-green))",
         light: {

@@ -1,6 +1,5 @@
 import React from "react";
 import BentoGrid from "../projects/bento-grid";
-import Title from "@/components/shared/title";
 import AcornText from "@/components/shared/acron-text";
 import { ArrowUpRight } from "lucide-react";
 

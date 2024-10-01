@@ -1,23 +1,8 @@
 import type { Metadata } from "next";
-import localFont from "next/font/local";
-import { Inter } from "next/font/google";
 import "./globals.css";
 import NavBar from "@/components/shared/nav-bar";
 import Footer from "@/components/shared/footer";
-
-export const acronMedium = localFont({
-  src: "./fonts/AcornMedium.otf",
-  variable: "--font-acron-medium",
-  weight: "600",
-});
-
-export const productSansMedium = localFont({
-  src: "./fonts/ProductSansMedium.ttf",
-  variable: "--font-product-sans-medium",
-  weight: "500",
-});
-
-export const inter = Inter({ subsets: ["latin"] });
+import { productSans } from "@/lib/custom-fonts";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -32,7 +17,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${productSansMedium.className} antialiased flex flex-col text-white`}
+        className={`${productSans.className} antialiased flex flex-col text-white`}
       >
         <NavBar />
         <main className="flex flex-col items-center overflow-x-hidden min-h-[100vh]">
