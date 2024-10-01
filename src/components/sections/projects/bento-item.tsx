@@ -19,14 +19,15 @@ export default function BentoItem({ data, className }: Props) {
 
   return (
     <div
-      className={`group relative flex flex-col rounded-[64px] hover:-translate-y-2 hover:shadow-lg transition duration-300 ${
-        data?.color
-      } overflow-hidden w-full h-[300px] sm:h-[500px] lg:h-auto ${
+      className={cn(
+        "group relative flex flex-col rounded-[64px] hover:-translate-y-2 hover:shadow-lg transition duration-300 overflow-hidden w-full h-[300px] sm:h-[500px] lg:h-auto",
+        "bg-light-" + data?.color,
         data?.type === "phone"
           ? "col-span-5 lg:col-span-2 lg:aspect-square"
-          : "col-span-5 lg:col-span-3"
-      }
-        ${data.type === "browser" ? "items-end" : "items-center"} ${className}`}
+          : "col-span-5 lg:col-span-3",
+        data?.type === "browser" ? "items-end" : "items-center",
+        className
+      )}
     >
       <div className="p-10 w-full">
         <p className="text-[14px] text-end">

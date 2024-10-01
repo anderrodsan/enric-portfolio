@@ -4,9 +4,5 @@ export type Project = {
   description: string;
   image: string;
   type: string | "phone" | "browser" | "mac";
-  color:
-    | string
-    | "bg-light-blue"
-    | "bg-light-orange"
-    | "bg-light-green | bg-light-pink";
+  color: string;
 };

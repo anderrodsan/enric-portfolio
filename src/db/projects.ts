@@ -5,7 +5,7 @@ export const projects = [
     description: "Lorem Ipsum",
     image: "https://via.placeholder.com/150",
     type: "phone",
-    color: "bg-light-blue",
+    color: "blue",
   },
   {
     id: 2,
@@ -13,7 +13,7 @@ export const projects = [
     description: "Lorem Ipsum",
     image: "https://via.placeholder.com/150",
     type: "browser",
-    color: "bg-light-orange",
+    color: "orange",
   },
   {
     id: 3,
@@ -21,7 +21,7 @@ export const projects = [
     description: "Lorem Ipsum",
     image: "https://via.placeholder.com/150",
     type: "mac",
-    color: "bg-light-green",
+    color: "green",
   },
   {
     id: 4,
@@ -29,6 +29,6 @@ export const projects = [
     description: "Lorem Ipsum",
     image: "https://via.placeholder.com/150",
     type: "phone",
-    color: "bg-light-pink",
+    color: "pink",
   },
 ];
