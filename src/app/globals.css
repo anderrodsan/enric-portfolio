@@ -2,26 +2,50 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
 body {
-  color: var(--foreground);
-  background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+@font-face {
+  font-family: "Acron Medium";
+  src: url("/fonts/AcronMedium.otf");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Product Sans Medium";
+  src: url("/fonts/ProductSansMedium.ttf");
+  font-weight: 500;
+  font-style: normal;
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+}
+
+@layer base {
+  :root {
+    --strong-green: 159 22% 18%;
+    --muted-green: 161 40% 33%;
+    --dark-green: 159, 24%, 13%;
+    --light-green: 160 52% 71%;
+    --light-blue: 206, 83%, 86%;
+    --light-orange: 22 74% 76%;
+    --light-pink: 284 61% 74%;
+  }
+  .dark {
+    --background: 222.2 84% 4.9%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
   }
 }

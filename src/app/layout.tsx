@@ -1,17 +1,23 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
+import { Inter } from "next/font/google";
 import "./globals.css";
+import NavBar from "@/components/shared/nav-bar";
+import Footer from "@/components/shared/footer";
 
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
+export const acronMedium = localFont({
+  src: "./fonts/AcornMedium.otf",
+  variable: "--font-acron-medium",
+  weight: "600",
 });
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
+
+export const productSansMedium = localFont({
+  src: "./fonts/ProductSansMedium.ttf",
+  variable: "--font-product-sans-medium",
+  weight: "500",
 });
+
+export const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -26,9 +32,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${productSansMedium.className} antialiased flex flex-col text-white`}
       >
-        {children}
+        <NavBar />
+        <main className="flex flex-col items-center overflow-x-hidden min-h-[100vh]">
+          {children}
+        </main>
+        <Footer />
       </body>
     </html>
   );

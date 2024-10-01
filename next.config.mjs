@@ -1,4 +1,8 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {};
+const nextConfig = {
+  fonts: {
+    acron: ["./fonts/AcronMedium.otf"],
+  },
+};
 
 export default nextConfig;
