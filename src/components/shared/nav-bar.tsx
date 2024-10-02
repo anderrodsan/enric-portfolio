@@ -37,10 +37,10 @@ export default function NavBar() {
   });
 
   return (
-    <div className="sticky z-50 top-0 py-[40px] px-10 flex flex-col items-center">
+    <div className="sticky z-50 top-0 py-[20px] md:py-[40px] px-5 md:px-10 flex flex-col items-center">
       <div
-        className={`p-4 grid grid-cols-4 gap-5 md:gap-10 rounded-full transition ease-in-out backdrop-blur-md ${
-          scrollValue > 20 ? "bg-black/30" : "bg-white/0"
+        className={`p-4 grid grid-cols-4 gap-5 rounded-full transition ease-in-out duration-700 backdrop-blur-md ${
+          scrollValue > 40 ? "bg-dark-green bg-opacity-80" : "bg-white/0"
         }`}
       >
         {paths.map((path) => (
@@ -51,12 +51,12 @@ export default function NavBar() {
                 className="absolute inset-0 w-full h-full bg-white/10 rounded-full"
               />
             )}
-            <div className="relative flex items-center justify-center gap-2 py-4 px-4">
+            <div className="relative flex items-center justify-center gap-2 py-3 px-4">
               <p className="text-[14px] md:text-[20px]">{path.name}</p>
               {activePath === path.path ? (
                 <motion.div
                   layoutId="active-dot"
-                  className={`h-3 w-3 rounded-full bg-white`}
+                  className={`h-3 w-3 rounded-full bg-white hidden md:block`}
                 />
               ) : (
                 <div className="w-3" />

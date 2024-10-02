@@ -15,13 +15,12 @@ export default function BentoItem({ data, className }: Props) {
       ? "justify-center px-10"
       : data?.type === "mac"
       ? "justify-center"
-      : "left-10 justify-end pl-10 w-[150%]";
+      : "md:left-10 justify-end pl-10 w-[150%]";
 
   return (
     <div
       className={cn(
-        "group relative flex flex-col rounded-[64px] hover:-translate-y-2 hover:shadow-lg transition duration-300 overflow-hidden w-full h-[300px] sm:h-[500px] lg:h-auto",
-        "bg-light-" + data?.color,
+        "flex justify-center w-full h-[300px] sm:h-[500px] lg:h-auto",
         data?.type === "phone"
           ? "col-span-5 lg:col-span-2 lg:aspect-square"
           : "col-span-5 lg:col-span-3",
@@ -29,30 +28,37 @@ export default function BentoItem({ data, className }: Props) {
         className
       )}
     >
-      <div className="p-10 w-full">
-        <p className="text-[14px] text-end">
-          {data?.description.toUpperCase()}
-        </p>
-        <h2
-          className={`text-[30px] lg:text-[45px] text-end ${acron.className}`}
-        >
-          {data?.title}
-        </h2>
-      </div>
       <div
         className={cn(
-          "absolute top-36 w-full flex items-end group-hover:translate-y-2 transition duration-500",
-          imgClassName
+          "group relative flex flex-col rounded-[64px] hover:-translate-y-2 transition duration-700 overflow-hidden w-full max-w-[500px]  sm:max-w-[700px] lg:max-w-full md:w-full h-full",
+          "bg-light-" + data?.color
         )}
       >
-        <Image
-          src={"/mockups/" + data?.type + ".png"}
-          width={500}
-          height={500}
-          alt="Project image"
-          style={{}}
-          className={`w-full`}
-        />
+        <div className="p-10 w-full">
+          <p className="text-[14px] text-end">
+            {data?.description.toUpperCase()}
+          </p>
+          <h2
+            className={`text-[30px] lg:text-[45px] text-end ${acron.className}`}
+          >
+            {data?.title}
+          </h2>
+        </div>
+        <div
+          className={cn(
+            "absolute top-36 w-full flex items-end group-hover:translate-y-5 transition duration-700",
+            imgClassName
+          )}
+        >
+          <Image
+            src={"/mockups/" + data?.type + ".png"}
+            width={1000}
+            height={1000}
+            alt="Project image"
+            style={{}}
+            className={`w-full`}
+          />
+        </div>
       </div>
     </div>
   );
