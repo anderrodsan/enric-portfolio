@@ -5,7 +5,7 @@ export const projects = [
     description: "Lorem Ipsum",
     image: "https://via.placeholder.com/150",
     type: "phone",
-    color: "blue",
+    color: "light-pink",
   },
   {
     id: 2,
@@ -13,7 +13,7 @@ export const projects = [
     description: "Lorem Ipsum",
     image: "https://via.placeholder.com/150",
     type: "browser",
-    color: "orange",
+    color: "light-green",
   },
   {
     id: 3,
@@ -21,7 +21,7 @@ export const projects = [
     description: "Lorem Ipsum",
     image: "https://via.placeholder.com/150",
     type: "mac",
-    color: "green",
+    color: "light-orange",
   },
   {
     id: 4,
@@ -29,6 +29,57 @@ export const projects = [
     description: "Lorem Ipsum",
     image: "https://via.placeholder.com/150",
     type: "phone",
-    color: "pink",
+    color: "light-blue",
+  },
+  {
+    id: 5,
+    title: "UX Design",
+    description: "Lorem Ipsum",
+    image: "https://via.placeholder.com/150",
+    type: "phone",
+    color: "light-pink",
+  },
+  {
+    id: 6,
+    title: "Design System",
+    description: "Lorem Ipsum",
+    image: "https://via.placeholder.com/150",
+    type: "browser",
+    color: "light-green",
+  },
+  {
+    id: 7,
+    title: "Design System",
+    description: "Lorem Ipsum",
+    image: "https://via.placeholder.com/150",
+    type: "mac",
+    color: "light-orange",
+  },
+  {
+    id: 8,
+    title: "UX Design",
+    description: "Lorem Ipsum",
+    image: "https://via.placeholder.com/150",
+    type: "phone",
+    color: "light-blue",
+  },
+];
+
+export const currentProjects = [
+  {
+    id: 5,
+    title: "UX Design",
+    description: "Lorem Ipsum",
+    image: "https://via.placeholder.com/150",
+    type: "browser",
+    color: "black",
+  },
+  {
+    id: 6,
+    title: "Design System",
+    description: "Lorem Ipsum",
+    image: "https://via.placeholder.com/150",
+    type: "browser",
+    color: "white",
   },
 ];

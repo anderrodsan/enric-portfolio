@@ -1,7 +1,11 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   fonts: {
-    acron: ["./fonts/AcronMedium.otf"],
+    acorn: ["./fonts/AcornMedium.otf", "./fonts/AcornBold.otf"],
+    product: [
+      "./fonts/ProductSansRegular.ttf",
+      "./fonts/ProductSansItalic.ttf",
+    ],
   },
 };
 

@@ -1,0 +1,58 @@
+import { Experience } from "@/lib/types";
+
+export const experience: Experience[] = [
+  {
+    id: 1,
+    title: "UX Designer & Project Manager",
+    type: "Full-time",
+    company: "Cantilever: Websites & Product Design",
+    logo: "/images/logos/cantilever.png",
+    startDate: "Jan 2022",
+    endDate: "Jul 2021",
+  },
+  {
+    id: 2,
+    title: "Product Design Research",
+    type: "Master Thesis",
+    company: "Milestone Systems Denmark",
+    logo: "/images/logos/milestone.png",
+    startDate: "Jan 2022",
+    endDate: "Jul 2021",
+  },
+  {
+    id: 3,
+    title: "User Experience Researcher",
+    type: "Internship",
+    company: "Aalborg University in Copenhagen (AAU)",
+    logo: "/images/logos/AAU.png",
+    startDate: "Jan 2022",
+    endDate: "Jul 2021",
+  },
+  {
+    id: 4,
+    title: "Junior UX Designer",
+    type: "Student Assistant",
+    company: "Cantilever: Websites & Product Design",
+    logo: "/images/logos/cantilever.png",
+    startDate: "Jan 2022",
+    endDate: "Jul 2021",
+  },
+  {
+    id: 1,
+    title: "AdTech Product Specialist",
+    type: "Full-time",
+    company: "Trkken: Google Marketing Platform & Google Cloud ",
+    logo: "/images/logos/trkken.png",
+    startDate: "Jan 2022",
+    endDate: "Jul 2021",
+  },
+  {
+    id: 1,
+    title: "Digital Marketing Specialist",
+    type: "Internship",
+    company: "GOLine Digital Agency ",
+    logo: "/images/logos/goline.png",
+    startDate: "Jan 2022",
+    endDate: "Jul 2021",
+  },
+];

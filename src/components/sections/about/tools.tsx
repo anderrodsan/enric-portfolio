@@ -1,0 +1,56 @@
+import Title from "@/components/shared/title";
+import { tools } from "@/db/tools";
+import { acornRegular } from "@/lib/custom-fonts";
+import { Tool } from "@/lib/types";
+import { cn } from "@/lib/utils";
+import Image from "next/image";
+import React from "react";
+
+export default function Tools() {
+  return (
+    <section className="w-full flex flex-col items-center gap-8 md:gap-16">
+      <Title>Tools</Title>
+      <ul className="grid grid-cols-1 lg:grid-cols-3 gap-8 md:gap-20 w-full">
+        {tools.slice(0, 5).map((item: Tool) => (
+          <ToolCard key={item.id} item={item} />
+        ))}
+        <ul className="flex flex-col">
+          <ToolCard item={tools[5]} className="h-1/2" />
+          <ToolCard item={tools[6]} className="h-1/2" />
+        </ul>
+      </ul>
+    </section>
+  );
+}
+
+function ToolCard({ item, className }: { item: Tool; className?: string }) {
+  return (
+    <li className="flex flex-col items-center gap-3">
+      <h3
+        className={cn(
+          "font-medium text-2xl md:text-3xl",
+          acornRegular.className
+        )}
+      >
+        {item.type}
+      </h3>
+      <div
+        className={cn(
+          "bg-muted-green/10 rounded-[64px] py-10 md:py-14 px-5 flex flex-col items-center justify-center gap-10 w-full h-full",
+          className
+        )}
+      >
+        {item.tools.map((tool: { name: string; size: number }) => (
+          <Image
+            src={`/images/logos/${tool.name}.png`}
+            alt={tool.name}
+            width={tool.size}
+            height={tool.size}
+            key={tool.name}
+            className="max-w-[100px] md:max-w-[100%] object-contain"
+          />
+        ))}
+      </div>
+    </li>
+  );
+}

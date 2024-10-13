@@ -5,32 +5,35 @@ import { MotionDiv } from "@/components/framer-motion/motion-div";
 
 export default function Hero() {
   return (
-    <div className="relative flex flex-col items-center space-y-[50px] p-5 pt-[80px] md:p-[80px]">
-      <Title>
-        Hej. I&apos;m Enric. <br /> A Designer.
-      </Title>
-      <p className="text-[18px] md:text-[25px] leading-[35px] md:leading-[45px] text-center text-balance max-w-[65ch]">
+    <div className="flex flex-col items-center gap-6 md:gap-9 mx-5 my-8 md:mx-20 md:my-14 max-w-6xl">
+      <div className="relative">
+        <Title>
+          Hej. I&apos;m Enric. <br /> A Designer.
+        </Title>
+        {/* Floating Figma Logo */}
+        <div className="absolute top-0 right-0 -translate-y-[70%] md:-translate-y-[50%] translate-x-[80%]  md:translate-x-[100%]">
+          <MotionDiv
+            animate={{
+              y: [0, -5, 5, 5, 0],
+              x: [0, 5, -5, 5, 0],
+            }}
+            transition={{ duration: 7, repeat: Infinity }}
+          >
+            <Image
+              src="/images/figma.png"
+              width={100}
+              height={180}
+              alt="Hero image"
+              className="w-[60px] h-[60px] sm:w-[100px] sm:h-[100px] hover:scale-105 transition duration-300"
+            />
+          </MotionDiv>
+        </div>
+      </div>
+
+      <p className="text-[14px] md:text-[25px] leading-[20px] md:leading-[45px] text-center md:text-balance max-w-[30ch] md:max-w-[65ch]">
         I&apos;m a UX Designer, passionate about crafting experiences that are
         engaging, accessible, and user-centric.
       </p>
-      {/* Floating Figma Logo */}
-      <div className="absolute -top-10 right-10 lg:-top-14 lg:right-0 translate-x-[30%]">
-        <MotionDiv
-          animate={{
-            y: [0, -5, 5, 5, 0],
-            x: [0, 5, -5, 5, 0],
-          }}
-          transition={{ duration: 7, repeat: Infinity }}
-        >
-          <Image
-            src="/images/figma.png"
-            width={180}
-            height={180}
-            alt="Hero image"
-            className="w-[60px] h-[60px] lg:w-[180px] lg:h-[180px]"
-          />
-        </MotionDiv>
-      </div>
     </div>
   );
 }

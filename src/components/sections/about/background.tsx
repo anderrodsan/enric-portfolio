@@ -1,0 +1,108 @@
+import LinkButton from "@/components/shared/link-button";
+import { education } from "@/db/education";
+import { experience } from "@/db/experience";
+import { acornRegular } from "@/lib/custom-fonts";
+import { Education, Experience } from "@/lib/types";
+import { cn } from "@/lib/utils";
+import Image from "next/image";
+import React from "react";
+
+export default function Background() {
+  return (
+    <section className="w-full grid grid-cols-5 gap-5 md:gap-10">
+      {/** Experience */}
+      <div className="col-span-5 md:col-span-3 flex flex-col gap-5 md:gap-10 items-center md:items-start">
+        <Title>Work experience.</Title>
+        {/** Item list */}
+        <ul className="flex flex-col gap-5">
+          {experience.map((experience: Experience, index) => (
+            <ExperienceItem key={index} experience={experience} />
+          ))}
+          <li className="flex md:hidden justify-start pt-3">
+            <LinkButton href="/about">Read full CV in PDF</LinkButton>
+          </li>
+        </ul>
+      </div>
+      {/** Education */}
+      <div className="col-span-5 md:col-span-2 flex flex-col gap-5 md:gap-10 items-center md:items-start">
+        <Title>Education.</Title>
+        {/** Item list */}
+        <ul className="flex flex-col gap-5">
+          {education.map((education: Education, index) => (
+            <EducationItem key={index} education={education} />
+          ))}
+          <li className="flex justify-start pt-3">
+            <LinkButton href="/about">Read full CV in PDF</LinkButton>
+          </li>
+        </ul>
+      </div>
+    </section>
+  );
+}
+
+function Title({ children }: { children: React.ReactNode }) {
+  return (
+    <h1
+      className={cn(
+        "text-4xl md:text-7xl text-light-green font-bold",
+        acornRegular.className
+      )}
+    >
+      {children}
+    </h1>
+  );
+}
+
+function ExperienceItem({ experience }: { experience: Experience }) {
+  return (
+    <li
+      className={cn(
+        "p-[14px] rounded-[30px] border-2 border-muted-green/20 flex gap-[18px] items-center",
+        "pr-[30px]"
+      )}
+    >
+      <div className="bg-muted-green/15 h-[60px] md:h-[120px] aspect-square rounded-xl md:rounded-3xl">
+        <Image
+          src={experience?.logo}
+          alt={experience.company}
+          width={100}
+          height={100}
+          className="object-contain w-full h-full p-3 md:p-5"
+        />
+      </div>
+      <div className="space-y-1">
+        <div className="flex gap-2 items-center">
+          <p className="py-1 px-[10px] bg-muted-green/20 text-white rounded-full text-[10px] md:text-[16px]">
+            {experience.type}
+          </p>
+          <p className="py-1 px-[10px] bg-dark-green/10 text-white rounded-full text-[10px] md:text-[16px]">
+            {experience.startDate} - {experience.endDate}
+          </p>
+        </div>
+        <h2 className="text-[14px] md:text-[36px] font-bold">
+          {experience.title}
+        </h2>
+        <p className="text-[10px] md:text-[16px]">{experience.company}</p>
+      </div>
+    </li>
+  );
+}
+
+function EducationItem({ education }: { education: Education }) {
+  return (
+    <li className="p-[20px] rounded-[30px] border-2 border-muted-green/20 space-y-1">
+      <div className="flex gap-2 items-center">
+        <p className="py-1 px-[10px] bg-muted-green/20 text-white rounded-full text-[10px] md:text-[16px]">
+          {education.type}
+        </p>
+        <p className="py-1 px-[10px] bg-dark-green/10 text-white rounded-full text-[10px] md:text-[16px]">
+          {education.startDate} - {education.endDate}
+        </p>
+      </div>
+      <h2 className="text-[14px] md:text-[25px] font-bold">
+        {education.title}
+      </h2>
+      <p className="text-[10px] md:text-[16px]">{education.university}</p>
+    </li>
+  );
+}

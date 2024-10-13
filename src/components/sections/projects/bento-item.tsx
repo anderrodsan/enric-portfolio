@@ -1,8 +1,8 @@
 import React from "react";
 import Image from "next/image";
 import { cn } from "@/lib/utils";
-import { acron } from "@/lib/custom-fonts";
 import { Project } from "@/lib/types";
+import { acornMedium } from "@/lib/custom-fonts";
 
 type Props = {
   data: Project;
@@ -12,41 +12,45 @@ type Props = {
 export default function BentoItem({ data, className }: Props) {
   const imgClassName =
     data?.type === "phone"
-      ? "justify-center px-10"
+      ? "min-w-[400px] lg:min-w-[100px] px-10"
       : data?.type === "mac"
-      ? "justify-center"
-      : "md:left-10 justify-end pl-10 w-[150%]";
+      ? "min-w-[500px] sm:min-w-[800px] lg:min-w-[100px] -left-3"
+      : "min-w-[900px] lg:min-w-[100px] px-10";
 
   return (
     <div
       className={cn(
-        "flex justify-center w-full h-[300px] sm:h-[500px] lg:h-auto",
+        "flex justify-center w-full",
         data?.type === "phone"
-          ? "col-span-5 lg:col-span-2 lg:aspect-square"
-          : "col-span-5 lg:col-span-3",
+          ? "col-span-full lg:col-span-2 aspect-square"
+          : "col-span-full lg:col-span-3 aspect-square lg:aspect-auto",
         data?.type === "browser" ? "items-end" : "items-center",
         className
       )}
     >
       <div
         className={cn(
-          "group relative flex flex-col rounded-[64px] hover:-translate-y-2 transition duration-700 overflow-hidden w-full max-w-[500px]  sm:max-w-[700px] lg:max-w-full md:w-full h-full",
-          "bg-light-" + data?.color
+          "group relative flex flex-col rounded-[64px] hover:-translate-y-2 transition duration-700 overflow-hidden w-full max-w-[500px] sm:max-w-[700px] sm:max-h-[700px] md:min-h-[400px] lg:max-w-full lg:w-full h-full",
+          "bg-" + data?.color
         )}
       >
-        <div className="p-10 w-full">
-          <p className="text-[14px] text-end">
+        <div className="pt-7 pr-10 sm:pt-10 sm:pr-20 w-full">
+          <p className="text-[10px] sm:text-[14px] text-end text-background">
             {data?.description.toUpperCase()}
           </p>
           <h2
-            className={`text-[30px] lg:text-[45px] text-end ${acron.className}`}
+            className={cn(
+              "text-2xl sm:text-5xl text-end",
+              data?.color === "black" ? "text-white" : "text-background",
+              acornMedium.className
+            )}
           >
             {data?.title}
           </h2>
         </div>
         <div
           className={cn(
-            "absolute top-36 w-full flex items-end group-hover:translate-y-5 transition duration-700",
+            "absolute top-24 sm:top-36 left-0 lg:left-auto w-full flex items-end group-hover:translate-y-5 transition duration-700",
             imgClassName
           )}
         >

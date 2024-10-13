@@ -1,7 +1,7 @@
 import React from "react";
 
 import { cn } from "@/lib/utils";
-import { acron } from "@/lib/custom-fonts";
+import { acornMedium } from "@/lib/custom-fonts";
 
 export default function Title({
   children,
@@ -13,8 +13,8 @@ export default function Title({
   return (
     <h1
       className={cn(
-        "text-center text-[60px] sm:text-[120px] lg:text-[170px] leading-[70px] sm:leading-[120px] lg:leading-[170px] letter-spacing-[-1.7px] text-light-green",
-        acron.className,
+        "text-center text-5xl sm:text-8xl lg:text-9xl leading-[48px] md:leading-[128px] letter-spacing-[-2em] text-light-green",
+        acornMedium.className,
         className
       )}
     >

@@ -12,6 +12,7 @@ const config: Config = {
     "bg-light-blue",
     "bg-light-orange",
     "bg-light-pink",
+    "bg-black",
   ],
   theme: {
     extend: {

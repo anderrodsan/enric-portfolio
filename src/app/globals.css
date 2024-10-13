@@ -6,26 +6,6 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-@font-face {
-  font-family: "Acron Medium";
-  src: url("/fonts/AcronMedium.otf");
-  font-weight: 600;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Product Sans Medium";
-  src: url("/fonts/ProductSansMedium.ttf");
-  font-weight: 500;
-  font-style: normal;
-}
-
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
-}
-
 @layer base {
   :root {
     --strong-green: 159 22% 18%;
@@ -48,4 +28,32 @@ body {
   body {
     @apply bg-background text-foreground;
   }
+}
+
+.text-acron {
+  font-family: var(--font-acron-regular);
+}
+
+.text-acron-medium {
+  font-family: var(--font-acron-medium);
+}
+
+.text-acron-bold {
+  font-family: var(--font-acron-bold);
+}
+
+.text-product-sans {
+  font-family: var(--font-product-sans-regular);
+}
+
+.text-product-sans-italic {
+  font-family: var(--font-product-sans-italic);
+}
+
+.text-product-sans-bold {
+  font-family: var(--font-product-sans-bold);
+}
+
+.text-product-sans-italic-bold {
+  font-family: var(--font-product-sans-italic-bold);
 }

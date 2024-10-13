@@ -1,13 +1,39 @@
 import localFont from "next/font/local";
 
-export const acron = localFont({
-  src: "../app/fonts/AcornMedium.otf",
-  variable: "--font-acron-medium",
-  weight: "600",
+// Acorn fonts
+export const acornRegular = localFont({
+  src: "../app/fonts/acorn/Acorn-Regular.otf",
+  variable: "--font-acorn-regular",
 });
 
-export const productSans = localFont({
-  src: "../app/fonts/ProductSansMedium.ttf",
-  variable: "--font-product-sans-medium",
-  weight: "500",
+export const acornMedium = localFont({
+  src: "../app/fonts/acorn/Acorn-Medium.otf",
+  variable: "--font-acorn-medium",
+});
+
+export const acornBold = localFont({
+  src: "../app/fonts/acorn/Acorn-Bold.otf",
+  variable: "--font-acorn-bold",
+});
+
+// Product Sans fonts
+
+export const productSansRegular = localFont({
+  src: "../app/fonts/product-sans/Product-Sans-Regular.ttf",
+  variable: "--font-product-sans-regular",
+});
+
+export const productSansItalic = localFont({
+  src: "../app/fonts/product-sans/Product-Sans-Italic.ttf",
+  variable: "--font-product-sans-italic",
+});
+
+export const productSansBold = localFont({
+  src: "../app/fonts/product-sans/Product-Sans-Bold.ttf",
+  variable: "--font-product-sans-bold",
+});
+
+export const productSansItalicBold = localFont({
+  src: "../app/fonts/product-sans/Product-Sans-Bold-Italic.ttf",
+  variable: "--font-product-sans-italic-bold",
 });
