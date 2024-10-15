@@ -9,8 +9,8 @@ import React from "react";
 export default function Tools() {
   return (
     <section className="w-full flex flex-col items-center gap-8 md:gap-16">
-      <Title>Tools</Title>
-      <ul className="grid grid-cols-1 lg:grid-cols-3 gap-8 md:gap-20 w-full">
+      <Title>Tools.</Title>
+      <ul className="grid grid-cols-1 lg:grid-cols-3 gap-8 md:gap-10 w-full">
         {tools.slice(0, 5).map((item: Tool) => (
           <ToolCard key={item.id} item={item} />
         ))}
@@ -25,10 +25,10 @@ export default function Tools() {
 
 function ToolCard({ item, className }: { item: Tool; className?: string }) {
   return (
-    <li className="flex flex-col items-center gap-3">
+    <li className="flex flex-col items-center gap-5">
       <h3
         className={cn(
-          "font-medium text-2xl md:text-3xl",
+          "font-medium text-xl md:text-2xl",
           acornRegular.className
         )}
       >
@@ -47,7 +47,7 @@ function ToolCard({ item, className }: { item: Tool; className?: string }) {
             width={tool.size}
             height={tool.size}
             key={tool.name}
-            className="max-w-[100px] md:max-w-[100%] object-contain"
+            className="max-w-[100px] md:max-w-[50%] object-contain"
           />
         ))}
       </div>

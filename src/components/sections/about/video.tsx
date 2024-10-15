@@ -1,15 +1,13 @@
-import Title from "@/components/shared/title";
-import { Play } from "lucide-react";
+ºimport { Play } from "lucide-react";
 import Image from "next/image";
 import React from "react";
 
 export default function Video() {
   return (
     <div className="flex flex-col items-center gap-5 w-full">
-      <Title>I&apos;m real.</Title>
-      <div className="relative group w-full min-h-[400px] lg:max-h-[700px] rounded-[64px] overflow-hidden">
+      <div className="relative group w-full min-h-[400px] lg:max-h-[700px] rounded-[64px] overflow-hidden hover:scale-105 transition duration-300">
         <Image
-          src="/images/video-image.png"
+          src="/images/enric-headshot.png"
           alt="profile"
           width={1000}
           height={1000}

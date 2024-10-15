@@ -79,7 +79,7 @@ export const currentProjects = [
     title: "Design System",
     description: "Lorem Ipsum",
     image: "https://via.placeholder.com/150",
-    type: "browser",
+    type: "phone",
     color: "white",
   },
 ];

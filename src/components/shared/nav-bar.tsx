@@ -6,6 +6,7 @@ import { usePathname } from "next/navigation";
 import { motion, useMotionValueEvent, useScroll } from "framer-motion";
 import { cn } from "@/lib/utils";
 import { SlashSquare } from "lucide-react";
+import BookMeeting from "./book-meeting";
 
 export default function NavBar() {
   const paths = [
@@ -20,10 +21,6 @@ export default function NavBar() {
     {
       name: "Work",
       path: "/work",
-    },
-    {
-      name: "Contact",
-      path: "/contact",
     },
   ];
 
@@ -67,6 +64,7 @@ export default function NavBar() {
             </div>
           </Link>
         ))}
+        <BookMeeting title={"Contact"} className="text-[14px] md:text-[20px]" />
       </div>
     </div>
   );

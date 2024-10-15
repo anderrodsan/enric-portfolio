@@ -35,7 +35,12 @@ export default function BentoItem({ data, className }: Props) {
         )}
       >
         <div className="pt-7 pr-10 sm:pt-10 sm:pr-20 w-full">
-          <p className="text-[10px] sm:text-[14px] text-end text-background">
+          <p
+            className={cn(
+              "text-[10px] sm:text-[14px] text-end text-background",
+              data?.color === "black" ? "text-white" : "text-background"
+            )}
+          >
             {data?.description.toUpperCase()}
           </p>
           <h2

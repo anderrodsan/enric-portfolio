@@ -11,7 +11,12 @@ export default function BentoGrid({
   className?: string;
 }) {
   return (
-    <div className={cn("grid grid-cols-5 gap-6 md:gap-12 w-full", className)}>
+    <div
+      className={cn(
+        "grid grid-cols-5 gap-6 md:gap-12 w-full max-w-6xl",
+        className
+      )}
+    >
       {projects.map((project: Project, idx: number) => (
         <BentoItem key={idx} data={project} />
       ))}
