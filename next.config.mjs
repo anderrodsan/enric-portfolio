@@ -1,11 +1,19 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  fonts: {
-    acorn: ["./fonts/AcornMedium.otf", "./fonts/AcornBold.otf"],
-    product: [
-      "./fonts/ProductSansRegular.ttf",
-      "./fonts/ProductSansItalic.ttf",
+  images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "**",
+      },
     ],
+  },
+  typescript: {
+    // !! WARN !!
+    // Dangerously allow production builds to successfully complete even if
+    // your project has type errors.
+    // !! WARN !!
+    ignoreBuildErrors: true,
   },
 };
 

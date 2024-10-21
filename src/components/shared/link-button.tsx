@@ -16,7 +16,7 @@ export default function LinkButton({
   return (
     <Link
       href={href}
-      className="relative group flex gap-4 justify-center items-center bg-white/5 hover:bg-white/10 pl-8 pr-3 py-3 rounded-full w-full md:w-auto"
+      className="relative group flex gap-4 justify-center items-center bg-white/5 hover:bg-white/10 pl-8 pr-16 py-3 md:py-4  rounded-full w-full md:w-auto"
     >
       <p
         className={cn(
@@ -27,7 +27,7 @@ export default function LinkButton({
       >
         {children}
       </p>
-      <div className="absolute right-[10px] top-[10px] md:block flex items-center justify-center w-[28px] md:w-[40px] h-[28px] md:h-[40px] bg-white rounded-full group-hover:rotate-45 transition duration-300">
+      <div className="absolute right-[10px] top-[10px] md:top-2 flex items-center justify-center w-[28px] md:w-[40px] h-[28px] md:h-[40px] bg-white rounded-full group-hover:rotate-45 transition duration-300">
         <ArrowUpRight className="text-background w-4 h-4 md:w-6 md:h-6" />
       </div>
     </Link>

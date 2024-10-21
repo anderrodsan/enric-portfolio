@@ -26,20 +26,20 @@ function parseFrontmatter(fileContent: string) {
   return { metadata: metadata as Metadata, content };
 }
 
-function getMDXFiles(dir) {
+function getMDXFiles(dir: string) {
   return fs.readdirSync(dir).filter((file) => path.extname(file) === ".mdx");
 }
 
-function readMDXFile(filePath) {
-  let rawContent = fs.readFileSync(filePath, "utf-8");
+function readMDXFile(filePath: string) {
+  const rawContent = fs.readFileSync(filePath, "utf-8");
   return parseFrontmatter(rawContent);
 }
 
-function getMDXData(dir) {
-  let mdxFiles = getMDXFiles(dir);
+function getMDXData(dir: string) {
+  const mdxFiles = getMDXFiles(dir);
   return mdxFiles.map((file) => {
-    let { metadata, content } = readMDXFile(path.join(dir, file));
-    let slug = path.basename(file, path.extname(file));
+    const { metadata, content } = readMDXFile(path.join(dir, file));
+    const slug = path.basename(file, path.extname(file));
     return {
       metadata,
       slug,
@@ -59,7 +59,8 @@ export function sortPosts(posts: any) {
       posts
         .sort(
           (a: any, b: any) =>
-            new Date(b.metadata.publishedAt) - new Date(a.metadata.publishedAt)
+            new Date(b.metadata.publishedAt).getTime() -
+            new Date(a.metadata.publishedAt).getTime()
         )
         .filter((post: any) => post.metadata.pinned === "false")
     );

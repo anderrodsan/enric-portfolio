@@ -7,7 +7,7 @@ import { CustomMDX } from "@/components/mdx/mdx";
 
 export async function generateMetadata({
   params,
-}): Promise<Metadata | undefined> {
+}: any): Promise<Metadata | undefined> {
   let post = getBlogPosts("work").find((post) => post.slug === params.slug);
 
   if (!post) {
@@ -45,7 +45,7 @@ export async function generateMetadata({
   };
 }
 
-export default function Blog({ params }) {
+export default function WorkContent({ params }: any) {
   let posts = getBlogPosts("work");
   let post = posts.find((post) => post.slug === params.slug);
 

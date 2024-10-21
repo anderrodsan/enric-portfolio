@@ -64,7 +64,10 @@ export default function NavBar() {
             </div>
           </Link>
         ))}
-        <BookMeeting title={"Contact"} className="text-[14px] md:text-[20px]" />
+        <BookMeeting
+          title={"Contact"}
+          className="text-[14px] md:text-[20px] px-3 lg:px-5"
+        />
       </div>
     </div>
   );

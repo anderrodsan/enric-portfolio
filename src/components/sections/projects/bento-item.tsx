@@ -45,7 +45,7 @@ export default function BentoItem({ data, className }: Props) {
           </p>
           <h2
             className={cn(
-              "text-2xl sm:text-5xl text-end",
+              "text-2xl sm:text-4xl text-end",
               data?.color === "black" ? "text-white" : "text-background",
               acornMedium.className
             )}
@@ -55,7 +55,7 @@ export default function BentoItem({ data, className }: Props) {
         </div>
         <div
           className={cn(
-            "absolute top-24 sm:top-36 left-0 lg:left-auto w-full flex items-end group-hover:translate-y-5 transition duration-700",
+            "absolute top-24 sm:top-32 left-0 lg:left-auto w-full flex items-end group-hover:translate-y-5 transition duration-700",
             imgClassName
           )}
         >

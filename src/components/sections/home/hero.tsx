@@ -5,7 +5,7 @@ import { MotionDiv } from "@/components/framer-motion/motion-div";
 
 export default function Hero() {
   return (
-    <div className="flex flex-col items-center gap-6 mx-5 my-8 md:mx-20 md:my-14 max-w-6xl">
+    <div className="flex flex-col items-center gap-3 mx-5 my-8 md:mx-20 md:my-14 max-w-6xl">
       <div className="relative">
         <Title>
           Hej. I&apos;m Enric. <br /> A Designer.

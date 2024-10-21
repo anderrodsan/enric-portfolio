@@ -4,11 +4,11 @@ import { MDXRemote } from "next-mdx-remote/rsc";
 import React from "react";
 import { ChevronRight, ExternalLink, File, Folder } from "lucide-react";
 
-function Table({ data }) {
-  let headers = data.headers.map((header, index) => (
+function Table({ data }: any) {
+  let headers = data.headers.map((header: string, index: number) => (
     <th key={index}>{header}</th>
   ));
-  let rows = data.rows.map((row, index) => (
+  let rows = data.rows.map((row: string[], index: number) => (
     <tr key={index}>
       {row.map((cell, cellIndex) => (
         <td key={cellIndex}>{cell}</td>
@@ -26,7 +26,7 @@ function Table({ data }) {
   );
 }
 
-function CustomLink(props) {
+function CustomLink(props: any) {
   let href = props.href;
 
   if (href.startsWith("/")) {
@@ -51,7 +51,7 @@ function CustomLink(props) {
   );
 }
 
-function RoundedImage(props) {
+function RoundedImage(props: any) {
   return (
     <>
       <Image alt={props.alt} className="rounded-lg" {...props} />
@@ -60,7 +60,7 @@ function RoundedImage(props) {
   );
 }
 
-function Callout(props) {
+function Callout(props: any) {
   return (
     <div className="px-4 py-3 border border-neutral-200 dark:border-neutral-700 bg-slate-200 dark:bg-slate-800 rounded p-1 text-sm flex items-center text-neutral-900 dark:text-neutral-100 mb-8">
       <div className="flex items-center w-4 mr-4">{props.emoji}</div>
@@ -69,7 +69,7 @@ function Callout(props) {
   );
 }
 
-function slugify(str) {
+function slugify(str: string) {
   return str
     .toString()
     .toLowerCase()
@@ -80,8 +80,8 @@ function slugify(str) {
     .replace(/\-\-+/g, "-"); // Replace multiple - with single -
 }
 
-function createHeading(level) {
-  const Heading = ({ children }) => {
+function createHeading(level: 1 | 2 | 3 | 4 | 5 | 6) {
+  const Heading = ({ children }: { children: string }) => {
     let slug = slugify(children);
     console.log("slug", slug);
     return React.createElement(
@@ -121,7 +121,7 @@ let components = {
   Card,
 };
 
-export function CustomMDX(props) {
+export function CustomMDX(props: any) {
   return (
     <MDXRemote
       {...props}

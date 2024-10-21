@@ -18,13 +18,15 @@ export default function BookMeeting({
         hideEventTypeDetails: false,
         layout: "month_view",
       });
+
+      console.log("cal", cal);
     })();
   }, []);
 
   return (
     <button
       className={className}
-      data-cal-namespace="30min"
+      data-cal-namespace=""
       data-cal-link="enric-clemente-pttwxh/30min"
       data-cal-config='{"layout":"month_view"}'
     >
