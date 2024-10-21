@@ -1,36 +1,118 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+This is a web portfolio developed by [@anderrodsan](https://github.com/anderrodsan) and designed by Enric Clemente. It can be visited at [enrik.dk](https://enrik.dk).
 
-## Getting Started
+# Introduction
 
-First, run the development server:
+The website has been created with the ability of being expanded in the future, once projects start coming up. The purpose of this documentation is to inform the owner of the website how new content could be added.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## Project Structure
+
+The project is structured in different main folders:
+
+- **/public**: contains all the images, videos, svgs or any kind of media. It also contains subfolders to easily divide them, but just for a better accessibility.
+- **/content**: contains the mdx files for each project, so they can be rendered as a blog.
+- **/src**: the main folder containing the app with components, functions, etc. No need of changing the content here, as long as the design or layout of the website have to be changed. Contact me for this.
+  - **/db**: includes the dynamic data to be shown, such as the list of projects, background, tools... in JSON format. To add new data, just copy one of the objects (into brackets) and change the values such as title: "project1".
+
+### Adding new projects
+
+The projects are listed in a bento grid, and when pressing into the card, the user will be navigated into the specific project page with detailed information.
+
+#### Requirements
+
+Two differents approaches have been taken depending on how projects are shown.
+
+- The bento grid contains cards with a consistent layout and data. That is why adding projects into the "src/db/projects.json" file is enough.
+- The detailed project pages might include different paragraphs, images, and layout. That is why a markdown solution is the most optimal one.
+
+The idea is that users will navigate to the work page, and press into a bento grid project item to access the project page. Hence, both solutions have to be used to add a new project.
+
+#### Step 1: Add project into the bento grid
+
+The projects are stored in a json format file that includes an array filled with objects with value pairs.
+
+```
+{
+    id: "project-shortname",
+    title: "UX Design",
+    description: "Lorem Ipsum",
+    image: "https://via.placeholder.com/150",
+    type: "phone",
+    color: "light-pink",
+  },
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+There are many variants for each bento item, thats why different values need to be added:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **id**: the text that will be included to navigate into the url/work/[id]. They have to be UNIQUE.
+- **title**: the main title of the card
+- **descripion**: the subtitle displayed in UPERCASE
+- **image**: the image with the mockups included. Those are saved into the "/public" folder, so just type "/images/..." without the "/public". (see example above)
+- **type**: phone cards occupy 1 column while browsers/laptops occupy 2
+- **color**: each card can have any specific color. Just type the predefined "light-pink" | "light-orange" | "light-blue"| "light-green", or a custom HEX value like [#ffffff]
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+To add a new project? Just add a new object into the array at "/src/db/projects.db"
 
-## Learn More
+P.S. What about other data as the education, tools, etc.? The same, just add a new object and change the values!
 
-To learn more about Next.js, take a look at the following resources:
+```
+export const projects = [
+  {
+    id: "project-shortname",
+    title: "UX Design",
+    description: "Lorem Ipsum",
+    image: "https://via.placeholder.com/150",
+    type: "phone",
+    color: "light-pink",
+  },
+  --- NEW PROJECT ADDED ------------------------
+  {
+    id: "project-shortname,
+    title: "Design System",
+    description: "Lorem Ipsum",
+    image: "https://via.placeholder.com/150",
+    type: "browser",
+    color: "light-green",
+  },
+  ----------------------------------------------
+  ...
+]
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+#### Step 2: Add the markdown file
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+To add a new project page, just create a new file at "/content/work/" and give it the name of its' id from the project located at the json file explained below.
 
-## Deploy on Vercel
+Example: for a project page of the one below, just create an "app-design.mdx" file in the "content/work" directory. When navigating to the "enric.dk/work/app-design" page, the website will detect there is a file with that name and render it.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```
+{
+    id: "app-design",
+    title: "Design System",
+    description: "Lorem Ipsum",
+    image: "https://via.placeholder.com/150",
+    type: "browser",
+    color: "light-green",
+  },
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Now lets add the content into the ".mdx" file, which is divided in two parts:
+
+This is the metadata of the app that will be showed into the header of the page. Just change the values depending on the project.
+
+```
+---
+title: "Feature Redesign for Element Bolt CRM."
+publishedAt: "2024-10-21"
+summary: "This is a test."
+company: "Element Bolt CRM"
+role: "UX Designer"
+team: "Product Manager, QA, Developer, Strategist"
+duration: "90 hours"
+tools: "figma, figma, figma"
+---
+```
+
+The rest is the actual content of the page. Check the "/content/work/test.mdx" file to hae a reference.
+
+- Images are rendered in different components called "FullWidthImage", "TwoColumnImages" and "ThreeColumnImages" components, folowed by the "Caption" component for the caption. Just change the src with the url of the images.
+- The text has a max width, that is why it has to be wrapped with the "MaxWidth" component. Note that two need to be placed: the opening one and the closing one with "/"
