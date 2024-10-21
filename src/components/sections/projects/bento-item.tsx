@@ -3,6 +3,7 @@ import Image from "next/image";
 import { cn } from "@/lib/utils";
 import { Project } from "@/lib/types";
 import { acornMedium } from "@/lib/custom-fonts";
+import Link from "next/link";
 
 type Props = {
   data: Project;
@@ -28,7 +29,8 @@ export default function BentoItem({ data, className }: Props) {
         className
       )}
     >
-      <div
+      <Link
+        href={"/work/" + "test"}
         className={cn(
           "group relative flex flex-col rounded-[64px] hover:-translate-y-2 transition duration-700 overflow-hidden w-full max-w-[500px] sm:max-w-[700px] sm:max-h-[700px] md:min-h-[400px] lg:max-w-full lg:w-full h-full",
           "bg-" + data?.color
@@ -68,7 +70,7 @@ export default function BentoItem({ data, className }: Props) {
             className={`w-full`}
           />
         </div>
-      </div>
+      </Link>
     </div>
   );
 }

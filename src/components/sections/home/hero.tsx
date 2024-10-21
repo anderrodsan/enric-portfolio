@@ -8,7 +8,7 @@ export default function Hero() {
     <div className="flex flex-col items-center gap-3 mx-5 my-8 md:mx-20 md:my-14 max-w-6xl">
       <div className="relative">
         <Title>
-          Hej. I&apos;m Enric. <br /> A Designer.
+          Hej. I&apos;m Enric. <br /> A UX Designer.
         </Title>
         {/* Floating Figma Logo */}
         <div className="absolute top-0 right-0 -translate-y-[70%] md:-translate-y-[50%] translate-x-[80%]  md:translate-x-[100%]">
