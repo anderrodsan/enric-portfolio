@@ -7,7 +7,7 @@ export default function BentoGrid({
   projects,
   className,
 }: {
-  projects: Project[];
+  projects: any;
   className?: string;
 }) {
   return (

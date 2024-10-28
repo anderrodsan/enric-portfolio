@@ -4,113 +4,36 @@ export const tools: Tool[] = [
   {
     id: 1,
     type: "User Research & Testing",
-    tools: [
-      {
-        name: "hotjar",
-        size: 100,
-      },
-      {
-        name: "maze",
-        size: 160,
-      },
-      {
-        name: "lookback",
-        size: 150,
-      },
-      {
-        name: "userbrain",
-        size: 130,
-      },
-    ],
+    tools: ["hotjar", "maze", "lookback", "userbrain"],
   },
   {
     id: 2,
     type: "Collaboration",
-    tools: [
-      {
-        name: "miro",
-        size: 90,
-      },
-      {
-        name: "figjam",
-        size: 100,
-      },
-      {
-        name: "slack",
-        size: 100,
-      },
-      {
-        name: "loom",
-        size: 100,
-      },
-    ],
+    tools: ["miro", "figjam", "slack", "loom"],
   },
   {
     id: 3,
     type: "Project Management",
-    tools: [
-      {
-        name: "asana",
-        size: 100,
-      },
-      {
-        name: "tldv",
-        size: 70,
-      },
-      {
-        name: "notion",
-        size: 80,
-      },
-      {
-        name: "jira",
-        size: 80,
-      },
-    ],
+    tools: ["asana", "tldv", "notion", "jira"],
   },
   {
     id: 4,
     type: "Design + AI",
-    tools: [
-      {
-        name: "galileo-ai",
-        size: 130,
-      },
-      {
-        name: "looppanel",
-        size: 150,
-      },
-      {
-        name: "uizard",
-        size: 130,
-      },
-    ],
+    tools: ["galileo-ai", "looppanel", "uizard"],
   },
   {
     id: 5,
-    type: "Resources",
-    tools: [
-      {
-        name: "mobbin",
-        size: 200,
-      },
-      {
-        name: "mobbin",
-        size: 200,
-      },
-      {
-        name: "mobbin",
-        size: 200,
-      },
-    ],
+    type: "Design Resources",
+    tools: ["mobbin", "framer", "uxcom"],
   },
   {
     id: 6,
     type: "My Best Friend.",
-    tools: [{ name: "figma-full", size: 100 }],
+    tools: ["figma-full"],
   },
   {
     id: 6,
     type: "No data no party.",
-    tools: [{ name: "google-analytics", size: 100 }],
+    tools: ["google-analytics"],
   },
 ];

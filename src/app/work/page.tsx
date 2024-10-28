@@ -1,9 +1,11 @@
 import BentoGrid from "@/components/sections/projects/bento-grid";
 import Title from "@/components/shared/title";
-import { projects } from "@/db/projects";
+import { getProjects } from "@/lib/actions";
 import React from "react";
 
 export default function Projects() {
+  const projects = getProjects();
+
   return (
     <div className="flex flex-col items-center">
       <div className="space-y-6 py-11 px-20">

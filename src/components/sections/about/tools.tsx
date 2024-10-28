@@ -28,7 +28,7 @@ function ToolCard({ item, className }: { item: Tool; className?: string }) {
     <li className="flex flex-col items-center gap-5">
       <h3
         className={cn(
-          "font-medium text-xl md:text-2xl",
+          "font-medium text-xl md:text-2xl text-light-green",
           acornRegular.className
         )}
       >
@@ -40,14 +40,14 @@ function ToolCard({ item, className }: { item: Tool; className?: string }) {
           className
         )}
       >
-        {item.tools.map((tool: { name: string; size: number }) => (
+        {item.tools.map((tool: string) => (
           <Image
-            src={`/images/logos/${tool.name}.png`}
-            alt={tool.name}
-            width={tool.size}
-            height={tool.size}
-            key={tool.name}
-            className="max-w-[100px] md:max-w-[50%] object-contain"
+            src={`/logos/${tool}.png`}
+            alt={tool}
+            width={500}
+            height={500}
+            key={tool}
+            className="w-[150px] object-contain"
           />
         ))}
       </div>

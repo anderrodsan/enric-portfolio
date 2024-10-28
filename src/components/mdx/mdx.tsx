@@ -19,14 +19,6 @@ function slugify(str: string) {
 function createHeading(level: 1 | 2 | 3 | 4 | 5 | 6) {
   const Heading = ({ children }: { children: string }) => {
     let slug = slugify(children);
-    const className = {
-      1: `text-4xl mt-10`,
-      2: "text-3xl mt-8",
-      3: "text-2xl mt-6",
-      4: "text-xl",
-      5: "text-lg",
-      6: "text-base",
-    };
 
     return React.createElement(
       `h${level}`,
@@ -34,7 +26,7 @@ function createHeading(level: 1 | 2 | 3 | 4 | 5 | 6) {
         id: slug,
         className: cn(
           acornMedium.className,
-          "text-5xl text-light-green group mb-3 mt-12 relative"
+          "text-5xl text-light-green group mb-3 relative"
         ),
       },
       [
@@ -62,7 +54,7 @@ function Text({ children }: any) {
 
 function MaxWidth({ children }: any) {
   return (
-    <div className="flex flex-col items-center">
+    <div className="flex flex-col items-center mb-10">
       <div className="max-w-[650px]">{children}</div>
     </div>
   );
@@ -71,7 +63,7 @@ function MaxWidth({ children }: any) {
 // Full Width Image Component
 function FullWidthImage({ src, alt }: { src: string; alt: string }) {
   return (
-    <div className="mt-12 mb-2 rounded-2xl overflow-hidden bg-light-green">
+    <div className="mb-2 rounded-2xl overflow-hidden bg-light-green">
       <Image
         src={src}
         alt={alt}
@@ -90,7 +82,7 @@ function TwoColumnImages({
   images: { src: string; alt: string }[];
 }) {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12 mb-2">
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-2">
       {images.map((image, i) => (
         <div key={i} className="rounded-2xl overflow-hidden bg-light-green">
           <Image
@@ -113,7 +105,7 @@ function ThreeColumnImages({
   images: { src: string; alt: string }[];
 }) {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12 mb-2">
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-2">
       {images.map((image, i) => (
         <div key={i} className="rounded-2xl overflow-hidden bg-light-green">
           <Image
@@ -132,7 +124,7 @@ function ThreeColumnImages({
 // Caption Component
 function Caption({ children }: { children: React.ReactNode }) {
   return (
-    <p className="flex justify-center items-start gap-1 text-xs text-center text-light-green italic mt-2 mb-10">
+    <p className="flex justify-center items-start gap-1 text-xs text-center text-white opacity-70 mb-10">
       <Lightbulb
         size={20}
         className="text-light-green"
@@ -151,10 +143,10 @@ const components = {
   h5: createHeading(5),
   h6: createHeading(6),
   p: (props: any) => (
-    <p className="text-lg mb-6 leading-relaxed text-light-green" {...props} />
+    <p className="text-lg mb-6 leading-relaxed text-white" {...props} />
   ),
   li: (props: any) => (
-    <li className="text-lg leading-relaxed text-light-green" {...props} />
+    <li className="text-lg leading-relaxed text-white" {...props} />
   ),
   FullWidthImage,
   TwoColumnImages,

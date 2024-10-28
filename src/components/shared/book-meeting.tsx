@@ -28,7 +28,7 @@ export default function BookMeeting({
       className={className}
       data-cal-namespace=""
       data-cal-link="enric-clemente-pttwxh/30min"
-      data-cal-config='{"layout":"month_view"}'
+      data-cal-config='{"layout":"month_view","theme":"light"}'
     >
       {title}
     </button>

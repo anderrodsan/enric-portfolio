@@ -20,7 +20,7 @@ export type Experience = {
   company: string;
   logo: string;
   startDate: string;
-  endDate: string;
+  endDate: string | null;
 };
 
 export type Education = {
@@ -35,5 +35,5 @@ export type Education = {
 export type Tool = {
   id: string | number;
   type: string;
-  tools: { name: string; size: number }[];
+  tools: string[];
 };

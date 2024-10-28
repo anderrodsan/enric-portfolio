@@ -6,11 +6,12 @@ import { acornMedium } from "@/lib/custom-fonts";
 import Link from "next/link";
 
 type Props = {
-  data: Project;
+  data: any;
   className?: string;
 };
 
 export default function BentoItem({ data, className }: Props) {
+  console.log("data", data.tag);
   const imgClassName =
     data?.type === "phone"
       ? "min-w-[400px] lg:min-w-[100px] px-10"
@@ -30,7 +31,7 @@ export default function BentoItem({ data, className }: Props) {
       )}
     >
       <Link
-        href={"/work/" + "test"}
+        href={"/work/" + data.slug}
         className={cn(
           "group relative flex flex-col rounded-[64px] hover:-translate-y-2 transition duration-700 overflow-hidden w-full max-w-[500px] sm:max-w-[700px] sm:max-h-[700px] md:min-h-[400px] lg:max-w-full lg:w-full h-full",
           "bg-" + data?.color
@@ -43,7 +44,7 @@ export default function BentoItem({ data, className }: Props) {
               data?.color === "black" ? "text-white" : "text-background"
             )}
           >
-            {data?.description.toUpperCase()}
+            {data?.tag.toUpperCase()}
           </p>
           <h2
             className={cn(
@@ -57,12 +58,12 @@ export default function BentoItem({ data, className }: Props) {
         </div>
         <div
           className={cn(
-            "absolute top-24 sm:top-32 left-0 lg:left-auto w-full flex items-end group-hover:translate-y-5 transition duration-700",
+            "absolute top-36 sm:top-40 left-0 lg:left-auto w-full flex items-end group-hover:translate-y-5 transition duration-700",
             imgClassName
           )}
         >
           <Image
-            src={"/mockups/" + data?.type + ".png"}
+            src={"/work/" + data?.slug + "/cover.png"}
             width={1000}
             height={1000}
             alt="Project image"

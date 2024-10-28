@@ -72,11 +72,19 @@ function ExperienceItem({ experience }: { experience: Experience }) {
       </div>
       <div className="space-y-1">
         <div className="flex gap-2 items-center">
-          <p className="py-1 px-3 bg-white/10 text-white rounded-full text-[10px] lg:text-[14px]">
-            {experience.type}
-          </p>
+          {experience?.endDate ? (
+            <p className="py-1 px-3 bg-white/10 text-white rounded-full text-[10px] lg:text-[14px]">
+              {experience.type}
+            </p>
+          ) : (
+            <p className="py-1 px-3 bg-[#5A8F7D] text-white rounded-full text-[10px] lg:text-[14px]">
+              Current Position
+            </p>
+          )}
+
           <p className="py-1 px-3 bg-white/[0.03] text-white rounded-full text-[10px] lg:text-[14px]">
-            {experience.startDate} - {experience.endDate}
+            {experience.startDate} -{" "}
+            {experience.endDate ? experience.endDate : "Present"}
           </p>
         </div>
         <h2 className="text-[14px] lg:text-[25px] font-bold">
