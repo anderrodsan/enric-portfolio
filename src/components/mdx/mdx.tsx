@@ -124,7 +124,7 @@ function ThreeColumnImages({
 // Caption Component
 function Caption({ children }: { children: React.ReactNode }) {
   return (
-    <p className="flex justify-center items-start gap-1 text-xs text-center text-white opacity-70 mb-10">
+    <p className="flex justify-center items-start gap-0 text-xs text-center text-white opacity-90 mb-10">
       <Lightbulb
         size={20}
         className="text-light-green"

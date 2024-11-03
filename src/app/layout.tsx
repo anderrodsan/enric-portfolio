@@ -7,8 +7,8 @@ import { cn } from "@/lib/utils";
 import { productSansRegular } from "@/lib/custom-fonts";
 
 export const metadata: Metadata = {
-  title: "UX Enric",
-  description: "Hej. I'm Enric. A Designer.",
+  title: "Hej. I'm Enric. A UX Designer.",
+  description: "Welcome to my portfolio!.",
 };
 
 export default function RootLayout({

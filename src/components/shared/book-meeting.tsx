@@ -13,7 +13,7 @@ export default function BookMeeting({
     (async function () {
       const cal = await getCalApi();
       cal("ui", {
-        theme: "dark",
+        theme: "light",
         styles: { branding: { brandColor: "#FFFFFF" } },
         hideEventTypeDetails: false,
         layout: "month_view",

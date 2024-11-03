@@ -20,6 +20,14 @@ export const education: Education[] = [
   },
   {
     id: 3,
+    title: "Exchange  in Business Administration & International Business",
+    university: "Tampere University of Applied Science (TAMK - Finland)",
+    type: "Eramus Exchange",
+    startDate: "Sept 2021",
+    endDate: "Jun 2023",
+  },
+  {
+    id: 4,
     title: "Bachelor’s Degree in Industrial Technology Engineering",
     university: "Polytechnic University of Catalonia (UPC)",
     type: "Bachelor's Degree",

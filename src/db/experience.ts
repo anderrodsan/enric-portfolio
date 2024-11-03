@@ -16,8 +16,8 @@ export const experience: Experience[] = [
     type: "Master Thesis",
     company: "Milestone Systems Denmark",
     logo: "/images/logos/milestone.png",
-    startDate: "Jan 2022",
-    endDate: "Jul 2021",
+    startDate: "Jan 2024",
+    endDate: "Jun 2024",
   },
   {
     id: 3,
@@ -25,8 +25,8 @@ export const experience: Experience[] = [
     type: "Internship",
     company: "Aalborg University in Copenhagen (AAU)",
     logo: "/images/logos/AAU.png",
-    startDate: "Jan 2022",
-    endDate: "Jul 2021",
+    startDate: "Sep 2023",
+    endDate: "Jan 2024",
   },
   {
     id: 4,
@@ -34,8 +34,8 @@ export const experience: Experience[] = [
     type: "Student Assistant",
     company: "Cantilever: Websites & Product Design",
     logo: "/images/logos/cantilever.png",
-    startDate: "Jan 2022",
-    endDate: "Jul 2021",
+    startDate: "Dec 2022",
+    endDate: "Present",
   },
   {
     id: 1,
@@ -43,8 +43,8 @@ export const experience: Experience[] = [
     type: "Full-time",
     company: "Trkken: Google Marketing Platform & Google Cloud ",
     logo: "/images/logos/trkken.png",
-    startDate: "Jan 2022",
-    endDate: "Jul 2021",
+    startDate: "Oct 2021",
+    endDate: "Jan 2023",
   },
   {
     id: 1,
@@ -52,7 +52,7 @@ export const experience: Experience[] = [
     type: "Internship",
     company: "GOLine Digital Agency ",
     logo: "/images/logos/goline.png",
-    startDate: "Jan 2022",
+    startDate: "May 2020",
     endDate: "Jul 2021",
   },
 ];

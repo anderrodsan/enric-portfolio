@@ -7,13 +7,13 @@ export default function Intro() {
   return (
     <div className="flex flex-col lg:flex-row gap-5 lg:gap-16 items-center md:items-start">
       {/** Image with rounded top corners */}
-      <div className="relative hidden lg:block rounded-full overflow-hidden aspect-square h-[200px] md:h-[300px]">
+      <div className="relative hidden lg:block rounded-full overflow-hidden aspect-square h-[210px] md:h-[310px]">
         <Image
           src="/images/enric-headshot.png"
           alt="profile"
           width={500}
           height={500}
-          style={{ objectFit: "cover", height: "100%" }}
+          style={{ objectFit: "cover", height: "115%" }}
           className="h-full w-full"
         />
       </div>
@@ -24,12 +24,13 @@ export default function Intro() {
             acornRegular.className
           )}
         >
-          I'm a UX Designer working remotely from 14°C Copenhagen.
+          I'm a UX Designer based in Copenhagen.
         </h1>
-        <p className="md:text-[23px] pb-[14px]">
-          Over the past 14 years, I've worked in various areas of digital
-          design, including front-end development, email, marketing, and app
-          UI/UX. I'm proud to have worn many hats.
+        <p className="md:text-[20px] pb-[14px]">
+        I am passionate about solving problems with design and technology and transforming new ideas into meaningful results.
+        </p>
+        <p className="md:text-[20px] pb-[14px]">
+        I enjoy working together with smart, creative, international, and passionate people determined to achieve more than required and challenge the status quo.
         </p>
       </div>
     </div>

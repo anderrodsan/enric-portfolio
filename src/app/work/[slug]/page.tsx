@@ -32,11 +32,6 @@ export default function WorkContent({ params }: any) {
 
       <div className="flex flex-col items-center w-full">
         <ProjectHeader meta={post.metadata} />
-        <iframe
-          className="border-[1px] rounded-xl overflow-hidden mb-10 w-full aspect-video max-w-4xl"
-          src="https://embed.figma.com/design/h2uduBPcH39Tdkii7Pud9v/Enric-UX-%2F-Product-Design?node-id=163-619&embed-host=share"
-          allowfullscreen
-        ></iframe>
         <article className="prose prose-quoteless prose-neutral dark:prose-invert pb-20 pt-3 text-light-green w-full max-w-[1300px]">
           <CustomMDX source={post.content} />
         </article>
