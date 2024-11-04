@@ -11,10 +11,10 @@ type Props = {
 };
 
 export default function BentoItem({ data, className }: Props) {
-  console.log("data", data.tag);
+  //console.log("data", data.tag);
   const imgClassName =
     data?.type === "phone"
-      ? "min-w-[400px] lg:min-w-[100px] px-10"
+      ? "min-w-[450px] lg:min-w-[100px] px-10"
       : data?.type === "mac"
       ? "min-w-[500px] sm:min-w-[800px] lg:min-w-[100px] -left-3"
       : "min-w-[900px] lg:min-w-[100px] px-10";
@@ -58,7 +58,7 @@ export default function BentoItem({ data, className }: Props) {
         </div>
         <div
           className={cn(
-            "absolute top-36 sm:top-40 left-0 lg:left-auto w-full flex items-end group-hover:translate-y-5 transition duration-700",
+            "absolute top-32 sm:top-40 left-0 lg:left-auto w-full flex items-end group-hover:translate-y-5 transition duration-700",
             imgClassName
           )}
         >

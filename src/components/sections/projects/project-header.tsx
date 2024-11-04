@@ -29,21 +29,12 @@ export default function ProjectHeader({ meta }: any) {
     },
   ];
 
-  const tools = {
-    title: "Tools",
-    values: meta.tools.split(",").map((tool) => {
-      return tool;
-    }),
-  };
-
-  console.log("tools", tools);
-
   return (
     <section className="flex flex-col items-center w-full gap-10 py-16">
       <Title className="text-5xl sm:5xl lg:5xl lg:text-8xl max-w-4xl text-balance">
         {meta.title}
       </Title>
-      <ul className="flex flex-col md:flex-row items-start md:items-start md:justify-center gap-16 w-full">
+      <ul className="flex flex-col md:flex-row items-start md:justify-center gap-10 md:gap-16 w-full">
         {data.map((item, index) => (
           <li key={index} className="flex flex-col items-start justify-start">
             <h3 className="text-lg">{item.title}</h3>
@@ -72,22 +63,6 @@ export default function ProjectHeader({ meta }: any) {
             })}
           </li>
         ))}
-        <li className="flex flex-col items-start justify-start">
-          <h3 className="text-lg">{tools.title}</h3>
-          <ul className="flex items-center justify-start gap-1 pt-1">
-            {tools?.values?.map((value, idx) => (
-              <li key={idx} className="flex gap-1 items-center">
-                <Image
-                  src={"/images/logos/figma.png"}
-                  alt={value}
-                  width={32}
-                  height={32}
-                  className="object-contain"
-                />
-              </li>
-            ))}
-          </ul>
-        </li>
       </ul>
     </section>
   );

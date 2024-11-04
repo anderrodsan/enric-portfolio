@@ -57,7 +57,7 @@ function ExperienceItem({ experience }: { experience: Experience }) {
   return (
     <li
       className={cn(
-        "p-[14px] rounded-[30px] border-2 border-muted-green/20 flex gap-[18px] items-center",
+        "p-[14px] rounded-[30px] border-2 border-white/10 flex gap-[18px] items-center",
         "pr-[30px]"
       )}
     >

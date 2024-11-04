@@ -7,7 +7,7 @@ export default function Home() {
     <div className="flex flex-col items-center w-[100%]">
       <Hero />
       <ShortProjects />
-      {/*<InProgress />*/}
+      <InProgress />
     </div>
   );
 }

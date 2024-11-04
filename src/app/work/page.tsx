@@ -8,7 +8,7 @@ export default function Projects() {
 
   return (
     <div className="flex flex-col items-center">
-      <div className="space-y-6 py-11 px-20">
+      <div className="space-y-3 py-11 px-20">
         <Title>My work.</Title>
         <p className="text-[18px] md:text-[23px] leading-[35px] md:leading-[35px] text-center text-balance max-w-[65ch]">
           I&apos;m a UX Designer, passionate about crafting experiences.

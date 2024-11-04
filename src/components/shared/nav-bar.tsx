@@ -38,7 +38,7 @@ export default function NavBar() {
   return (
     <div className="sticky z-50 top-0 py-5 px-8 md:py-6 md:px-20 flex flex-col items-center">
       <div
-        className={`p-3 flex items-center justify-center gap-5 rounded-full transition ease-in-out duration-700 backdrop-blur-md ${
+        className={`p-3 flex items-center justify-center gap-2 md:gap-5 rounded-full transition ease-in-out duration-700 backdrop-blur-md ${
           scrollValue > 40 ? "bg-dark-green bg-opacity-80" : "bg-white/0"
         }`}
       >
@@ -56,7 +56,7 @@ export default function NavBar() {
                 activePath === path.path ? "px-5 lg:px-6" : "px-3 lg:px-5"
               )}
             >
-              <p className="text-[14px] md:text-[20px]">{path.name}</p>
+              <p className="text-[16px] md:text-[20px]">{path.name}</p>
               {/** add svg icon here */}
               {index === 0 && (
                 <SlashSquare className="text-light-green h-4 w-4 md:h-[22px] md:w-[22px]" />
@@ -66,7 +66,7 @@ export default function NavBar() {
         ))}
         <BookMeeting
           title={"Contact"}
-          className="text-[14px] md:text-[20px] px-3 lg:px-5"
+          className="text-[16px] md:text-[20px] px-3 lg:px-5"
         />
       </div>
     </div>
