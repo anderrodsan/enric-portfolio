@@ -78,7 +78,7 @@ function ExperienceItem({ experience }: { experience: Experience }) {
             </p>
           ) : (
             <p className="py-1 px-3 bg-[#5A8F7D] text-white rounded-full text-[10px] lg:text-[14px]">
-              Current Position
+              Current
             </p>
           )}
 
