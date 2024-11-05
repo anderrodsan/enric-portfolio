@@ -5,6 +5,7 @@ import { acornRegular } from "@/lib/custom-fonts";
 import { Education, Experience } from "@/lib/types";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 export default function Background() {
@@ -25,7 +26,9 @@ export default function Background() {
       </div>
       {/** Education */}
       <div className="col-span-5 lg:col-span-2 flex flex-col gap-5 lg:gap-10 items-center lg:items-start">
-        <Title>Education.</Title>
+        <Link href="/education" passHref>
+          <Title>Education.</Title>
+        </Link>
         {/** Item list */}
         <ul className="flex flex-col gap-5">
           {education.map((education: Education, index) => (
@@ -40,12 +43,13 @@ export default function Background() {
   );
 }
 
-function Title({ children }: { children: React.ReactNode }) {
+function Title({ children, className }: { children: React.ReactNode; className?: string }) {
   return (
     <h1
       className={cn(
         "text-4xl lg:text-6xl text-light-green font-bold text-center lg:text-start w-full",
-        acornRegular.className
+        acornRegular.className,
+        className
       )}
     >
       {children}
