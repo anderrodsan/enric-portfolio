@@ -21,14 +21,19 @@ function createHeading(level: 1 | 2 | 3 | 4 | 5 | 6) {
   const Heading = ({ children }: { children: string }) => {
     let slug = slugify(children);
 
+    //different size classNames depending on the level
+    const className = cn(
+      acornMedium.className,
+      "text-start text-light-green group mb-3 mt-10 relative w-full max-w-[650px]",
+      level === 1 && "text-4xl md:text-5xl",
+      level === 2 && "text-xl md:text-2xl"
+    );
+
     return React.createElement(
       `h${level}`,
       {
         id: slug,
-        className: cn(
-          acornMedium.className,
-          "text-start text-5xl text-light-green group mb-3 mt-10 relative w-full max-w-[650px]"
-        ),
+        className: className,
       },
       [
         React.createElement("a", {
@@ -64,7 +69,7 @@ function MaxWidth({ children }: any) {
 // Full Width Image Component
 function FullWidthImage({ src, alt }: { src: string; alt: string }) {
   return (
-    <div className="mb-2 rounded-2xl overflow-hidden max-w-[1200px] max-h-[650px]">
+    <div className="rounded-2xl overflow-hidden max-w-[1200px] max-h-[650px]">
       <Image
         src={src}
         alt={alt}
@@ -83,14 +88,14 @@ function TwoColumnImages({
   images: { src: string; alt: string }[];
 }) {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-2">
+    <div className="grid grid-cols-1 md:grid-cols-2 md:gap-8">
       {images.map((image, i) => (
         <div key={i} className="rounded-2xl overflow-hidden">
           <Image
             src={image.src}
             alt={image.alt}
             width={580}
-            height={400}
+            height={350}
             className="w-full object-cover rounded-2xl"
           />
         </div>
@@ -125,7 +130,7 @@ function ThreeColumnImages({
 // Caption Component
 function Caption({ children }: { children: React.ReactNode }) {
   return (
-    <p className="flex justify-center items-start gap-2 text-center text-white opacity-90 mb-10 text-base md:text-lg">
+    <p className="flex justify-center items-start gap-2 text-center text-white opacity-90 mb-5 text-sm md:text-lg -mt-3">
       <span>
         <Lightbulb
           size={20}
@@ -171,8 +176,8 @@ const components = {
     </div>
   ),
   li: (props: any) => (
-    <div className="flex flex-col items-center -my-5 w-full max-w-[650px]">
-      <ul className="w-full  -mb-1">
+    <div className="flex flex-col items-center -my-5 w-full max-w-[650px] -ml-6 md:ml-0">
+      <ul className="w-full -mb-1">
         <li
           className="text-start w-full text-lg leading-relaxed text-white"
           {...props}
