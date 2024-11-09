@@ -6,7 +6,7 @@ import Link from "next/link";
 
 export default function Hero() {
   return (
-    <div className="flex flex-col items-center gap-3 mx-5 my-8 md:mx-20 md:my-14 max-w-6xl">
+    <div className="flex flex-col items-center gap-3 mx-5 my-4 md:mx-20 md:my-14 max-w-6xl">
       <div className="relative flex flex-col justify-center items-center">
         <div className="flex items-center justify-center gap-2 md:gap-[22px]">
           <Title>Hej. I&apos;m </Title>
