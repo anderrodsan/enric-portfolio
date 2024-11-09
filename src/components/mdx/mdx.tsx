@@ -24,7 +24,7 @@ function createHeading(level: 1 | 2 | 3 | 4 | 5 | 6) {
     //different size classNames depending on the level
     const className = cn(
       acornMedium.className,
-      "text-start text-light-green group mb-3 mt-10 relative w-full max-w-[650px]",
+      "text-start text-light-green group mb-2 mt-4 relative w-full max-w-[650px]",
       level === 1 && "text-4xl md:text-5xl",
       level === 2 && "text-xl md:text-2xl"
     );

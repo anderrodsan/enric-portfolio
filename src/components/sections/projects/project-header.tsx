@@ -34,7 +34,7 @@ export default function ProjectHeader({ meta }: any) {
       <Title className="text-5xl sm:5xl lg:5xl lg:text-8xl max-w-4xl text-balance">
         {meta.title}
       </Title>
-      <ul className="flex flex-col md:flex-row items-start md:justify-center gap-5 md:gap-8 w-full">
+      <ul className="flex flex-col md:flex-row items-start md:justify-center gap-10 md:gap-16 w-full">
         {data.map((item, index) => (
           <li key={index} className="flex flex-col items-start justify-start">
             <h3 className="text-lg">{item.title}</h3>
