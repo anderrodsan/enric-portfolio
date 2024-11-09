@@ -11,7 +11,7 @@ export default function Hero() {
         <div className="flex items-center justify-center gap-2 md:gap-[22px]">
           <Title>Hej. I&apos;m </Title>
           <Link href={"/about"} className="group cursor-pointer relative">
-            <Title className="group-hover:from-slate-300 group-hover:to-slate-400 transition-all">
+            <Title className="group-hover:text-[#EFB594] transition-all">
               Enric.
             </Title>
             <div className="hidden md:block scale-0 group-hover:scale-100 transition-all absolute top-0 left-1/2 transform -translate-y-[20%] group-hover:-translate-y-[78%] opacity-0 group-hover:opacity-100">
@@ -28,7 +28,7 @@ export default function Hero() {
         <div className="flex items-center justify-center gap-2 md:gap-[22px] -mt-4">
           <Title>A UX</Title>
           <Link href={"/about"} className="group cursor-pointer relative">
-            <Title className="group-hover:from-slate-300 group-hover:to-slate-400 transition-all">
+            <Title className="group-hover:text-[#D094E5] transition-all">
               Designer.
             </Title>
 

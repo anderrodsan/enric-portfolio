@@ -9,7 +9,7 @@ import Script from "next/script";
 
 export const metadata: Metadata = {
   title: "Hej. I'm Enric. A UX Designer.",
-  description: "Welcome to my portfolio!.",
+  description: "Welcome to my portfolio!",
 };
 
 export default function RootLayout({

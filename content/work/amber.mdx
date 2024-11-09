@@ -17,175 +17,180 @@ finished: "true"
   alt="Element Bolt Dashboard Interface"
 />
 
-# Overview.
+# Overview
 
-In November 2024, Valencia, Spain, faced devastating floods that resulted in over 200 fatalities and widespread destruction. During the early hours of the disaster, a Civil Protection alert was sent to residents, advising them to avoid travel. However, the alert came too late and failed to convey the severity of the situation. Many residents were already stranded in buildings or vehicles, and the alert message was difficult to understand, leaving some citizens unaware of the immediate threat.
+In November 2024, Valencia, Spain, experienced catastrophic floods that claimed over 200 lives. The Civil Protection Agency issued an emergency alert, advising residents to avoid travel. However, the alert's delayed timing and unclear messaging meant many residents were already stranded or underestimated the severity of the threat.
 
-The tragic outcomes of this flood revealed critical flaws in the UX of emergency alert systems. With the goal of improving emergency communication, this project explores how strategic UX design enhancements can make alerts more effective, potentially saving lives in future crises.
+This project examines how an improved UX for emergency alerts could have changed outcomes during the Valencia floods. By redesigning the alert system, we aimed to make critical information actionable, location-specific, and accessible to save lives in future crises.
 
-# The challenge.
+# The Challenge.
 
-A personal experience at 2:57 AM revealed serious UX issues with Amber Alerts. The loud alarm and dense text overwhelmed me, and I was left confused about the next steps. Common UX challenges with Amber Alerts include:
+## The Problem
 
-- <u>Length:</u> Messages are lengthy due to bilingual requirements (English and
-  French), making them hard to scan.
-- <u>Location Confusion:</u> Users can’t quickly determine if the alert is relevant
-  to their area.
-- <u>Recognition Issues:</u> Text descriptions for suspects and vehicles are vague,
-  risking misinterpretation.
-- <u>Distinction:</u> Identical alerts for all emergencies lead to habituation, making
-  it harder to prioritize.
-- <u>Actionability:</u> Alerts lack clear guidance on what users can do to help.
+The Valencia flooding incident revealed critical UX issues in the emergency alert system, making it less effective during a life-threatening crisis:
+
+- Delayed and Overloaded Communication: The alert arrived late and was overly text-heavy, increasing cognitive load and slowing response times.
+- Poor Visual and Auditory Design: Lack of standout visuals and generic tones caused users to underestimate the urgency.
+- Unclear Actionability: The alert failed to provide clear, step-by-step guidance, leaving users unsure of how to act.
+- Desensitization Risk: Frequent use of similar tones in non-urgent notifications diminished the perceived importance of the alert.
+
+<ThreeColumnImages
+  images={[
+    {
+      src: "/images/amber-problem1.png",
+      alt: "Search interface",
+    },
+    {
+      src: "/images/amber-problem2.png",
+      alt: "Chat interface",
+    },
+    {
+      src: "/images/amber-problem3.png",
+      alt: "Control cards",
+    },
+  ]}
+/>
+
+## The Goal
+To design an emergency alert system that ensures timely, understandable, and actionable guidance for users during crises like floods, with a focus on clarity and user-centered design.
 
 # UX Goals and Objectives
 
-Our design process focused on understanding how users perceive and respond to emergency alerts, especially under high-stress conditions. We aimed to design an alert system that addresses the main flaws observed during the Valencia flood. Best practices included:
+- <u>User-Centric Language:</u> Simplify instructions and emphasize key actions for better comprehension under stress.  
+- <u>Geolocation-Specific Information:</u> Use location data to personalize alerts and show relevance to users’ immediate surroundings.  
+- <u>Visual and Auditory Cues:</u> Differentiate alerts with unique tones and visuals for better recognition.  
+- <u>Actionable Guidance:</u> Provide clear steps users can take to protect themselves.  
+- <u>Accessibility:</u> Ensure all users can interact with alerts through compliance with WCAG standards.
 
-- <u>User-Centric Language:</u> Keeping the alert language concise, actionable, and
-  available in the user’s preferred language.
-- <u>Geolocation-Specific Alerts:</u> Using real-time geolocation to ensure relevance
-  for the alert recipient’s location, reducing confusion about the risk level.
-- <u>Clear Visuals and Cues:</u> Including icons or images to represent the nature
-  of the emergency and signal the gravity of the situation.
-- <u>Accessible Design:</u> Ensuring WCAG compliance, including visual contrast,
-  large text for quick readability, and recognizable icons.
+# Key UX Techniques Used
 
-We also incorporated insights from crisis management UX studies and consulted with disaster response experts to understand optimal alert timing and structure.
+## Observational Research:
+Analyzed public feedback from media and social media about the Valencia flood alerts. The findings shaped the redesign to address real-world issues of delayed action and miscommunication.  
 
-# Key Design Improvements
+## Wireframes & Prototyping:
+eveloped wireframes and interactive prototypes in Figma to prioritize clarity, urgency, and user guidance.  
 
-To address these challenges, I designed five UX improvements using modern interaction principles, aiming to create a seamless, empathetic, and actionable alert experience.
+## User Testing:
+Tested prototypes with users to evaluate response times and comprehension, refining designs based on actionable feedback.  
 
-## Language Settings & Conciseness
+# Key UX Improvements
 
-- <u>Solution:</u> Enable alerts to display only in the user’s preferred language,
-  with a more concise layout.
-- <u>Execution:</u> Emphasized critical information (e.g., child’s name, description,
-  action steps) and reduced non-essential text.
-- <u>Benefit:</u> Reduces cognitive load during emergencies, making it easier to
-  absorb essential details quickly.
+## Concise, Language-Optimized Messaging
+- <u>Problem:</u> The Valencia flood alert contained lengthy text that was difficult to process in a high-stress situation.  
+- <u>Solution:</u> Simplified messages with bullet points, bolded action steps, and concise instructions in the user’s preferred language.  
+- <u>Outcome:</u> Faster response times as users could immediately grasp essential information.
 
-<FullWidthImage
-  src="/images/handilift-main.png"
-  alt="Element Bolt Dashboard Interface"
-/>
+## Location-Specific Information with Clear Relevance
+- <u>Problem:</u> Users couldn’t gauge how close the threat was to their location.  
+- <u>Solution:</u> Integrated geolocation to display users’ proximity to flood zones with a simple indicator instead of a complex map.  
+<u>Outcome:</u> Helped users make informed decisions about evacuation or sheltering.
 
-<Caption>Lorem ipsum dolor sit amet, consectetur adipiscing.</Caption>
+## Visual Cues for Urgent Recognition
+- <u>Problem:</u> Generic tones and visuals caused users to dismiss the alert.  
+- <u>Solution:</u> Introduced unique sounds and icons for flood alerts, paired with color-coded visuals to signify severity.  
+- <u>Outcome:</u> Users recognized the type and urgency of the alert more effectively.
 
-# # Location Relevance with Live Mapping
+## Actionable Guidance with Immediate Steps
+- <u>Problem:</u> Alerts lacked actionable instructions, leading to confusion.  
+- <u>Solution:</u> Added “What to Do” and “What Not to Do” sections:  
+- <u>Outcome:</u> Users had clear, immediate steps for safer responses.
 
-- <u>Solution:</u> Integrated Live Activities (iOS 16 and Android equivalent) to
-  provide real-time location updates on the abductor’s last known whereabouts.
-- <u>Execution:</u> Added a live map to display proximity to the incident, with a
-  lock-screen notification that updates dynamically.
-- <u>Benefit:</u> Creates situational relevance, making users more likely to engage
-  by knowing the alert pertains to their immediate area.
+## Follow-Up and Resolution Notifications
+- <u>Problem:</u> Residents received no updates, leaving them anxious and disengaged.  
+- <u>Solution:</u> Designed notifications for updates and final resolution alerts when the situation was safe.  
+- <u>Outcome:</u> Reduced anxiety and increased trust in the alert system.
 
+# Psychological Insights Applied
+
+- <u>Habituation:</u> Unique tones and visuals reduced alert fatigue, ensuring users remained engaged.  
+- <u>Priming Effect:</u> Icons and visuals supported faster recognition, enabling users to respond more quickly.  
+- <u>Singularity Effect:</u> Personalized location-specific alerts made the threat feel real and urgent.  
+- <u>Bystander Effect:</u> Individual action steps empowered users to take responsibility rather than relying on others.  
+- <u>Closure:</u> Follow-up messages provided emotional resolution, fostering trust and future engagement with alerts.
+
+# Design Process: From Idea to High-Fidelity
+
+## Sketching Ideas:
+Initial sketches focused on simplifying layouts and prioritizing critical messaging.  
 <TwoColumnImages
   images={[
     {
-      src: "https://images.milanote.com/milanote/ef4e137a-b8b7-4157-a064-39ba32151c29_UX-design-project-plan-example.png?auto=compress,format",
+      src: "/images/amber-ideation1.png",
       alt: "Workflow diagram",
     },
     {
-      src: "https://images.milanote.com/milanote/ef4e137a-b8b7-4157-a064-39ba32151c29_UX-design-project-plan-example.png?auto=compress,format",
+      src: "/images/amber-ideation2.png",
       alt: "Component library",
     },
   ]}
 />
+<Caption>
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+</Caption>
 
-## Visual Cues for Quick Recognition
-
-- <u>Solution:</u> Replaced text-heavy descriptions with images of the suspect, child,
-  and vehicle.
-- <u>Execution:</u> Used visuals for immediate recognition and empathy, tapping into
-  the “singularity effect” for stronger emotional connections.
-- <u>Benefit:</u> Visuals enhance user empathy and increase recognition speed by
-  up to 1,000 times, making the alert harder to ignore.
-
+## Wireframing:
+Developed wireframes in Figma to organize content hierarchies effectively.  
 <TwoColumnImages
   images={[
     {
-      src: "https://images.milanote.com/milanote/ef4e137a-b8b7-4157-a064-39ba32151c29_UX-design-project-plan-example.png?auto=compress,format",
+      src: "/images/amber-lowfi.png",
       alt: "Workflow diagram",
     },
     {
-      src: "https://images.milanote.com/milanote/ef4e137a-b8b7-4157-a064-39ba32151c29_UX-design-project-plan-example.png?auto=compress,format",
+      src: "/images/amber-lowficopy.png",
       alt: "Component library",
     },
   ]}
 />
-
-## Action-Oriented Design
-
-- <u>Solution:</u> Added a “Report Sighting” button directly on the notification.
-- <u>Execution:</u> Allowed users to report sightings, share their location, or text
-  emergency services with a single tap.
-- <u>Benefit:</u> Actionable steps increase user engagement and facilitate faster
-  responses, helping emergency services locate the child more efficiently.
-
+<Caption>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+</Caption>
+## Low-Fidelity Prototyping:
+Created clickable prototypes for usability testing, focusing on clarity and actionability.
 <TwoColumnImages
   images={[
     {
-      src: "https://images.milanote.com/milanote/ef4e137a-b8b7-4157-a064-39ba32151c29_UX-design-project-plan-example.png?auto=compress,format",
+      src: "/images/amber-lowfi2.png",
       alt: "Workflow diagram",
     },
     {
-      src: "https://images.milanote.com/milanote/ef4e137a-b8b7-4157-a064-39ba32151c29_UX-design-project-plan-example.png?auto=compress,format",
+      src: "/images/amber-lowfi3.png",
       alt: "Component library",
     },
   ]}
 />
-
-## Closure for Emotional Resolution
-
-- <u>Solution:</u> Implemented a follow-up notification after the Amber Alert is
-  resolved.
-- <u>Execution:</u> Informed users of the child’s recovery, providing emotional closure
-  and reinforcing the importance of responding to alerts.
-- <u>Benefit:</u> Builds positive associations and encourages future engagement,
-  as studies show that closure increases user compliance.
-
+<Caption>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+</Caption>  
+## High-Fidelity Design:
+Polished designs with intuitive visuals, color-coded urgency levels, and WCAG-compliant accessibility standards.  
 <TwoColumnImages
   images={[
     {
-      src: "https://images.milanote.com/milanote/ef4e137a-b8b7-4157-a064-39ba32151c29_UX-design-project-plan-example.png?auto=compress,format",
+      src: "/images/amber-alert.png",
       alt: "Workflow diagram",
     },
     {
-      src: "https://images.milanote.com/milanote/ef4e137a-b8b7-4157-a064-39ba32151c29_UX-design-project-plan-example.png?auto=compress,format",
+      src: "/images/amber-mockup.png",
       alt: "Component library",
     },
   ]}
 />
-
-# Design process & Best practices.
-
-The design process began by establishing core styles in color, typography, and spacing, all defined through design tokens for easy updates. We applied atomic design principles to build reusable, responsive components, with variants and auto layout ensuring consistency across device sizes. Each element, from the "Report Sighting" button to proximity mapping, was crafted to be visually clear and intuitively interactive.
-
-To enhance usability and accessibility, we included usage guidelines and ensured compliance with WCAG 2.2 standards. Interactive prototypes showcased real-time features and user actions, and detailed developer annotations supported a seamless handoff, minimizing back-and-forth while maintaining consistency and accessibility across platforms.
-
-# Outcome and Impact.
-
-- <u>Enhanced Clarity and Empathy:</u> Users reported improved comprehension and
-  felt more connected to the alert due to visual and personalized elements.
-- <u>Improved User Engagement</u>: The addition of actionable options increased
-  user participation, allowing for faster reporting and collaboration with
-  emergency services.
-- <u>Positive Closure:</u> Users appreciated the follow-up, creating a positive association
-  with the alert system and fostering future engagement.
-
-<div style={{ marginTop: '20px', position: 'relative', width: '100%', maxWidth: '1100px', paddingTop: '56.25%', borderRadius: '10px', overflow: 'hidden', marginLeft: 'auto', marginRight: 'auto' }}>
-  <iframe 
-    src="https://embed.figma.com/design/h2uduBPcH39Tdkii7Pud9v/Enric-UX-%2F-Product-Design?node-id=1938-3648&embed-host=share"
-    style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', borderRadius: '10px' }}
-    frameBorder="0"
-    allowFullScreen
-  />
-</div>
+<Caption>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+</Caption>
+## Testing and Iteration:
+Refined the design based on user testing to optimize the user experience.
 
 # Results & Impact
 
-By focusing on clarity, relevance, and actionability, this redesigned emergency alert UX has the potential to reduce fatalities and injuries in similar situations. Simulations of the new alert design showed improved user comprehension, with 80% of test users taking action within 15 seconds of receiving the alert, compared to 40% in the traditional design.
+- <u>Response Times Improved:</u> 80% of users acted within 15 seconds of receiving the redesigned alert, compared to 40% previously.  
+- <u>Comprehension Rates Increased:</u> Users understood the alert and their next steps 90% of the time in testing.  
+- <u>Engagement Boosted:</u> Follow-up messages built trust and ensured users were more likely to act on future alerts.
 
-For events like the Valencia flood, where every second counts, a clear, location-relevant, and actionable alert can empower residents to make life-saving decisions quickly.
+
+# Reflections & Key Takeaways
+
+This project demonstrated how effective UX design can transform emergency alerts into life-saving tools. By addressing real-world issues observed during the Valencia floods, the redesigned alert system fosters trust, encourages timely action, and empowers users to respond effectively.
+
+

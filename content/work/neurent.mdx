@@ -27,19 +27,14 @@ The design system’s wireframe setup will serve as the blueprint for Neurent’
 
 The original Handi-Lift website was outdated, heavy, and no longer reflected the evolving needs of the company or its users. Recent user feedback and site diagnostics revealed the following key issues:
 
-- <u>Problem:</u> Neurent’s current dual-site structure is divided between patient
-  and provider audiences, creating a fragmented experience. This redesign aimed to
-  consolidate their online presence while adhering to accessibility and regulatory
-  standards for healthcare.
-- <u>Project Goal:</u> Delop a comprehensive, reusable wireframe design system in
-  Figma, laying a scalable foundation for the new site. By setting up advanced wireframes
-  with robust components, I ensured the design system would streamline future design
-  work, reduce development time, and provide a cohesive, accessible experience across
-  devices.
-- <u>My role:</u> As the UX Designer, I established the entire design system within
-  Figma, leveraging best practices to ensure modularity, accessibility, and efficient
-  developer handoff. This setup included establishing foundational styles, breakpoints,
-  atomic components, and in-depth documentation.
+## Problem:
+Neurent’s current dual-site structure is divided between patient and provider audiences, creating a fragmented experience. This redesign aimed to consolidate their online presence while adhering to accessibility and regulatory standards for healthcare.
+
+## Project Goal:
+Delop a comprehensive, reusable wireframe design system in Figma, laying a scalable foundation for the new site. By setting up advanced wireframes with robust components, I ensured the design system would streamline future design work, reduce development time, and provide a cohesive, accessible experience across devices.
+
+## My role:
+As the UX Designer, I established the entire design system within Figma, leveraging best practices to ensure modularity, accessibility, and efficient developer handoff. This setup included establishing foundational styles, breakpoints atomic components, and in-depth documentation.
 
 # Design System Setup
 
@@ -57,16 +52,18 @@ To create a design system suitable for wireframes, I focused on several best pra
   seamless adaptation to screen size. By setting up breakpoints within constraints,
   I enabled components to resize dynamically across mobile, tablet, and desktop layouts.
 
-<iframe
-  style={{
-    border: "1px solid rgba(0, 0, 0, 0.1)",
-    borderRadius: "12px",
-  }}
-  width="800"
-  height="450"
-  src="https://embed.figma.com/design/h2uduBPcH39Tdkii7Pud9v/Enric-UX-%2F-Product-Design?node-id=766-23489&embed-host=share"
-  allowFullScreen
-></iframe>
+<TwoColumnImages
+  images={[
+    {
+      src: "/images/neurent-main.png",
+      alt: "Workflow diagram",
+    },
+    {
+      src: "/images/neurent-main.png",
+      alt: "Component library",
+    },
+  ]}
+/>
 
 ## Component Architecture
 
@@ -80,16 +77,14 @@ To create a design system suitable for wireframes, I focused on several best pra
   design, where components expand or contract based on content or screen size, critical
   for responsive and user-centered wireframes.
 
-<iframe
-  style={{
-    border: "1px solid rgba(0, 0, 0, 0.1)",
-    borderRadius: "12px",
-  }}
-  width="800"
-  height="450"
-  src="https://embed.figma.com/design/h2uduBPcH39Tdkii7Pud9v/Enric-UX-%2F-Product-Design?node-id=766-23489&embed-host=share"
-  allowFullScreen
-></iframe>
+<div style={{ marginTop: '30px', position: 'relative', width: '100%', maxWidth: '1100px', paddingTop: '56.25%', borderRadius: '10px', overflow: 'hidden', marginLeft: 'auto', marginRight: 'auto' }}>
+  <iframe 
+    src="https://embed.figma.com/design/h2uduBPcH39Tdkii7Pud9v/Enric-UX-%2F-Product-Design?node-id=2064-7874&embed-host=share"
+    style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', borderRadius: '10px' }}
+    frameBorder="0"
+    allowFullScreen
+  />
+</div>
 
 ## Scalability & Consistency
 
@@ -103,51 +98,10 @@ To create a design system suitable for wireframes, I focused on several best pra
   seamlessly using instance properties, ensuring visual consistency and reducing
   duplication.
 
-<iframe
-  style={{
-    border: "1px solid rgba(0, 0, 0, 0.1)",
-    borderRadius: "12px", // Adjust the radius as needed
-  }}
-  width="800"
-  height="450"
-  src="https://embed.figma.com/design/h2uduBPcH39Tdkii7Pud9v/Enric-UX-%2F-Product-Design?node-id=766-23490&embed-host=share"
-  allowFullScreen
-></iframe>
-
 ## Design System Governance
 
-- <u>Regular Audits & Updates:</u> Established a schedule for periodic audits to
-  ensure the system remains aligned with Neurent’s evolving needs.
-- <u>Component Versioning:</u> Used Figma’s Team Library update notifications to
-  document component changes, minimizing workflow disruptions and maintaining alignment
-  across teams.
-
-<iframe
-  style={{
-    border: "1px solid rgba(0, 0, 0, 0.1)",
-    borderRadius: "12px", // Adjust the radius as needed
-  }}
-  width="800"
-  height="450"
-  src="https://embed.figma.com/design/h2uduBPcH39Tdkii7Pud9v/Enric-UX-%2F-Product-Design?node-id=766-23491&embed-host=share"
-  allowFullScreen
-></iframe>
-
-## Visual Design
-
-- Created a fresh, modern look while retaining elements of Handi-Lift’s legacy. The new design is brighter, more welcoming, and visually highlights the company’s 50-year legacy and transformation.
-- Designed new product images (animated CAD drawings) to visually explain Handi-Lift’s product offerings. These images were integrated into key pages like the Home Page and Products Page.
-
-<iframe
-  style={{
-    border: "1px solid rgba(0, 0, 0, 0.1)",
-    borderRadius: "12px",
-  }}
-  width="800"
-  height="450"
-  src="https://embed.figma.com/design/h2uduBPcH39Tdkii7Pud9v/Enric-UX-%2F-Product-Design?node-id=766-23492&embed-host=share"
-  allowFullScreen
-></iframe>
+- <u>Regular Audits & Updates:</u> Established a schedule for periodic audits to ensure the system remains aligned with Neurent’s evolving needs.
+- <u>Component Versioning:</u>Used Figma’s Team Library update notifications to document component changes, minimizing workflow disruptions and maintaining alignment across teams.
 
 # Key Deliverables & Impact.
 
@@ -160,52 +114,40 @@ The advanced wireframe design system provided a structured, modular foundation t
 - <u>Accessible, Responsive Structure:</u> A robust framework that adapts to different
   screen sizes and meets WCAG 2.2 standards, providing an inclusive experience.
 
-# Reflection & Next Steps.
-
-This wireframe phase underscored the value of a well-structured, modular design system in accelerating development and ensuring consistency across devices. Moving forward, the high-fidelity phase will apply brand elements to this foundation, creating a polished, accessible digital presence ready for Neurent’s Gen 3 launch.
-
-<FullWidthImage
-  src="https://images.milanote.com/milanote/ef4e137a-b8b7-4157-a064-39ba32151c29_UX-design-project-plan-example.png?auto=compress,format"
-  alt="Element Bolt Dashboard Interface"
-/>
-<Caption>
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris aliquet
-  scelerisque mattis.
-</Caption>
-
-<TwoColumnImages
-  images={[
-    {
-      src: "https://images.milanote.com/milanote/ef4e137a-b8b7-4157-a064-39ba32151c29_UX-design-project-plan-example.png?auto=compress,format",
-      alt: "Workflow diagram",
-    },
-    {
-      src: "https://images.milanote.com/milanote/ef4e137a-b8b7-4157-a064-39ba32151c29_UX-design-project-plan-example.png?auto=compress,format",
-      alt: "Component library",
-    },
-  ]}
-/>
-<Caption>
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris aliquet
-  scelerisque mattis.
-</Caption>
-
 <ThreeColumnImages
   images={[
     {
-      src: "https://images.milanote.com/milanote/ef4e137a-b8b7-4157-a064-39ba32151c29_UX-design-project-plan-example.png?auto=compress,format",
+      src: "/images/neurent-wi1.png",
       alt: "Search interface",
     },
     {
-      src: "https://images.milanote.com/milanote/ef4e137a-b8b7-4157-a064-39ba32151c29_UX-design-project-plan-example.png?auto=compress,format",
+      src: "/images/neurent-wi2.png",
       alt: "Chat interface",
     },
     {
-      src: "https://images.milanote.com/milanote/ef4e137a-b8b7-4157-a064-39ba32151c29_UX-design-project-plan-example.png?auto=compress,format",
+      src: "/images/neurent-wi3.png",
       alt: "Control cards",
     },
   ]}
 />
-<Caption>
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris aliquet .
-</Caption>
+
+<ThreeColumnImages
+  images={[
+    {
+      src: "/images/neurent-wi4.png",
+      alt: "Search interface",
+    },
+    {
+      src: "/images/neurent-wi5.png",
+      alt: "Chat interface",
+    },
+    {
+      src: "/images/neurent-wi6.png",
+      alt: "Control cards",
+    },
+  ]}
+/>
+
+# Reflection & Next Steps.
+
+This wireframe phase underscored the value of a well-structured, modular design system in accelerating development and ensuring consistency across devices. Moving forward, the high-fidelity phase will apply brand elements to this foundation, creating a polished, accessible digital presence ready for Neurent’s Gen 3 launch.
