@@ -12,7 +12,7 @@ export default function Projects() {
         <Title className="text-5xl sm:text-6xl md:text-7xl leading-[1.2] text-center">
           My work.
         </Title>
-        <p className="text-[18px] sm:text-[20px] md:text-[23px] leading-[22px] sm:leading-[30px] md:leading-[35px] text-center text-balance max-w-[65ch]">
+        <p className="text-[18px] sm:text-[20px] md:text-[23px] leading-[22px] sm:leading-[30px] md:leading-[35px] text-center md:text-balance max-w-[32ch] md:max-w-[65ch]">
           I&apos;m a UX Designer, passionate about crafting experiences.
         </p>
       </div>
