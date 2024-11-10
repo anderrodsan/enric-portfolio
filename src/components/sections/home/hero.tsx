@@ -9,9 +9,11 @@ export default function Hero() {
     <div className="flex flex-col items-center gap-3 mx-5 my-4 md:mx-20 md:my-14 max-w-6xl">
       <div className="relative flex flex-col justify-center items-center">
         <div className="flex items-center justify-center gap-2 md:gap-[22px]">
-          <Title className="text-4xl sm:text-5xl md:text-6xl">Hej. I&apos;m</Title>
+          <Title className="text-5xl sm:text-6xl md:text-7xl leading-[1.2]">
+            Hej. I&apos;m
+          </Title>
           <Link href={"/about"} className="group cursor-pointer relative">
-            <Title className="text-4xl sm:text-5xl md:text-6xl group-hover:text-[#EFB594] transition-all">
+            <Title className="text-5xl sm:text-6xl md:text-7xl leading-[1.2] group-hover:text-[#EFB594] transition-all">
               Enric.
             </Title>
             <div className="hidden md:block scale-0 group-hover:scale-100 transition-all absolute top-0 left-1/2 transform -translate-y-[20%] group-hover:-translate-y-[78%] opacity-0 group-hover:opacity-100">
@@ -26,9 +28,11 @@ export default function Hero() {
           </Link>
         </div>
         <div className="flex items-center justify-center gap-2 md:gap-[22px] -mt-4">
-          <Title className="text-4xl sm:text-5xl md:text-6xl">A UX</Title>
+          <Title className="text-5xl sm:text-6xl md:text-7xl leading-[1.2]">
+            A UX
+          </Title>
           <Link href={"/about"} className="group cursor-pointer relative">
-            <Title className="text-4xl sm:text-5xl md:text-6xl group-hover:text-[#D094E5] transition-all">
+            <Title className="text-5xl sm:text-6xl md:text-7xl leading-[1.2] group-hover:text-[#D094E5] transition-all">
               Designer.
             </Title>
 

@@ -9,7 +9,7 @@ export default function Projects() {
   return (
     <div className="flex flex-col items-center">
       <div className="space-y-3 py-11 px-20">
-        <Title className="text-4xl sm:text-5xl md:text-6xl text-center">
+        <Title className="text-5xl sm:text-6xl md:text-7xl leading-[1.2] text-center">
           My work.
         </Title>
         <p className="text-[18px] sm:text-[20px] md:text-[23px] leading-[22px] sm:leading-[30px] md:leading-[35px] text-center text-balance max-w-[65ch]">
