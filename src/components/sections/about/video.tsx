@@ -24,30 +24,28 @@ export default function Video() {
         style={{
           width: "100%",
           maxWidth: "1200px",
-          aspectRatio: "16/9", // Maintain 16:9 aspect ratio
+          aspectRatio: "16/9", // Maintain aspect ratio
         }}
       >
         <video
           ref={videoRef}
           className="rounded-[16px] w-full h-full"
-          src="/video/video-enric.mp4"
+          src="/video/video-enric.mp4" // Ensure correct path for production
           style={{
-            objectFit: "cover", // Ensures video covers the container
+            objectFit: "cover",
           }}
         />
         <button
           onClick={togglePlay}
-          className="absolute flex items-center justify-center text-white text-lg md:text-xl lg:text-2xl w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 rounded-full transition-all duration-300"
+          className="absolute flex items-center justify-center text-white text-lg w-12 h-12 sm:w-14 sm:h-14 rounded-full"
           style={{
             backgroundColor: "#243831", // Button background color
-            top: "1rem", // Ensure consistent spacing from the top
-            left: "1rem", // Ensure consistent spacing from the left
+            top: "1rem", // Padding from top
+            left: "1rem", // Padding from left
           }}
           title={isPlaying ? "Pause" : "Play"}
         >
-          <span className="flex items-center justify-center">
-            {isPlaying ? "⏸" : "▶"}
-          </span>
+          <span className="text-white">{isPlaying ? "⏸" : "▶"}</span>
         </button>
       </div>
     </div>
