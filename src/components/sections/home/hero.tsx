@@ -69,7 +69,7 @@ export default function Hero() {
         </div>
       </div>
 
-      <p className="text-[25px] sm:text-[40px] md:text-[25px] leading-[22px] sm:leading-[20px] md:leading-[35px] text-center md:text-balance max-w-[32ch] md:max-w-[65ch]">
+      <p className="text-[20px] sm:text-[25px] md:text-[25px] leading-[22px] sm:leading-[20px] md:leading-[35px] text-center md:text-balance max-w-[32ch] md:max-w-[65ch]">
         I&apos;m a UX Designer, passionate about crafting experiences that are
         engaging, accessible, and user-centric.
       </p>
