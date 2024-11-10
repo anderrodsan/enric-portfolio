@@ -21,7 +21,7 @@ export default function Background() {
           ))}
           <li className="flex lg:hidden justify-start pt-3">
             <LinkButton
-              href="https://drive.google.com/file/d/1VfleiYPwiaclUeQ0dqVdy4QrCB0JghCB/view?usp=sharing"
+              href="https://drive.google.com/file/d/1KQHvTeoaiKtYs5GfuowzaXerKgENGZnn/view?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -42,7 +42,7 @@ export default function Background() {
           ))}
           <li className="flex justify-start pt-3">
             <LinkButton
-              href="https://drive.google.com/file/d/1VfleiYPwiaclUeQ0dqVdy4QrCB0JghCB/view?usp=sharing"
+              href="https://drive.google.com/file/d/1KQHvTeoaiKtYs5GfuowzaXerKgENGZnn/view?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
             >
