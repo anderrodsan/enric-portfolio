@@ -20,7 +20,9 @@ export default function Background() {
             <ExperienceItem key={index} experience={experience} />
           ))}
           <li className="flex lg:hidden justify-start pt-3">
-            <LinkButton href="/about">Read full CV</LinkButton>
+            <LinkButton href="https://drive.google.com/file/d/1VfleiYPwiaclUeQ0dqVdy4QrCB0JghCB/view?usp=sharing">
+              Read full CV
+            </LinkButton>
           </li>
         </ul>
       </div>
@@ -35,7 +37,9 @@ export default function Background() {
             <EducationItem key={index} education={education} />
           ))}
           <li className="flex justify-start pt-3">
-            <LinkButton href="/about">Read full CV</LinkButton>
+            <LinkButton href="https://drive.google.com/file/d/1VfleiYPwiaclUeQ0dqVdy4QrCB0JghCB/view?usp=sharing">
+              Read full CV
+            </LinkButton>
           </li>
         </ul>
       </div>

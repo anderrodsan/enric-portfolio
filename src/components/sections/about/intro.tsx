@@ -7,7 +7,7 @@ export default function Intro() {
   return (
     <div className="flex flex-col lg:flex-row gap-5 lg:gap-16 items-center md:items-start w-full">
       {/** Image with rounded top corners */}
-      <div className="relative hidden lg:block rounded-full overflow-hidden aspect-square h-[210px] md:h-[310px]">
+      <div className="relative block rounded-full overflow-hidden aspect-square h-[210px] md:h-[310px]">
         <Image
           src="/images/enric-headshot.png"
           alt="profile"

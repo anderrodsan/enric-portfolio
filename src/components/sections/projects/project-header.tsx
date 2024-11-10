@@ -1,13 +1,9 @@
 import Title from "@/components/shared/title";
-import { projects } from "@/db/projects";
 import { ArrowUpRight } from "lucide-react";
-import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
 export default function ProjectHeader({ meta }: any) {
-  //find the project.id that matches the slug
-
   const data = [
     {
       title: "Company",
@@ -19,9 +15,7 @@ export default function ProjectHeader({ meta }: any) {
     },
     {
       title: "Team",
-      values: meta.team.split(",").map((team) => {
-        return team;
-      }),
+      values: (meta.team || "").split(",").map((team) => team.trim()),
     },
     {
       title: "Duration",
@@ -42,7 +36,7 @@ export default function ProjectHeader({ meta }: any) {
               if (index === 0) {
                 return (
                   <Link
-                    href={"https://" + value}
+                    href={value ? `https://${value}` : "#"}
                     target="_blank"
                     key={idx}
                     className="group flex gap-1 items-center cursor-pointer"
@@ -56,9 +50,9 @@ export default function ProjectHeader({ meta }: any) {
               }
 
               return (
-                <li key={idx} className="flex gap-1 items-center">
+                <div key={idx} className="flex gap-1 items-center">
                   <p className="text-light-green text-lg">{value}</p>
-                </li>
+                </div>
               );
             })}
           </li>
@@ -66,7 +60,4 @@ export default function ProjectHeader({ meta }: any) {
       </ul>
     </section>
   );
-}
-function parseArrayField(team: any) {
-  throw new Error("Function not implemented.");
 }
