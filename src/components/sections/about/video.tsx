@@ -31,6 +31,7 @@ export default function Video() {
           ref={videoRef}
           className="rounded-[16px] w-full h-full"
           src="/video/video-enric.mp4" // Ensure correct path for production
+          poster="/video/video-preview.jpg" // Add a poster image here
           style={{
             objectFit: "cover",
           }}
