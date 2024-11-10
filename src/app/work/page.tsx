@@ -13,8 +13,7 @@ export default function Projects() {
           My work.
         </Title>
         <p className="text-[18px] sm:text-[20px] md:text-[23px] leading-[22px] sm:leading-[30px] md:leading-[35px] text-center md:text-balance max-w-[42ch] md:max-w-[72ch]">
-          I&apos;m a UX Designer, passionate about crafting experiences that are
-          engaging, accessible, and user-centric.
+        Solving problems. From real companies. 
         </p>
       </div>
       <div className="py-12 px-5 md:py-16 md:px-20 w-full flex justify-center">
