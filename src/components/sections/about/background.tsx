@@ -1,3 +1,4 @@
+import LinkButton from "@/components/shared/link-button";
 import { education } from "@/db/education";
 import { experience } from "@/db/experience";
 import { acornRegular } from "@/lib/custom-fonts";
@@ -19,14 +20,13 @@ export default function Background() {
             <ExperienceItem key={index} experience={experience} />
           ))}
           <li className="flex lg:hidden justify-start pt-3">
-            <a
+            <LinkButton
               href="https://drive.google.com/file/d/1KQHvTeoaiKtYs5GfuowzaXerKgENGZnn/view?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
-              className="px-4 py-2 text-white bg-blue-600 rounded-md hover:bg-blue-700 transition"
             >
               Read full CV
-            </a>
+            </LinkButton>
           </li>
         </ul>
       </div>
@@ -41,14 +41,13 @@ export default function Background() {
             <EducationItem key={index} education={education} />
           ))}
           <li className="flex justify-start pt-3">
-            <a
+            <LinkButton
               href="https://drive.google.com/file/d/1KQHvTeoaiKtYs5GfuowzaXerKgENGZnn/view?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
-              className="px-4 py-2 text-white bg-blue-600 rounded-md hover:bg-blue-700 transition"
             >
               Read full CV
-            </a>
+            </LinkButton>
           </li>
         </ul>
       </div>

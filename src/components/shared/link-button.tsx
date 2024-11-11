@@ -8,14 +8,22 @@ export default function LinkButton({
   children,
   className,
   href,
+  target,
+  rel,
 }: {
   children: React.ReactNode;
   className?: string;
   href: string;
+  target?: "_self" | "_blank" | "_parent" | "_top"; // Optional target attribute
+  rel?: string; // Optional rel attribute
 }) {
+  const isExternal = target === "_blank";
+
   return (
     <Link
       href={href}
+      target={target || "_self"}
+      rel={isExternal ? rel || "noopener noreferrer" : undefined} // Add rel only for external links
       className="relative group flex items-center justify-center gap-1 bg-white/5 hover:bg-white/10 px-6 pr-16 py-3 rounded-full w-full md:w-auto"
     >
       <p
