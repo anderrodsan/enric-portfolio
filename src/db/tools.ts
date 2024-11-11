@@ -4,7 +4,7 @@ export const tools: Tool[] = [
   {
     id: 1,
     type: "User Research & Testing",
-    tools: ["hotjar", "maze", "lookback", "userbrain1"],
+    tools: ["hotjar", "maze", "lookback", "userbrain"],
   },
   {
     id: 2,
