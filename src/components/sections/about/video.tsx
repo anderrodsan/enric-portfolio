@@ -1,6 +1,8 @@
 "use client";
 
-import React, { useRef, useState } from "react";
+import { Pause, PlayIcon } from "lucide-react";
+import Image from "next/image";
+import React, { useEffect, useRef, useState } from "react";
 
 export default function Video() {
   const videoRef = useRef(null);
@@ -17,36 +19,56 @@ export default function Video() {
     }
   };
 
+  useEffect(() => {
+    const video = videoRef.current;
+    if (video) {
+      // Listen for when the video ends
+      video.addEventListener("ended", () => {
+        setIsPlaying(false); // Set isPlaying to false when the video ends
+      });
+    }
+
+    // Cleanup event listeners
+    return () => {
+      if (video) {
+        video.removeEventListener("ended", () => {
+          setIsPlaying(false); // Cleanup the ended listener
+        });
+      }
+    };
+  }, []);
+
   return (
     <div className="flex flex-col items-center gap-5 w-full">
-      <div
-        className="relative group rounded-[16px] overflow-hidden hover:scale-105 transition duration-300"
-        style={{
-          width: "100%",
-          maxWidth: "1200px",
-          aspectRatio: "16/9", // Maintain aspect ratio
-        }}
-      >
+      <div className="group relative w-full aspect-[1043/697] hover:opacity-100 hover:scale-[1.02] cursor-pointer transition duration-300 rounded-2xl">
         <video
+          width="100%"
+          controls={false}
+          preload="none"
+          poster="/video/cover.png"
           ref={videoRef}
-          className="rounded-[16px] w-full h-full"
-          src="/video/video-enric.mp4" // Ensure correct path for production
-          poster="/video/video-preview.jpg" // Add a poster image here
-          style={{
-            objectFit: "cover",
-          }}
+          className="relative rounded-2xl"
+        >
+          <source src="/video/video-enric.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+        <button
+          onClick={togglePlay}
+          className={`absolute inset-0 bg-black ${
+            isPlaying ? "opacity-0" : "opacity-10"
+          } group-hover:opacity-0 transition duration-300 rounded-2xl`}
         />
         <button
           onClick={togglePlay}
-          className="absolute flex items-center justify-center text-white text-lg w-12 h-12 sm:w-14 sm:h-14 rounded-full"
-          style={{
-            backgroundColor: "#243831", // Button background color
-            top: "1rem", // Padding from top
-            left: "1rem", // Padding from left
-          }}
-          title={isPlaying ? "Pause" : "Play"}
+          className={
+            "transition duration-300 absolute top-5 left-5 z-20 group-hover:scale-110 group-hover:opacity-100 opacity-70"
+          }
         >
-          <span className="text-white">{isPlaying ? "⏸" : "▶"}</span>
+          {isPlaying ? (
+            <Pause fill="white" className="w-7 h-7 text-white" />
+          ) : (
+            <PlayIcon fill="white" className="w-7 h-7 text-white" />
+          )}
         </button>
       </div>
     </div>

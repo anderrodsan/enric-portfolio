@@ -8,12 +8,12 @@ export default function Projects() {
 
   return (
     <div className="flex flex-col items-center">
-      <div className="space-y-3 py-11 px-20">
+      <div className="space-y-3 pt-4 md:pt-14 pb-11 px-5 md:px-20">
         <Title className="text-5xl sm:text-6xl md:text-7xl leading-[1.2] text-center">
           My work.
         </Title>
-        <p className="text-[18px] sm:text-[20px] md:text-[23px] leading-[22px] sm:leading-[30px] md:leading-[35px] text-center md:text-balance max-w-[42ch] md:max-w-[72ch]">
-        Solving problems. From real companies. 
+        <p className="text-[18px] sm:text-[20px] md:text-[23px] leading-[22px] sm:leading-[30px] md:leading-[35px] text-center md:text-balance w-full">
+          Solving problems. From real companies.
         </p>
       </div>
       <div className="py-12 px-5 md:py-16 md:px-20 w-full flex justify-center">

@@ -24,9 +24,9 @@ function createHeading(level: 1 | 2 | 3 | 4 | 5 | 6) {
     //different size classNames depending on the level
     const className = cn(
       acornMedium.className,
-      "text-start text-light-green group mb-2 mt-4 relative w-full max-w-[650px]",
-      level === 1 && "text-4xl md:text-5xl",
-      level === 2 && "text-xl md:text-2xl"
+      "text-start text-light-green group mb-2 relative w-full max-w-[650px]",
+      level === 1 && "text-4xl md:text-5xl mt-14",
+      level === 2 && "text-xl md:text-2xl mt-10"
     );
 
     return React.createElement(
@@ -145,7 +145,7 @@ function Caption({ children }: { children: React.ReactNode }) {
 
 function IFrame({ src }: { src: string }) {
   return (
-    <div className="w-full flex flex-col items-center mt-10 mb-5">
+    <div className="w-full flex flex-col items-center mt-10 mb-10">
       <iframe
         style={{
           border: "1px solid rgba(0, 0, 0, 0.1)",
