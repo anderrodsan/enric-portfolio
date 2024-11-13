@@ -1,3 +1,4 @@
+import { finished } from "stream";
 import { getBlogPosts } from "./mdx-remote";
 
 //get the projects and order them by the index
@@ -19,6 +20,7 @@ export function getProjects() {
       tag: post.metadata.role,
       color: post.metadata.color,
       slug: post.slug,
+      finished: post.metadata.finished,
     };
   });
 
@@ -44,6 +46,7 @@ export function getInProgress() {
       tag: post.metadata.role,
       color: post.metadata.color,
       slug: post.slug,
+      finished: post.metadata.finished,
     };
   });
 
