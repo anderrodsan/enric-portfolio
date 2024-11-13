@@ -40,15 +40,18 @@ export default function Video() {
 
   return (
     <div className="flex flex-col items-center gap-5 w-full">
-      <div className="group relative w-full aspect-[1043/697] hover:opacity-100 hover:scale-[1.02] cursor-pointer transition duration-300 rounded-2xl">
+      <div
+        onClick={togglePlay}
+        className="group relative w-full aspect-[1043/697] hover:opacity-100 hover:scale-[1.01] cursor-pointer transition duration-300 rounded-2xl"
+      >
         <video
           width="100%"
           controls={false}
           preload="none"
           ref={videoRef}
           className="rounded-[16px] w-full h-full"
-          src="/video/video-enric.mp4" // Ensure correct path for production
-          poster="/video/video-preview.jpg" // Add a poster image here
+          src="/video/video-presentation.mp4" // Ensure correct path for production
+          poster="/video/video-cover.jpg" // Add a poster image here
           style={{
             objectFit: "cover",
           }}
