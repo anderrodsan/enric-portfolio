@@ -45,18 +45,13 @@ export default function Video() {
           width="100%"
           controls={false}
           preload="none"
-          poster="/video/cover.png"
           ref={videoRef}
-          className="relative rounded-2xl"
-        >
-          <source src="/video/video-enric.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
-        <button
-          onClick={togglePlay}
-          className={`absolute inset-0 bg-black ${
-            isPlaying ? "opacity-0" : "opacity-10"
-          } group-hover:opacity-0 transition duration-300 rounded-2xl`}
+          className="rounded-[16px] w-full h-full"
+          src="/video/video-enric.mp4" // Ensure correct path for production
+          poster="/video/video-preview.jpg" // Add a poster image here
+          style={{
+            objectFit: "cover",
+          }}
         />
         <button
           onClick={togglePlay}

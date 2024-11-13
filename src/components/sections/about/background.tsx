@@ -77,7 +77,7 @@ function ExperienceItem({ experience }: { experience: Experience }) {
         "pr-[30px]"
       )}
     >
-      <div className="relative bg-white/5  rounded-xl lg:rounded-3xl">
+      <div className="relative bg-white/5 rounded-xl lg:rounded-3xl">
         <Image
           src={experience?.logo}
           alt={experience.company}
