@@ -24,7 +24,7 @@ export default function Intro() {
             acornRegular.className
           )}
         >
-          I'm a UX Designer based in Copenhagen.
+          I'm a Product Designer based in Copenhagen.
         </h1>
         <p className="md:text-[20px] pb-[14px]">
           I am passionate about solving problems with design and technology and
