@@ -15,6 +15,7 @@ body {
     --light-blue: 206, 83%, 86%;
     --light-orange: 22 74% 76%;
     --light-pink: 284 61% 74%;
+    --card1: hsla(159, 22%, 18%, 1);
   }
   .dark {
     --background: 222.2 84% 4.9%;
@@ -76,4 +77,14 @@ body {
 
 .animate-move {
   animation: move 4s infinite;
+}
+
+.gradient-border {
+  border: 2px solid transparent;
+  border-image: radial-gradient(
+      150.36% 227.1% at 8.75% 100%,
+      #ffffff 0%,
+      rgba(201, 201, 201, 0) 100%
+    )
+    1;
 }

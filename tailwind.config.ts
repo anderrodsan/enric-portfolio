@@ -13,6 +13,7 @@ const config: Config = {
     "bg-light-orange",
     "bg-light-pink",
     "bg-black",
+    "bg-strong-green",
   ],
   theme: {
     extend: {
@@ -27,6 +28,9 @@ const config: Config = {
           blue: "hsl(var(--light-blue))",
           orange: "hsl(var(--light-orange))",
           pink: "hsl(var(--light-pink))",
+        },
+        strong: {
+          green: "hsl(var(--strong-green))",
         },
         muted: {
           green: "hsl(var(--muted-green))",
