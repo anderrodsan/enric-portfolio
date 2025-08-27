@@ -16,12 +16,12 @@ export default function CTACard({ data }: { data: CTACardType }) {
     <Link
       href={data.href}
       className={cn(
-        "relative group w-full flex items-center justify-between gap-[38px] p-[60px] rounded-[42px] overflow-hidden",
+        "relative group w-full flex items-center justify-between gap-[38px] p-10 rounded-[42px] overflow-hidden",
         "hover:outline hover:outline-4 hover:outline-white hover:outline-offset-[-2px] transition-all duration-300",
         "bg-" + data.color
       )}
     >
-      <div className="space-y-1.5 w-[400px]">
+      <div className="space-y-1.5 w-[300px] md:w-[400px]">
         <span className="uppercase text-sm text-black">{data.tag}</span>
         <h2
           className={cn(
@@ -32,7 +32,7 @@ export default function CTACard({ data }: { data: CTACardType }) {
           {data.title}
         </h2>
       </div>
-      <div className="absolute top-10 left-[438px] lg:right-20 min-w-[400px] h-full">
+      <div className="absolute top-10 left-[350px] md:left-[600px] lg:right-20 min-w-[300px] md:min-w-[400px] h-full">
         <Image
           src={data.image}
           alt={data.title}

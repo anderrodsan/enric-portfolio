@@ -3,6 +3,7 @@ import Title from "@/components/shared/title";
 import { ArrowUpRight } from "lucide-react";
 import Image from "next/image";
 import { HeroLinks } from "./hero-links";
+import Link from "next/link";
 
 const METRICS = [
   "+50 projects completed",
@@ -12,15 +13,8 @@ const METRICS = [
 
 export default function Hero() {
   return (
-    <div className="flex flex-col items-center gap-20 px-5 mt-4 lg:mx-20 lg:mt-14 max-w-[1300px] w-full">
-      <div className="flex flex-col items-center justify-center gap-2 lg:gap-[22px]">
-        <span className="text-[20px] leading-[28px] lg:text-[28px] font-medium md:leading-[40px] text-center align-middle">
-          Hej!
-        </span>
-        <Title className="text-[40px] md:text-[96px] leading-[100%] tracking-[-0.02em] text-center text-light-green font-medium font-acorn">
-          I&apos;m Enric, <br /> Product Designer.
-        </Title>
-      </div>
+    <div className="flex flex-col items-center gap-20 px-5 mt-4 lg:mx-20 lg:mt-14 max-w-6xl w-full">
+      <HeroTitle />
       <div className="relative flex flex-col items-center justify-center gap-2 lg:gap-[22px] w-full">
         <div className="relative flex flex-col items-center justify-center max-w-5xl">
           <Image
@@ -41,7 +35,7 @@ export default function Hero() {
         <div className="lg:absolute bottom-10 w-full flex items-center justify-center pt-3 lg:pt-0">
           <HeroLinks />
         </div>
-        <div className="relative lg:absolute top-0 left-0 -z-20 py-3 lg:py-0">
+        <div className="relative lg:absolute top-0 left-0 z-10 py-3 lg:py-0">
           <Image
             src="/svg/corner-lines.svg"
             alt="Hero image"
@@ -73,6 +67,60 @@ export default function Hero() {
             </GlassCard>
           ))}
         </div>
+      </div>
+    </div>
+  );
+}
+
+function HeroTitle() {
+  return (
+    <div className="relative flex flex-col justify-center items-center">
+      <span className="text-[20px] leading-[28px] lg:text-[28px] font-medium md:leading-[40px] text-center align-middle mb-4">
+        Hej!
+      </span>
+      <div className="flex items-center justify-center gap-2 md:gap-[22px]">
+        <Title className="text-5xl sm:text-6xl lg:text-8xl leading-[1.2]">
+          I&apos;m
+        </Title>
+        <Link href={"/about"} className="group cursor-pointer relative">
+          <Title className="text-5xl sm:text-6xl lg:text-8xl leading-[1.2] group-hover:text-[#EFB594] transition-all">
+            Enric.
+          </Title>
+          <div className="hidden md:block scale-0 group-hover:scale-100 transition-all absolute top-0 left-[45%] transform -translate-y-[20%] group-hover:-translate-y-[72%] opacity-0 group-hover:opacity-100">
+            <Image
+              src="/images/enric-headshot.png"
+              width={100}
+              height={100}
+              alt="Hero image"
+              className="w-[100px] h-[100px] rounded-full animate-move"
+            />
+          </div>
+        </Link>
+      </div>
+      <div className="flex items-center justify-center gap-2 md:gap-[22px] -mt-4">
+        <Title className="text-5xl sm:text-6xl lg:text-8xl leading-[1.2]">
+          A Product
+        </Title>
+        <Link href={"/about"} className="group cursor-pointer relative">
+          <Title className="text-5xl sm:text-6xl lg:text-8xl leading-[1.2] group-hover:text-[#D094E5] transition-all">
+            Designer.
+          </Title>
+
+          <Image
+            alt="project1"
+            src="/images/hero-card1.png"
+            width={100}
+            height={100}
+            className="hidden md:block absolute bottom-5 -right-10 translate-x-[50%] opacity-0 group-hover:opacity-100 translate-y-[0%] group-hover:-translate-y-[50%] rotate-[25deg] group-hover:rotate-0 transition duration-500 rounded-xl z-10 shadow-xl"
+          />
+          <Image
+            alt="project2"
+            src="/images/hero-card2.png"
+            width={110}
+            height={110}
+            className="hidden md:block absolute bottom-5 -right-10 opacity-0 group-hover:opacity-100 -translate-y-[0%] group-hover:-translate-y-[50%] translate-x-[50%] group-hover:translate-x-[70%] rotate-0 group-hover:rotate-[20deg] transition duration-500 delay-200 rounded-xl z-10 shadow-xl"
+          />
+        </Link>
       </div>
     </div>
   );

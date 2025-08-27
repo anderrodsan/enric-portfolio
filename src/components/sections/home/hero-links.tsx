@@ -1,6 +1,6 @@
 "use client";
 
-import { GlassCard } from "@/components/shared/glass-card";
+import GlassCard from "@/components/shared/glass-card";
 import { acornMedium, acornRegular } from "@/lib/custom-fonts";
 import { cn } from "@/lib/utils";
 import { ArrowUpRight } from "lucide-react";
@@ -63,7 +63,6 @@ export function HeroLinks() {
     <GlassCard
       className="p-2 rounded-full flex gap-4"
       borderRadius="rounded-full"
-      hoverEffect={false}
     >
       <HeroLinkItem
         label="portfolio"

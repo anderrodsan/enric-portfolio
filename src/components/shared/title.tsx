@@ -16,8 +16,8 @@ export default function Title({
         "text-medium w-full text-center text-5xl sm:text-8xl lg:text-9xl leading-[55px] sm:leading-[140px] tracking-tight text-light-green",
         "bg-gradient-to-b from-light-green to-[#5eb195] inline-block text-transparent bg-clip-text",
         acornMedium.className,
-        className,
-        "pb-2 sm:pb-4"
+        "pb-2 sm:pb-4",
+        className
       )}
     >
       {children}

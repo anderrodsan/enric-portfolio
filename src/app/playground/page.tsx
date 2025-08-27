@@ -1,5 +1,5 @@
 import CTACard from "@/components/shared/cta-card";
-import { GlassCard } from "@/components/shared/glass-card";
+import GlassCard from "@/components/shared/glass-card";
 import Title from "@/components/shared/title";
 import { CheckCircle } from "lucide-react";
 import React from "react";
