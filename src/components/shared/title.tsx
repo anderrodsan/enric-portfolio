@@ -24,3 +24,23 @@ export default function Title({
     </h1>
   );
 }
+
+export function Subtitle({
+  children,
+  className,
+}: {
+  children: React.ReactNode;
+  className?: string;
+}) {
+  return (
+    <h2
+      className={cn(
+        "text-4xl lg:text-5xl font-medium text-light-green mb-5 text-center",
+        acornMedium.className,
+        className
+      )}
+    >
+      {children}
+    </h2>
+  );
+}

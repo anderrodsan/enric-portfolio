@@ -25,14 +25,14 @@ export default function CTACard({ data }: { data: CTACardType }) {
         <span className="uppercase text-sm text-black">{data.tag}</span>
         <h2
           className={cn(
-            "text-[28px] text-black leading-[120%] tracking-[-0.01em] group-hover:underline transition-all duration-300",
+            "text-2xl lg:text-3xl text-black leading-[120%] tracking-[-0.01em] group-hover:underline transition-all duration-300",
             acornMedium.className
           )}
         >
           {data.title}
         </h2>
       </div>
-      <div className="absolute top-10 left-[350px] md:left-[600px] lg:right-20 min-w-[300px] md:min-w-[400px] h-full">
+      <div className="absolute top-10 left-[300px] md:left-[600px] lg:right-20 min-w-[300px] md:min-w-[400px] h-full">
         <Image
           src={data.image}
           alt={data.title}

@@ -4,6 +4,7 @@ import { ArrowUpRight } from "lucide-react";
 import Image from "next/image";
 import { HeroLinks } from "./hero-links";
 import Link from "next/link";
+import Socials from "@/components/shared/socials";
 
 const METRICS = [
   "+50 projects completed",
@@ -14,9 +15,10 @@ const METRICS = [
 export default function Hero() {
   return (
     <div className="flex flex-col items-center gap-20 px-5 mt-4 lg:mx-20 lg:mt-14 max-w-6xl w-full">
+      <Socials className="absolute top-14 right-20" />
       <HeroTitle />
       <div className="relative flex flex-col items-center justify-center gap-2 lg:gap-[22px] w-full">
-        <div className="relative flex flex-col items-center justify-center max-w-5xl">
+        <div className="relative flex flex-col items-center justify-center max-w-5xl -mt-20 lg:-mt-28 overflow-hidden">
           <Image
             src="/svg/ellipse.svg"
             alt="Hero image"
@@ -29,7 +31,7 @@ export default function Hero() {
             alt="Hero image"
             width={1000}
             height={1000}
-            className="w-full -mt-20 lg:-mt-28"
+            className="w-full"
           />
         </div>
         <div className="lg:absolute bottom-10 w-full flex items-center justify-center pt-3 lg:pt-0">
@@ -99,7 +101,7 @@ function HeroTitle() {
       </div>
       <div className="flex items-center justify-center gap-2 md:gap-[22px] -mt-4">
         <Title className="text-5xl sm:text-6xl lg:text-8xl leading-[1.2]">
-          A Product
+          Product
         </Title>
         <Link href={"/about"} className="group cursor-pointer relative">
           <Title className="text-5xl sm:text-6xl lg:text-8xl leading-[1.2] group-hover:text-[#D094E5] transition-all">

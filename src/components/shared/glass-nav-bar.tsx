@@ -16,6 +16,10 @@ export default function GlassNavBar() {
       path: "/",
     },
     {
+      name: "Hire me",
+      path: "/services",
+    },
+    {
       name: "About",
       path: "/about",
     },
@@ -59,7 +63,7 @@ export default function GlassNavBar() {
         ))}
         <BookMeeting
           title={"Contact"}
-          className="text-[16px] md:text-[20px] px-3 lg:px-5"
+          className="text-[16px] md:text-[20px] px-3 lg:px-5 font-semibold"
         />
       </GlassCard>
     </div>
