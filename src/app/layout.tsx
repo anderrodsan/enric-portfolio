@@ -33,9 +33,9 @@ export default function RootLayout({
           productSansRegular.className
         )}
       >
-        <PageTransition className="flex flex-col items-center w-screen overflow-x-clip">
+        <PageTransition className="flex flex-col items-center justify-between w-screen overflow-x-clip min-h-[100dvh]">
           <GlassNavBar />
-          <main className="min-h-[100vh] w-full">{children}</main>
+          <main className="w-full pt-20 md:pt-0">{children}</main>
           <Footer />
         </PageTransition>
       </body>

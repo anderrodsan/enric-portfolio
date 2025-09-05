@@ -11,9 +11,8 @@ export default function Footer() {
 
   return (
     <footer className="px-5 lg:px-20 py-10 space-y-4 bg-dark-green w-full">
-      <div className="flex flex-col md:flex-row gap-2 justify-center items-center">
-        <span className="hidden md:block">•</span>
-        <p className="text-center text-lg md:text-xl">
+      <div className="flex gap-2 justify-center items-center text-sm md:text-base">
+        <p className="text-center">
           Crafted by{" "}
           <span>
             <Link
@@ -27,7 +26,7 @@ export default function Footer() {
           </span>
         </p>
         <span className="hidden md:block">•</span>
-        <p className="text-center text-lg md:text-xl">
+        <p className="text-center">
           Brought to life by{" "}
           <span>
             <Link
@@ -40,7 +39,7 @@ export default function Footer() {
             </Link>
           </span>
         </p>
-        <p className="text-center text-lg md:text-xl">© 2024</p>
+        <p className="text-center">© 2024</p>
       </div>
     </footer>
   );

@@ -12,7 +12,7 @@ export default function Headline({ className }: { className?: string }) {
         className
       )}
     >
-      <Title className="sm:text-6xl max-w-[12ch] lg:text-7xl lg:max-w-none">
+      <Title className="sm:text-5xl max-w-[12ch] lg:text-7xl lg:max-w-none">
         {SERVICE_HEADLINE.title}
       </Title>
 
@@ -29,14 +29,13 @@ export default function Headline({ className }: { className?: string }) {
         <div className="flex-1 space-y-6 max-w-[60ch] lg:max-w-none">
           <h2
             className={cn(
-              "text-2xl lg:text-4xl leading-[1.2] text-start font-bold text-light-green",
+              "text-3xl lg:text-4xl leading-[1.2] text-start font-bold text-light-green",
               acornRegular.className
             )}
-          >
-            {SERVICE_HEADLINE.subtitle}
-          </h2>
+            dangerouslySetInnerHTML={{ __html: SERVICE_HEADLINE.subtitle }}
+          />
           <p
-            className="text-xl lg:text-2xl"
+            className="text-lg lg:text-2xl"
             dangerouslySetInnerHTML={{ __html: SERVICE_HEADLINE.description }}
           />
         </div>

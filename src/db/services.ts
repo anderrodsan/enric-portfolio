@@ -76,7 +76,7 @@ export const SERVICE_STEPS = [
     description: "Tasks completed within 48 hours.",
   },
   {
-    title: "Tranparent delivery",
+    title: "Transparent delivery",
     description: "No hiring hassle, no long contracts.",
   },
   {

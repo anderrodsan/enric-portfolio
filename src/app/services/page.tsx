@@ -15,14 +15,14 @@ const ctaCardData = {
 export default function About() {
   return (
     <div className="flex flex-col items-center w-[100%]">
-      <div className="flex flex-col items-center gap-10 w-[100%] max-w-6xl py-4 px-5 md:py-14 md:gap-20">
+      <div className="flex flex-col items-center gap-10 w-[100%] max-w-2xl lg:max-w-6xl py-4 px-5 md:py-14 md:gap-20">
         <Headline />
         <ServiceFeatures />
         <FitCheck />
         <ServiceSteps />
         <ServiceFAQ />
 
-        <p className="text-xl max-w-[60ch] text-center py-10">
+        <p className="hidden lg:block text-xl max-w-[60ch] text-center py-10">
           If you made it this far, thank you. This space holds my passion and
           dreams, and having you here means the world. Hope you have an amazing
           day.

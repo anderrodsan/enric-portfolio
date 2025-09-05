@@ -14,11 +14,31 @@ const METRICS = [
 
 export default function Hero() {
   return (
-    <div className="flex flex-col items-center gap-20 px-5 mt-4 lg:mx-20 lg:mt-14 max-w-6xl w-full">
-      <Socials className="absolute top-14 right-20" />
+    <div className="flex flex-col items-center gap-10 md:gap-20 px-5 mt-4 lg:mx-20 lg:mt-14 max-w-6xl w-full">
+      <Socials className="hidden lg:flex absolute top-14 right-20" />
       <HeroTitle />
       <div className="relative flex flex-col items-center justify-center gap-2 lg:gap-[22px] w-full">
-        <div className="relative flex flex-col items-center justify-center max-w-5xl -mt-20 lg:-mt-28 overflow-hidden">
+        <div className="relative md:absolute top-0 left-0 z-10 py-3 lg:py-0 w-full max-w-xl md:w-auto">
+          <Image
+            src="/svg/corner-lines.svg"
+            alt="Hero image"
+            width={1000}
+            height={1000}
+            className="absolute -top-3 -left-3 w-4 lg:w-5"
+          />
+          <GlassCard
+            hoverEffect
+            className="p-6 md:p-8 w-full lg:w-auto"
+            borderRadius="rounded-[28px] md:rounded-[48px]"
+          >
+            <p className="md:max-w-[22ch] text-wrap text-lg lg:text-2xl">
+              I help teams stuck with unclear, slow, or inconsistent design get
+              fast, polished, developer-ready UX/UI without the hassle of hiring
+              full-time.
+            </p>
+          </GlassCard>
+        </div>
+        <div className="relative flex flex-col items-center justify-center max-w-5xl -mt-20 lg:-mt-28 overflow-hidden z-30 md:z-0">
           <Image
             src="/svg/ellipse.svg"
             alt="Hero image"
@@ -34,36 +54,19 @@ export default function Hero() {
             className="w-full"
           />
         </div>
-        <div className="lg:absolute bottom-10 w-full flex items-center justify-center pt-3 lg:pt-0">
+        <div className="md:absolute bottom-10 w-full flex items-center justify-center pt-3 lg:pt-0">
           <HeroLinks />
         </div>
-        <div className="relative lg:absolute top-0 left-0 z-10 py-3 lg:py-0">
-          <Image
-            src="/svg/corner-lines.svg"
-            alt="Hero image"
-            width={1000}
-            height={1000}
-            className="absolute -top-1 -left-1 lg:-top-3 lg:-left-3 w-4 lg:w-5"
-          />
-          <GlassCard
-            className="p-8 w-full lg:w-auto"
-            borderRadius="rounded-[48px]"
-          >
-            <p className="max-w-[22ch] text-wrap text-2xl">
-              I help teams stuck with unclear, slow, or inconsistent design get
-              fast, polished, developer-ready UX/UI without the hassle of hiring
-              full-time.
-            </p>
-          </GlassCard>
-        </div>
-        <div className="lg:absolute top-0 right-0 space-y-3 w-full lg:w-auto">
+
+        <div className="hidden md:block md:absolute top-0 right-0 space-y-3 w-full md:w-auto">
           {METRICS.map((metric) => (
             <GlassCard
               key={metric}
+              hoverEffect
               className="p-[18px] flex flex-col items-center w-full lg:w-auto"
               borderRadius="rounded-[28px]"
             >
-              <span className="text-2xl font-medium text-center w-full">
+              <span className="text-lg lg:text-2xl font-medium text-center w-full">
                 {metric}
               </span>
             </GlassCard>
@@ -81,14 +84,20 @@ function HeroTitle() {
         Hej!
       </span>
       <div className="flex items-center justify-center gap-2 md:gap-[22px]">
-        <Title className="text-5xl sm:text-6xl lg:text-8xl leading-[1.2]">
+        <Title
+          gradient={false}
+          className="text-5xl sm:text-6xl lg:text-8xl leading-[1.2]"
+        >
           I&apos;m
         </Title>
         <Link href={"/about"} className="group cursor-pointer relative">
-          <Title className="text-5xl sm:text-6xl lg:text-8xl leading-[1.2] group-hover:text-[#EFB594] transition-all">
+          <Title
+            gradient={false}
+            className="text-5xl sm:text-6xl lg:text-8xl leading-[1.2] group-hover:text-[#EFB594] transition-all"
+          >
             Enric.
           </Title>
-          <div className="hidden md:block scale-0 group-hover:scale-100 transition-all absolute top-0 left-[45%] transform -translate-y-[20%] group-hover:-translate-y-[72%] opacity-0 group-hover:opacity-100">
+          <div className="hidden lg:block scale-0 group-hover:scale-100 transition-all absolute top-0 left-[45%] transform -translate-y-[20%] group-hover:-translate-y-[72%] opacity-0 group-hover:opacity-100">
             <Image
               src="/images/enric-headshot.png"
               width={100}
@@ -100,11 +109,17 @@ function HeroTitle() {
         </Link>
       </div>
       <div className="flex items-center justify-center gap-2 md:gap-[22px] -mt-4">
-        <Title className="text-5xl sm:text-6xl lg:text-8xl leading-[1.2]">
+        <Title
+          gradient={false}
+          className="text-5xl sm:text-6xl lg:text-8xl leading-[1.2]"
+        >
           Product
         </Title>
         <Link href={"/about"} className="group cursor-pointer relative">
-          <Title className="text-5xl sm:text-6xl lg:text-8xl leading-[1.2] group-hover:text-[#D094E5] transition-all">
+          <Title
+            gradient={false}
+            className="text-5xl sm:text-6xl lg:text-8xl leading-[1.2] group-hover:text-[#D094E5] transition-all"
+          >
             Designer.
           </Title>
 
@@ -113,14 +128,14 @@ function HeroTitle() {
             src="/images/hero-card1.png"
             width={100}
             height={100}
-            className="hidden md:block absolute bottom-5 -right-10 translate-x-[50%] opacity-0 group-hover:opacity-100 translate-y-[0%] group-hover:-translate-y-[50%] rotate-[25deg] group-hover:rotate-0 transition duration-500 rounded-xl z-10 shadow-xl"
+            className="hidden lg:block absolute bottom-5 -right-10 translate-x-[50%] opacity-0 group-hover:opacity-100 translate-y-[0%] group-hover:-translate-y-[50%] rotate-[25deg] group-hover:rotate-0 transition duration-500 rounded-xl z-10 shadow-xl"
           />
           <Image
             alt="project2"
             src="/images/hero-card2.png"
             width={110}
             height={110}
-            className="hidden md:block absolute bottom-5 -right-10 opacity-0 group-hover:opacity-100 -translate-y-[0%] group-hover:-translate-y-[50%] translate-x-[50%] group-hover:translate-x-[70%] rotate-0 group-hover:rotate-[20deg] transition duration-500 delay-200 rounded-xl z-10 shadow-xl"
+            className="hidden lg:block absolute bottom-5 -right-10 opacity-0 group-hover:opacity-100 -translate-y-[0%] group-hover:-translate-y-[50%] translate-x-[50%] group-hover:translate-x-[70%] rotate-0 group-hover:rotate-[20deg] transition duration-500 delay-200 rounded-xl z-10 shadow-xl"
           />
         </Link>
       </div>

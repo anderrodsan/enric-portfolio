@@ -9,33 +9,36 @@ export function CompanyLogos() {
     {
       name: "aalborg-university",
       tag: "Case study",
-      href: "/",
+      href: "/work",
     },
     {
       name: "cantilever",
       tag: "Case study",
-      href: "/",
+      href: "/work",
     },
     {
       name: "eye10",
       tag: "Case study",
-      href: "/",
+      href: "/work",
     },
     {
       name: "milestone-systems",
       tag: "Case study",
-      href: "/",
+      href: "/work",
     },
     {
       name: "national-children-museum",
       tag: "Case study",
-      href: "/",
+      href: "/work",
     },
   ];
   return (
-    <div className="flex flex-wrap justify-center w-full py-12 items-center gap-4 lg:gap-10 px-5 md:px-20 max-w-[1400px]">
+    <div className="flex md:flex-wrap justify-center w-full py-12 items-center gap-2 lg:gap-10 px-5 md:px-20 max-w-[1400px]">
       {LOGOS.map((logo) => (
-        <div className="overflow-hidden h-auto relative pb-5" key={logo.name}>
+        <div
+          className="overflow-hidden h-auto relative pb-5 last:hidden md:last:block scale-[0.8] md:scale-10"
+          key={logo.name}
+        >
           <Image
             key={logo.name}
             src={`/logos/hero/${logo.name}.png`}
@@ -46,21 +49,21 @@ export function CompanyLogos() {
           />
           <Link
             href={logo.href}
-            className={cn("group absolute bottom-0 -right-6 opacity-80")}
+            className={cn("group absolute bottom-0 -right-5 opacity-80")}
           >
-            <div className="group-hover:-translate-x-10 transition-all duration-600 flex items-center gap-2">
+            <div className="group-hover:-translate-x-6 transition-all duration-600 flex items-center gap-2">
               <span
                 className={cn(
-                  "group-hover:underline text-sm tracking-[-0.01em]",
+                  "group-hover:underline underline-offset-4 text-sm tracking-[-0.01em] text-light-green",
                   acornMedium.className
                 )}
               >
                 {logo.tag}
               </span>
               <div
-                className={`flex justify-center items-center gap-2 rounded-full bg-white text-[#5A8F7D] opacity-70`}
+                className={`flex justify-center items-center h-4 aspect-square rounded-full bg-[#D3EDE5] text-[#5A8F7D] opacity-70`}
               >
-                <ArrowUpRight size={16} className="text-background" />
+                <ArrowUpRight size={12} className="text-background" />
               </div>
             </div>
           </Link>

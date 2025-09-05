@@ -20,8 +20,6 @@ function HeroLinkItem({
   href,
   onMouseEnter,
 }: HeroLinkItemProps) {
-  const capitalizedLabel = label.charAt(0).toUpperCase() + label.slice(1);
-
   return (
     <Link
       className={`rounded-full py-2 flex items-center transition-all duration-300 relative cursor-pointer ${
@@ -34,12 +32,12 @@ function HeroLinkItem({
     >
       <p
         className={cn(
-          "text-2xl font-medium whitespace-nowrap font-acorn leading-[100%] tracking-[0.03em] text-center align-middle py-2 px-2",
+          "text-2xl font-medium whitespace-nowrap capitalize font-acorn leading-[100%] tracking-[0.03em] text-center align-middle py-2 px-2",
           isActive && "text-white",
           isActive ? acornMedium.className : acornRegular.className
         )}
       >
-        {capitalizedLabel}
+        {label}
       </p>
       <div
         className={`absolute right-2 flex justify-center items-center gap-2 rounded-full bg-white text-[#5A8F7D] transition-all duration-300 ${
@@ -54,10 +52,61 @@ function HeroLinkItem({
   );
 }
 
+function HeroLinkItemMobile({ label, isActive, href }: HeroLinkItemProps) {
+  return (
+    <Link className="w-full" href={href}>
+      <GlassCard
+        className={cn(
+          "flex justify-center items-center gap-2 w-full h-14",
+          isActive && "bg-[#5A8F7D]"
+        )}
+        borderRadius="rounded-2xl"
+      >
+        <p
+          className={cn(
+            "text-2xl font-medium whitespace-nowrap capitalize font-acorn leading-[100%] tracking-[0.03em] text-center align-middle py-2",
+            acornRegular.className
+          )}
+        >
+          {label}
+        </p>
+        <div
+          className={`flex justify-center items-center p-1 rounded-full bg-white text-[#5A8F7D]`}
+        >
+          <ArrowUpRight size={16} className="text-black/80" strokeWidth={2} />
+        </div>
+      </GlassCard>
+    </Link>
+  );
+}
+
 export function HeroLinks() {
   const [activeItem, setActiveItem] = useState<"portfolio" | "services">(
     "portfolio"
   );
+
+  //check if its mobile screen
+
+  const isMobile = window.innerWidth < 768;
+
+  if (isMobile) {
+    return (
+      <div className="flex flex-col gap-4 w-full">
+        <HeroLinkItemMobile
+          label="portfolio"
+          isActive={activeItem === "portfolio"}
+          onMouseEnter={() => setActiveItem("portfolio")}
+          href="/work"
+        />
+        <HeroLinkItemMobile
+          label="services"
+          isActive={activeItem === "services"}
+          onMouseEnter={() => setActiveItem("services")}
+          href="/services"
+        />
+      </div>
+    );
+  }
 
   return (
     <GlassCard

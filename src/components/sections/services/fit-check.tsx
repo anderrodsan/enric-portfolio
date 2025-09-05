@@ -6,27 +6,25 @@ import {
   SERVICE_RIGHT_FIT,
   SERVICE_WRONG_FIT,
 } from "@/db/services";
-import { acornMedium } from "@/lib/custom-fonts";
-import { cn } from "@/lib/utils";
-import { CircleCheck, CircleX } from "lucide-react";
+import { Check, X } from "lucide-react";
 
 export default function FitCheck() {
   return (
-    <div className="flex flex-col items-center w-full gap-10 py-10">
+    <div className="flex flex-col items-center w-full gap-6 lg:gap-10 py-10">
       <Subtitle>Am I a right fit?</Subtitle>
-      <div className="grid lg:grid-cols-2 lg:grid-rows-1 gap-10">
-        <div className="flex-1 flex row-span-1 h-full items-center">
+      <div className="grid lg:grid-cols-2 lg:grid-rows-1 gap-4 lg:gap-10 w-full">
+        <div className="h-full lg:flex">
           <FeatureCard
             title="This is a great fit for you if:"
             features={SERVICE_RIGHT_FIT}
-            listIcon={CircleCheck}
+            listIcon={Check}
           />
         </div>
-        <div className="flex-1 flex row-span-1 h-full items-center">
+        <div className="h-full lg:flex">
           <FeatureCard
             title="This is a great fit for you if:"
             features={SERVICE_WRONG_FIT}
-            listIcon={CircleX}
+            listIcon={X}
           />
         </div>
       </div>
