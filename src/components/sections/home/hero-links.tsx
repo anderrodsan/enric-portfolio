@@ -64,7 +64,7 @@ function HeroLinkItemMobile({ label, isActive, href }: HeroLinkItemProps) {
       >
         <p
           className={cn(
-            "text-2xl font-medium whitespace-nowrap capitalize font-acorn leading-[100%] tracking-[0.03em] text-center align-middle py-2",
+            "text-xl font-medium whitespace-nowrap capitalize font-acorn leading-[100%] tracking-[0.03em] text-center align-middle py-2",
             acornRegular.className
           )}
         >
@@ -85,13 +85,28 @@ export function HeroLinks() {
     "portfolio"
   );
 
-  //check if its mobile screen
-
-  const isMobile = window.innerWidth < 768;
-
-  if (isMobile) {
-    return (
-      <div className="flex flex-col gap-4 w-full">
+  return (
+    <>
+      <div className="hidden md:block">
+        <GlassCard
+          className="p-2 rounded-full flex gap-4 "
+          borderRadius="rounded-full"
+        >
+          <HeroLinkItem
+            label="portfolio"
+            isActive={activeItem === "portfolio"}
+            onMouseEnter={() => setActiveItem("portfolio")}
+            href="/work"
+          />
+          <HeroLinkItem
+            label="services"
+            isActive={activeItem === "services"}
+            onMouseEnter={() => setActiveItem("services")}
+            href="/services"
+          />
+        </GlassCard>
+      </div>
+      <div className="flex md:hidden flex-col gap-4 w-full">
         <HeroLinkItemMobile
           label="portfolio"
           isActive={activeItem === "portfolio"}
@@ -105,26 +120,6 @@ export function HeroLinks() {
           href="/services"
         />
       </div>
-    );
-  }
-
-  return (
-    <GlassCard
-      className="p-2 rounded-full flex gap-4"
-      borderRadius="rounded-full"
-    >
-      <HeroLinkItem
-        label="portfolio"
-        isActive={activeItem === "portfolio"}
-        onMouseEnter={() => setActiveItem("portfolio")}
-        href="/work"
-      />
-      <HeroLinkItem
-        label="services"
-        isActive={activeItem === "services"}
-        onMouseEnter={() => setActiveItem("services")}
-        href="/services"
-      />
-    </GlassCard>
+    </>
   );
 }

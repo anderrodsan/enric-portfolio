@@ -31,12 +31,11 @@ export default function GlassNavBar() {
   ];
 
   const activePath = usePathname();
-  const isMobile = window.innerWidth < 768;
 
   return (
     <>
       <MobileMenu paths={paths} activePath={activePath} />
-      <div className="hidden sm:block sticky z-50 top-0 py-5 px-8 md:py-6 md:px-20 flex flex-col items-center">
+      <div className="hidden sticky z-50 top-0 py-5 px-8 md:py-6 md:px-20 md:flex flex-col items-center">
         <GlassCard
           className="p-3 flex items-center justify-center gap-2 md:gap-5 rounded-full"
           borderRadius="rounded-full"
