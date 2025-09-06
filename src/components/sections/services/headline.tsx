@@ -12,6 +12,7 @@ export default function Headline({ className }: { className?: string }) {
         className
       )}
     >
+      {/* Main title */}
       <h1
         className={cn(
           "text-3xl md:text-5xl font-bold text-light-green text-balance max-w-[65ch] mb-6 md:mb-8",
@@ -21,6 +22,7 @@ export default function Headline({ className }: { className?: string }) {
         {SERVICE_HEADLINE.title}
       </h1>
 
+      {/* Description */}
       <p
         className="md:text-[20px] max-w-[70ch] mb-12 md:mb-16"
         dangerouslySetInnerHTML={{ __html: SERVICE_HEADLINE.description }}
@@ -37,6 +39,16 @@ export default function Headline({ className }: { className?: string }) {
           className="w-full h-auto"
         />
       </div>
+
+      {/* New section title (farther down, not a video caption) */}
+      <h1
+        className={cn(
+          "text-3xl md:text-5xl font-bold text-light-green text-balance max-w-[65ch] mt-20 md:mt-28",
+          acornRegular.className
+        )}
+      >
+        What’s included in your monthly plan?
+      </h1>
     </div>
   );
 }

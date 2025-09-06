@@ -11,7 +11,7 @@ import { Check, X } from "lucide-react";
 export default function FitCheck() {
   return (
     <div className="flex flex-col items-center w-full max-w-screen-lg mx-auto gap-6 lg:gap-10 py-10">
-      <Subtitle>Am I a right fit?</Subtitle>
+      <Subtitle>Am I the right fit?</Subtitle>
       <div className="grid lg:grid-cols-2 lg:grid-rows-1 gap-4 lg:gap-10 w-full">
         <div className="h-full lg:flex">
           <FeatureCard

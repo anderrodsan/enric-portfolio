@@ -1,3 +1,5 @@
+"use client";
+
 import CTACard from "@/components/shared/cta-card";
 import GlassCard from "@/components/shared/glass-card";
 import Title from "@/components/shared/title";
@@ -37,14 +39,14 @@ export default function Playground() {
       <div className="flex flex-col items-center space-y-12 max-w-4xl mx-auto">
         <Title>Playground</Title>
 
-        {/* Feature List Card - matches your image */}
+        {/* Feature List Card */}
         <GlassCard
           className="w-full max-w-2xl p-8"
           borderRadius="rounded-[48px]"
         >
           <div className="space-y-6">
             <h3 className="text-2xl font-medium text-white leading-relaxed">
-              Your design support includes
+              What’s included in your monthly plan?
             </h3>
             <div className="space-y-4">
               {designSupport.map((feature, index) => (
@@ -60,6 +62,11 @@ export default function Playground() {
             </div>
           </div>
         </GlassCard>
+
+        {/* New section title for CTACards */}
+        <h3 className="text-2xl font-medium text-white leading-relaxed text-center">
+          What’s included in your monthly plan?
+        </h3>
 
         <div className="flex flex-col gap-10 w-full">
           {ctaCards.map((card) => (
