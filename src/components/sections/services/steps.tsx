@@ -7,7 +7,7 @@ import { cn } from "@/lib/utils";
 
 export default function ServiceSteps() {
   return (
-    <div className="flex flex-col items-center w-full gap-6 lg:gap-10">
+    <div className="flex flex-col items-center w-full max-w-screen-lg mx-auto gap-6 lg:gap-10">
       <Subtitle>Simple, transparent & flexible</Subtitle>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-5 w-full">
         {SERVICE_STEPS.map((step, index) => (

@@ -8,7 +8,7 @@ export default function Headline({ className }: { className?: string }) {
   return (
     <div
       className={cn(
-        "flex flex-col items-center w-full gap-10 lg:gap-20",
+        "flex flex-col items-center w-full max-w-screen-lg mx-auto gap-10 lg:gap-20",
         className
       )}
     >
@@ -29,7 +29,8 @@ export default function Headline({ className }: { className?: string }) {
         <div className="flex-1 space-y-6 max-w-[60ch] lg:max-w-none">
           <h2
             className={cn(
-              "text-3xl lg:text-4xl leading-[1.2] text-start font-bold text-light-green",
+              // ⬇ bumped up one size
+              "text-4xl lg:text-5xl leading-[1.2] text-start font-bold text-light-green",
               acornRegular.className
             )}
             dangerouslySetInnerHTML={{ __html: SERVICE_HEADLINE.subtitle }}

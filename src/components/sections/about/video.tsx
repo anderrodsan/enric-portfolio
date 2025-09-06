@@ -5,36 +5,34 @@ import Image from "next/image";
 import React, { useEffect, useRef, useState } from "react";
 
 export default function Video() {
-  const videoRef = useRef(null);
+  // 🔒 Disable the video (set to false to re-enable)
+  const DISABLE_VIDEO = true;
+  if (DISABLE_VIDEO) {
+    return null; // or return a static poster (see alternative below)
+  }
+
+  const videoRef = useRef<HTMLVideoElement | null>(null);
   const [isPlaying, setIsPlaying] = useState(false);
 
   const togglePlay = () => {
-    if (videoRef.current) {
-      if (isPlaying) {
-        videoRef.current.pause();
-      } else {
-        videoRef.current.play();
-      }
-      setIsPlaying(!isPlaying);
+    if (!videoRef.current) return;
+    if (isPlaying) {
+      videoRef.current.pause();
+    } else {
+      videoRef.current.play();
     }
+    setIsPlaying(!isPlaying);
   };
 
   useEffect(() => {
     const video = videoRef.current;
-    if (video) {
-      // Listen for when the video ends
-      video.addEventListener("ended", () => {
-        setIsPlaying(false); // Set isPlaying to false when the video ends
-      });
-    }
+    if (!video) return;
 
-    // Cleanup event listeners
+    const onEnded = () => setIsPlaying(false);
+    video.addEventListener("ended", onEnded);
+
     return () => {
-      if (video) {
-        video.removeEventListener("ended", () => {
-          setIsPlaying(false); // Cleanup the ended listener
-        });
-      }
+      video.removeEventListener("ended", onEnded);
     };
   }, []);
 
@@ -50,17 +48,13 @@ export default function Video() {
           preload="none"
           ref={videoRef}
           className="rounded-[16px] w-full h-full"
-          src="/video/video-presentation.mp4" // Ensure correct path for production
-          poster="/video/video-cover.jpg" // Add a poster image here
-          style={{
-            objectFit: "cover",
-          }}
+          src="/video/video-presentation.mp4"
+          poster="/video/video-cover.jpg"
+          style={{ objectFit: "cover" }}
         />
         <button
           onClick={togglePlay}
-          className={
-            "transition duration-300 absolute top-5 left-5 z-20 group-hover:scale-110 group-hover:opacity-100 opacity-70"
-          }
+          className="transition duration-300 absolute top-5 left-5 z-20 group-hover:scale-110 group-hover:opacity-100 opacity-70"
         >
           {isPlaying ? (
             <Pause fill="white" className="w-7 h-7 text-white" />

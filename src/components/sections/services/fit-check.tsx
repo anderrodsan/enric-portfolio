@@ -10,7 +10,7 @@ import { Check, X } from "lucide-react";
 
 export default function FitCheck() {
   return (
-    <div className="flex flex-col items-center w-full gap-6 lg:gap-10 py-10">
+    <div className="flex flex-col items-center w-full max-w-screen-lg mx-auto gap-6 lg:gap-10 py-10">
       <Subtitle>Am I a right fit?</Subtitle>
       <div className="grid lg:grid-cols-2 lg:grid-rows-1 gap-4 lg:gap-10 w-full">
         <div className="h-full lg:flex">
@@ -22,7 +22,7 @@ export default function FitCheck() {
         </div>
         <div className="h-full lg:flex">
           <FeatureCard
-            title="This is a great fit for you if:"
+            title="This is not a great fit for you if:"
             features={SERVICE_WRONG_FIT}
             listIcon={X}
           />

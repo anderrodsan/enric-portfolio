@@ -10,7 +10,7 @@ import { Check } from "lucide-react";
 
 export default function ServiceFeatures() {
   return (
-    <div className="flex flex-col items-center w-full gap-6 lg:gap-10">
+    <div className="flex flex-col items-center w-full max-w-screen-lg mx-auto gap-6 lg:gap-10">
       <div className="flex flex-col gap-4 lg:flex-row items-center w-full lg:gap-10">
         <div className="flex-1 w-full lg:w-auto">
           <FeatureCard

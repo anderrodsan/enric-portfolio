@@ -1,9 +1,9 @@
 export const SERVICE_HEADLINE = {
   title: "Design support. Monthly plan.",
   subtitle:
-    "I'll take care of your product&apos;s design needs. So you can focus on what matters.",
+    "I handle your product design so you can focus on what matters.",
   description:
-    "For <b>12,000 DKK per month</b>, get up to <b>20 hours</b> of expert product, UX, and UI design. We&apos;ll start with a <b>free discovery call</b> to set priorities, then focus on what matters most each month.",
+    "For 12,000 DKK/month, get up to 20 hours of expert product, UX & UI design. Start with a free discovery call to set priorities, then focus on what matters each month.",
 };
 
 export const SERVICE_FEATURES_DESIGN_SUPPORT = [
