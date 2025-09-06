@@ -9,7 +9,7 @@ export default function Intro() {
       {/** Image with rounded top corners */}
       <div className="relative block rounded-full overflow-hidden aspect-square h-[210px] md:h-[310px]">
         <Image
-          src="/images/enric-headshot.png"
+          src="/images/newenric1.png"
           alt="profile"
           width={500}
           height={500}

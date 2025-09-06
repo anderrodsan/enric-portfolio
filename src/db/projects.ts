@@ -63,23 +63,22 @@ export const projects = [
     type: "phone",
     color: "light-blue",
   },
-];
-
-export const currentProjects = [
+  // 👇 New project 1
   {
-    id: 5,
-    title: "UX Design",
-    description: "Lorem Ipsum",
+    id: 9,
+    title: "Accessibility Audit",
+    description: "Improving web accessibility for all users.",
     image: "https://via.placeholder.com/150",
     type: "browser",
-    color: "black",
+    color: "light-yellow",
   },
+  // 👇 New project 2
   {
-    id: 6,
-    title: "Design System",
-    description: "Lorem Ipsum",
+    id: 10,
+    title: "E-commerce Redesign",
+    description: "Redesigned checkout flow to increase conversions.",
     image: "https://via.placeholder.com/150",
-    type: "phone",
-    color: "white",
+    type: "mac",
+    color: "light-purple",
   },
 ];

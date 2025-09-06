@@ -2,9 +2,18 @@ import { Experience } from "@/lib/types";
 
 export const experience: Experience[] = [
   {
+    id: 0,
+    title: "Product Designer",
+    type: "Full-time",
+    company: "Klikko",
+    logo: "/images/logos/cantilever.png",
+    startDate: "March 24",
+    endDate: null,
+  },
+  {
     id: 1,
     title: "UX Designer & Project Manager",
-    type: "Full-time",
+    type: "Freelance",
     company: "Cantilever: Websites & Product Design",
     logo: "/images/logos/cantilever.png",
     startDate: "Jan 22",
