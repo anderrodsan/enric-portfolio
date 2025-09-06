@@ -38,14 +38,23 @@ export default function Hero() {
             </p>
           </GlassCard>
         </div>
+
         <div className="relative flex flex-col items-center justify-center max-w-5xl -mt-20 lg:-mt-28 overflow-hidden z-30 md:z-0">
-          <Image
-            src="/svg/ellipse.svg"
-            alt="Hero image"
-            width={1000}
-            height={1000}
+          {/* Updated ellipse with custom color #17241F */}
+          <svg
+            width="813"
+            height="406"
+            viewBox="0 0 813 406"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
             className="absolute bottom-0 lg:w-[90%] z-[-1]"
-          />
+          >
+            <path
+              d="M812.673 406C542.08 406 271.487 406 0.894409 406C0.894409 181.833 182.617 0.110596 406.784 0.110596C630.95 0.110596 812.673 181.833 812.673 406Z"
+              fill="#17241F"
+            />
+          </svg>
+
           <Image
             src="/images/enric-without-background.png"
             alt="Hero image"
@@ -54,6 +63,7 @@ export default function Hero() {
             className="w-full"
           />
         </div>
+
         <div className="md:absolute bottom-10 w-full flex items-center justify-center pt-3 lg:pt-0">
           <HeroLinks />
         </div>

@@ -1,5 +1,5 @@
 export const SERVICE_HEADLINE = {
-  title: "Design support. Monthly plan.",
+  title: "I handle your product design, so you can focus on what matters.",
   subtitle:
     "I handle your product design so you can focus on what matters.",
   description:
@@ -36,11 +36,11 @@ export const SERVICE_FEATURES_BENEFITS = [
 ];
 
 export const SERVICE_FEATURES_CTA_CARD = {
-  title: "Join the evolution of creativity with our AI-powered art gallery",
+  title: "Building a Scalable Design System for an SEO SaaS Platform",
   tag: "Case study",
   color: "light-green",
   image: "/mockups/browser.png",
-  href: "/services",
+  href: "/work",
 };
 
 export const SERVICE_RIGHT_FIT = [
@@ -59,11 +59,11 @@ export const SERVICE_WRONG_FIT = [
 ];
 
 export const SERVICE_FIT_CTA_CARD = {
-  title: "Join the evolution of creativity with our AI-powered art gallery",
+  title: "Chatform: Designing an AI-Powered Help Desk MVP",
   tag: "Case study",
   color: "light-pink",
   image: "/mockups/browser.png",
-  href: "/services",
+  href: "/work",
 };
 
 export const SERVICE_STEPS = [
@@ -86,11 +86,11 @@ export const SERVICE_STEPS = [
 ];
 
 export const SERVICE_STEPS_CTA_CARD = {
-  title: "Join the evolution of creativity with our AI-powered art gallery",
+  title: "From Concept to MVP: UX/UI Design for an AI Audio Generation",
   tag: "Case study",
   color: "light-orange",
   image: "/mockups/browser.png",
-  href: "/services",
+  href: "/work",
 };
 
 export const FAQ = [

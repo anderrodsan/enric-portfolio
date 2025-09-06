@@ -8,38 +8,37 @@ export default function Headline({ className }: { className?: string }) {
   return (
     <div
       className={cn(
-        "flex flex-col items-center w-full max-w-screen-lg mx-auto gap-10 lg:gap-20",
+        "flex flex-col lg:flex-row gap-5 lg:gap-16 items-center md:items-start w-full max-w-screen-lg mx-auto",
         className
       )}
     >
-      <Title className="sm:text-5xl max-w-[12ch] lg:text-7xl lg:max-w-none">
-        {SERVICE_HEADLINE.title}
-      </Title>
+      {/* Image block */}
+      <div className="relative block rounded-full overflow-hidden aspect-square h-[210px] md:h-[310px]">
+        <Image
+          src="/images/enric-headshot.png"
+          alt="profile"
+          width={500}
+          height={500}
+          style={{ objectFit: "cover", height: "115%" }}
+          className="h-full w-full"
+        />
+      </div>
 
-      <div className="flex flex-col lg:flex-row items-center justify-center w-full gap-10">
-        <div className="group relative rounded-full bg-[#5A8F7D] hover:bg-[#D094E5] h-60 aspect-square overflow-hidden transition-all duration-1000">
-          <Image
-            src="/images/enric-without-background.png"
-            alt="Hero image"
-            width={1000}
-            height={1000}
-            className="absolute inset-0 top-4 -left-2 h-full w-auto object-cover scale-125 group-hover:-translate-y-2 group-hover:scale-[1.3] transition-all duration-1000"
-          />
-        </div>
-        <div className="flex-1 space-y-6 max-w-[60ch] lg:max-w-none">
-          <h2
-            className={cn(
-              // ⬇ bumped up one size
-              "text-4xl lg:text-5xl leading-[1.2] text-start font-bold text-light-green",
-              acornRegular.className
-            )}
-            dangerouslySetInnerHTML={{ __html: SERVICE_HEADLINE.subtitle }}
-          />
-          <p
-            className="text-lg lg:text-2xl"
-            dangerouslySetInnerHTML={{ __html: SERVICE_HEADLINE.description }}
-          />
-        </div>
+      {/* Text block */}
+      <div className="flex-1">
+        <h1
+          className={cn(
+            "text-3xl md:text-5xl font-bold text-light-green text-balance max-w-[65ch] pb-5 md:pb-10",
+            acornRegular.className
+          )}
+        >
+          {SERVICE_HEADLINE.title}
+        </h1>
+
+        <p
+          className="md:text-[20px] pb-[14px] max-w-[70ch]"
+          dangerouslySetInnerHTML={{ __html: SERVICE_HEADLINE.description }}
+        />
       </div>
     </div>
   );
