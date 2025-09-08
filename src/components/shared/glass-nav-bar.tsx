@@ -15,8 +15,9 @@ export default function GlassNavBar() {
     { name: "Home", path: "/" },
     { name: "Hire me", path: "/services" },
     { name: "About", path: "/about" },
-    { name: "Work", path: "/work" },
-    { name: "Contact", path: "/contact" }, // keep for mobile
+    { name: "Case Studies", path: "/work" },
+    { name: "Work Bites", path: "/bites" }, // 👈 Added Bites
+    { name: "Contact", path: "/contact" }, // kept for mobile
   ];
 
   // Remove "Contact" from desktop nav to avoid duplication with BookMeeting
@@ -30,13 +31,13 @@ export default function GlassNavBar() {
       <MobileMenu paths={paths} activePath={activePath} />
 
       {/* Desktop */}
-      <div className="hidden sticky z-50 top-0 py-5 px-8 md:py-6 md:px-20 md:flex flex-col items-center">
+      <div className="hidden sticky z-50 top-0 py-4 px-6 md:py-5 md:px-16 md:flex flex-col items-center">
         <GlassCard
-          className="p-3 flex items-center justify-center gap-2 md:gap-5 rounded-full"
+          className="py-3 px-3 flex items-center justify-center gap-3 rounded-full" // ⬅️ Extra top/bottom padding only
           borderRadius="rounded-full"
         >
           {desktopPaths.map((path, index) => (
-            <Link href={path.path} key={path.name} className="relative py-1">
+            <Link href={path.path} key={path.name} className="relative">
               {activePath === path.path && (
                 <motion.div
                   layoutId="active-link"
@@ -45,15 +46,17 @@ export default function GlassNavBar() {
               )}
               <div
                 className={cn(
-                  "relative flex items-center justify-center gap-2 py-[6px] rounded-full",
-                  activePath === path.path ? "px-5 lg:px-6" : "px-3 lg:px-5"
+                  "relative flex items-center justify-center gap-2 rounded-full transition-colors",
+                  activePath === path.path
+                    ? "px-3 lg:px-4 py-1.5"
+                    : "px-2.5 lg:px-3.5 py-1"
                 )}
               >
                 <p className="text-[16px] md:text-[20px] font-semibold">
                   {path.name}
                 </p>
                 {index === 0 && (
-                  <SlashSquare className="text-light-green h-4 w-4 md:h-[22px] md:w-[22px]" />
+                  <SlashSquare className="text-light-green h-4 w-4 md:h-[20px] md:w-[20px]" />
                 )}
               </div>
             </Link>
@@ -62,7 +65,7 @@ export default function GlassNavBar() {
           {/* Desktop-only Contact action */}
           <BookMeeting
             title="Contact"
-            className="text-[16px] md:text-[20px] px-3 lg:px-5 font-semibold"
+            className="text-[16px] md:text-[20px] px-2.5 lg:px-3.5 py-1 font-semibold"
           />
         </GlassCard>
       </div>

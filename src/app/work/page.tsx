@@ -13,7 +13,7 @@ export default function Projects() {
           gradient={false}
           className="text-5xl sm:text-6xl md:text-7xl leading-[1.2] text-center"
         >
-          My work.
+          Case Studies.
         </Title>
         <p className="text-[18px] sm:text-[20px] md:text-[23px] leading-[22px] sm:leading-[30px] md:leading-[35px] text-center md:text-balance w-full">
           Solving problems. From real companies.
