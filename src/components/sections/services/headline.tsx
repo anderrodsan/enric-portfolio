@@ -3,8 +3,15 @@
 import { SERVICE_HEADLINE } from "@/db/services";
 import { acornRegular } from "@/lib/custom-fonts";
 import { cn } from "@/lib/utils";
+import { useMemo } from "react";
 
 export default function Headline({ className }: { className?: string }) {
+  // 🎥 Pick a random video between 1–7 on mount
+  const randomVideo = useMemo(() => {
+    const index = Math.floor(Math.random() * 7) + 1; // 1 → 7
+    return `/video/video${index}.mp4`;
+  }, []);
+
   return (
     <div
       className={cn(
@@ -31,7 +38,8 @@ export default function Headline({ className }: { className?: string }) {
       {/* Video block */}
       <div className="w-full rounded-2xl overflow-hidden shadow-md">
         <video
-          src="/images/banking.mp4"
+          key={randomVideo} // ensures it reloads properly
+          src={randomVideo}
           autoPlay
           loop
           muted
@@ -40,7 +48,7 @@ export default function Headline({ className }: { className?: string }) {
         />
       </div>
 
-      {/* New section title (farther down, not a video caption) */}
+      {/* New section title (not a caption) */}
       <h1
         className={cn(
           "text-3xl md:text-5xl font-bold text-light-green text-balance max-w-[65ch] mt-20 md:mt-28",
