@@ -96,7 +96,7 @@ export default function BitesPage() {
         </p>
       </div>
 
-      {/* Grid: 2 items per row */}
+      {/* Grid: 1 col on mobile, 2 cols on small+ */}
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 px-5 md:px-20 w-full max-w-[1600px]">
         {ordered.map((item) =>
           item.type === "video" ? (
@@ -109,7 +109,9 @@ export default function BitesPage() {
               muted
               loop
               playsInline
-              className="w-full h-[500px] object-cover rounded-xl shadow-lg"
+              // Mobile: smaller height + contain so nothing gets cropped
+              // Tablet/Desktop: larger height + cover for a tight crop
+              className="w-full h-[260px] sm:h-[320px] md:h-[400px] lg:h-[500px] object-contain md:object-cover object-center rounded-xl shadow-lg bg-black"
             />
           ) : (
             // eslint-disable-next-line @next/next/no-img-element
@@ -118,7 +120,7 @@ export default function BitesPage() {
               src={item.src}
               alt={`Bite ${item.id}`}
               loading="lazy"
-              className="w-full h-[500px] object-cover rounded-xl shadow-lg"
+              className="w-full h-[260px] sm:h-[320px] md:h-[400px] lg:h-[500px] object-contain md:object-cover object-center rounded-xl shadow-lg bg-black"
             />
           )
         )}
