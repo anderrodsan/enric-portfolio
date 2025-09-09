@@ -89,10 +89,10 @@ export default function BitesPage() {
           gradient={false}
           className="text-5xl sm:text-6xl md:text-7xl leading-[1.2] text-center"
         >
-          Bites.
+          Snapshots.
         </Title>
         <p className="text-[18px] sm:text-[20px] md:text-[23px] text-center">
-          Mixed between <span className="font-semibold">videos and images</span> — new order each time you load the page.
+        A living gallery of my craft. Scroll, wander, and discover my work in motion.
         </p>
       </div>
 

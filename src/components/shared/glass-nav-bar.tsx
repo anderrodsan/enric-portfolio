@@ -13,16 +13,15 @@ import MobileMenu from "./mobile-menu";
 export default function GlassNavBar() {
   const paths = [
     { name: "Home", path: "/" },
-    { name: "Hire me", path: "/services" },
     { name: "About", path: "/about" },
-    { name: "Case Studies", path: "/work" },
-    { name: "Work Bites", path: "/bites" }, // 👈 Added Bites
+    { name: "Services", path: "/services" },
+    { name: "Portfolio", path: "/work" },
+    { name: "Snapshots", path: "/bites" },
     { name: "Contact", path: "/contact" }, // kept for mobile
   ];
 
   // Remove "Contact" from desktop nav to avoid duplication with BookMeeting
   const desktopPaths = paths.filter((p) => p.name !== "Contact");
-
   const activePath = usePathname();
 
   return (
@@ -33,7 +32,7 @@ export default function GlassNavBar() {
       {/* Desktop */}
       <div className="hidden sticky z-50 top-0 py-4 px-6 md:py-5 md:px-16 md:flex flex-col items-center">
         <GlassCard
-          className="py-3 px-3 flex items-center justify-center gap-3 rounded-full" // ⬅️ Extra top/bottom padding only
+          className="py-3 px-3 flex items-center justify-center gap-3 rounded-full"
           borderRadius="rounded-full"
         >
           {desktopPaths.map((path, index) => (
