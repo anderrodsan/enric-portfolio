@@ -40,7 +40,7 @@ export const SERVICE_FEATURES_CTA_CARD = {
   tag: "Case study",
   color: "light-green",
   image: "/mockups/browser.png",
-  href: "/work",
+  href: "/work/designsystemseo",
 };
 
 export const SERVICE_RIGHT_FIT = [
@@ -63,7 +63,7 @@ export const SERVICE_FIT_CTA_CARD = {
   tag: "Case study",
   color: "light-pink",
   image: "/mockups/browser.png",
-  href: "/work",
+  href: "/work/chatform",
 };
 
 export const SERVICE_STEPS = [
@@ -90,7 +90,7 @@ export const SERVICE_STEPS_CTA_CARD = {
   tag: "Case study",
   color: "light-orange",
   image: "/mockups/browser.png",
-  href: "/work",
+  href: "/work/aiaudio",
 };
 
 export const FAQ = [

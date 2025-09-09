@@ -24,7 +24,8 @@ function IntroSection({
     <div
       className={cn(
         "grid gap-6 lg:gap-16 w-full lg:grid-cols-2 lg:items-stretch",
-        reverse && "lg:[&>*:first-child]:col-start-2 lg:[&>*:last-child]:col-start-1"
+        reverse &&
+          "lg:[&>*:first-child]:col-start-2 lg:[&>*:last-child]:col-start-1"
       )}
     >
       {/* Image column */}
@@ -72,30 +73,7 @@ function IntroSection({
 export default function Intro() {
   return (
     <div className="flex flex-col gap-16 w-full">
-      {/* Row 1: image left, text right */}
-      <IntroSection
-        imageSrc="/images/newenric1.png"
-        imageAlt="Enric portrait 1"
-        imageLabel="Exploring product direction, early sketches → wireframes"
-        title="I'm a Product Designer based in Copenhagen."
-        paragraphs={[
-          "I am passionate about solving problems with design and technology and transforming new ideas into meaningful results.",
-          "I enjoy working together with smart, creative, international, and passionate people determined to achieve more than required and challenge the status quo.",
-        ]}
-      />
-
-      {/* Row 2: image right, text left */}
-      <IntroSection
-        reverse
-        imageSrc="/images/newenric1.png" // 🔁 can be changed later to another image
-        imageAlt="Enric portrait 2"
-        imageLabel="From discovery to delivery — pragmatic, outcome-driven"
-        title="I bridge creativity with strategy."
-        paragraphs={[
-          "With a background in UX and product design, I bring a structured approach to creating intuitive and impactful user experiences.",
-          "My work is driven by curiosity and the belief that thoughtful design can shape better digital products for people everywhere.",
-        ]}
-      />
+      {/* Currently no IntroSections are rendered */}
     </div>
   );
 }
