@@ -1,108 +1,88 @@
+// src/components/sections/about/intro.tsx
+"use client";
+
 import { acornRegular } from "@/lib/custom-fonts";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
 import React from "react";
 
-type SectionProps = {
-  title: string;
-  paragraphs: string[];
-  imageLabel?: string;
-  reverse?: boolean;          // image on the right when true (lg+)
-  imageSrc?: string;          // optional: set a custom image path (e.g. "/images/myphoto.jpg")
-  imageAlt?: string;          // optional alt text
-};
-
-// Default placeholders (replace these filenames with any you like inside /public/images)
-const DEFAULT_LEFT_PLACEHOLDER = "/images/newenric1.png";
-const DEFAULT_RIGHT_PLACEHOLDER = "/images/newenric1.png";
-
-function IntroSection({
-  title,
-  paragraphs,
-  imageLabel = "",
-  reverse = false,
-  imageSrc,
-  imageAlt = "Section image",
-}: SectionProps) {
-  const resolvedImageSrc =
-    imageSrc ?? (reverse ? DEFAULT_RIGHT_PLACEHOLDER : DEFAULT_LEFT_PLACEHOLDER);
-
+export default function Intro() {
   return (
-    <div
-      className={cn(
-        "grid gap-6 lg:gap-16 w-full lg:grid-cols-2 lg:items-stretch",
-        reverse &&
-          "lg:[&>*:first-child]:col-start-2 lg:[&>*:last-child]:col-start-1"
-      )}
-    >
-      {/* Image column */}
-      <div className="group relative w-full overflow-hidden rounded-2xl shadow-lg aspect-[4/3] md:aspect-[16/10]">
+    <div className="flex flex-col gap-16 w-full">
+      {/* Chunk 1 — text only, horizontal on md+ */}
+      <div className="flex flex-col md:flex-row items-start justify-between gap-6 md:gap-12">
+        <h1
+          className={cn(
+            "text-3xl md:text-5xl font-bold text-light-green md:w-1/2",
+            acornRegular.className
+          )}
+        >
+          I&apos;m a Product Designer based in Copenhagen.
+        </h1>
+        <div className="flex flex-col gap-4 md:w-1/2">
+          <p className="md:text-[20px]">
+            I am passionate about solving problems with design and technology and
+            transforming new ideas into meaningful results.
+          </p>
+          <p className="md:text-[20px]">
+            I enjoy working together with smart, creative, international, and
+            passionate people determined to achieve more than required and challenge
+            the status quo.
+          </p>
+        </div>
+      </div>
+
+      {/* Full-width image between chunks with hover/focus overlay */}
+      <div
+        className="group relative w-full rounded-2xl overflow-hidden shadow-lg aspect-[16/9] md:aspect-[21/9] outline-none"
+        tabIndex={0} // enables keyboard focus to reveal overlay
+        aria-label="Enric portrait with additional information on hover"
+      >
         <Image
-          src={resolvedImageSrc}
-          alt={imageAlt}
+          src="/images/uganda.jpeg"
+          alt="Enric portrait"
           fill
-          sizes="(min-width: 1024px) 50vw, 100vw"
+          sizes="100vw"
           className="object-cover"
           priority={false}
         />
 
-        {/* Hover/touch overlay label */}
-        <div className="pointer-events-none absolute inset-0 transition-opacity duration-300 opacity-100 md:opacity-0 md:group-hover:opacity-100">
-          <div className="absolute inset-0 bg-black/20" />
-          <div className="absolute inset-x-0 bottom-0 p-4">
-            <div className="rounded-xl bg-black/60 backdrop-blur-sm px-3 py-2 text-white text-sm md:text-base">
-              {imageLabel}
+        {/* Overlay (appears on hover or keyboard focus) */}
+        <div className="pointer-events-none absolute inset-0 bg-black/80 opacity-0 transition-opacity duration-300 group-hover:opacity-100 group-focus:opacity-100">
+          <div className="absolute inset-0 flex items-center justify-center px-6">
+            <div className="max-w-[70ch] text-center text-white">
+              <h3 className="text-xl md:text-2xl font-semibold mb-3">
+              Research in Gulu, Uganda
+              </h3>
+              <p className="text-sm md:text-base leading-relaxed">
+              In Gulu, I helped improve Master’s programs through workshops and
+        hybrid teaching methods. This experience showed me how empathy and
+        human-centered design make technology meaningful by addressing real
+        human needs.
+              </p>
             </div>
           </div>
         </div>
       </div>
 
-      {/* Text column */}
-      <div className="flex flex-col justify-center">
+      {/* Chunk 2 — text only, horizontal on md+ */}
+      <div className="flex flex-col md:flex-row items-start justify-between gap-6 md:gap-12">
         <h1
           className={cn(
-            "text-3xl md:text-5xl font-bold text-light-green text-balance max-w-[65ch] pb-5 md:pb-10",
+            "text-3xl md:text-5xl font-bold text-light-green md:w-1/2",
             acornRegular.className
           )}
         >
-          {title}
+          Building meaningful products together
         </h1>
-        {paragraphs.map((p, i) => (
-          <p key={i} className="md:text-[20px] pb-[14px]">
-            {p}
+        <div className="md:w-1/2">
+          <p className="md:text-[20px]">
+            For me, design is about people — the clarity it brings and the ease it adds
+            to daily life. I value empathy, honesty, and collaboration, and believe the
+            best work stays open, adaptable, and grounded in real human needs.
           </p>
-        ))}
+        </div>
       </div>
-    </div>
-  );
-}
-
-export default function Intro() {
-  return (
-    <div className="flex flex-col gap-16 w-full">
-      {/* Row 1 */}
-      <IntroSection
-        imageSrc="/images/newenric1.png"
-        imageAlt="Enric portrait"
-        imageLabel="Exploring product direction, early sketches → wireframes"
-        title="I'm a Product Designer based in Copenhagen."
-        paragraphs={[
-          "I am passionate about solving problems with design and technology and transforming new ideas into meaningful results.",
-          "I enjoy working together with smart, creative, international, and passionate people determined to achieve more than required and challenge the status quo.",
-        ]}
-      />
-
-      {/* Row 2 (duplicate of Row 1) */}
-      <IntroSection
-        imageSrc="/images/newenric1.png"
-        imageAlt="Enric portrait"
-        imageLabel="Exploring product direction, early sketches → wireframes"
-        title="I'm a Product Designer based in Copenhagen."
-        paragraphs={[
-          "I am passionate about solving problems with design and technology and transforming new ideas into meaningful results.",
-          "I enjoy working together with smart, creative, international, and passionate people determined to achieve more than required and challenge the status quo.",
-        ]}
-      />
     </div>
   );
 }
