@@ -17,7 +17,7 @@ export default function Intro() {
             acornRegular.className
           )}
         >
-          I&apos;m a Product Designer based in Copenhagen.
+          I&apos;m a Designer based in Copenhagen.
         </h1>
         <div className="flex flex-col gap-4 md:w-1/2">
           <p className="md:text-[20px]">
@@ -73,7 +73,7 @@ export default function Intro() {
             acornRegular.className
           )}
         >
-          Building meaningful products together
+          Focused on Human-Centered Design.
         </h1>
         <div className="md:w-1/2">
           <p className="md:text-[20px]">

@@ -61,7 +61,7 @@ export const SERVICE_FIT_CTA_CARD: Card = {
 export const SERVICE_STEPS: Benefit[] = [
   { title: "Monthly planning", description: "Focus on what matters." },
   { title: "Discovery call", description: "Tasks completed within 48 hours." },
-  { title: "Transparent delivery", description: "No hiring hassle, no long contracts." },
+  { title: "Transparent", description: "No hiring hassle, no long contracts." },
   { title: "Ongoing review", description: "From audits to dev handoffs." },
 ];
 
