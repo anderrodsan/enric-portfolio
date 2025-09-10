@@ -29,10 +29,9 @@ export default function HorizontalHeadline() {
         </h2>
 
         <p className="text-[18px] md:text-[20px] max-w-[70ch]">
-          For <span className="font-semibold">12,000 DKK/month</span>, get up to
-          20 hours of expert product, UX &amp; UI design. <br />
-          Start with a free discovery call to set priorities, then focus on what
-          matters each month.
+          Starting at <span className="font-semibold">6,000 DKK/month</span>, get up to
+          <span className="font-semibold"> 10 hours</span> of expert product, UX &amp; UI design. <br />
+          Perfect for startups who need design help without the commitment of a full-time hire.
         </p>
       </div>
     </div>

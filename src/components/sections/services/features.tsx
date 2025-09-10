@@ -14,7 +14,7 @@ export default function ServiceFeatures() {
       <div className="flex flex-col gap-4 lg:flex-row items-center w-full lg:gap-10">
         <div className="flex-1 w-full lg:w-auto">
           <FeatureCard
-            title="Your design support includes"
+            title="What you get each month"
             features={SERVICE_FEATURES_DESIGN_SUPPORT}
             listIcon={Check}
           />
