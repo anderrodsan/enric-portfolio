@@ -3,13 +3,12 @@ import BentoItem from "./bento-item";
 import { Project } from "@/lib/types";
 import { cn } from "@/lib/utils";
 
-export default function BentoGrid({
-  projects,
-  className,
-}: {
-  projects: any;
+interface BentoGridProps {
+  projects: Project[];
   className?: string;
-}) {
+}
+
+export default function BentoGrid({ projects, className }: BentoGridProps) {
   return (
     <div
       className={cn(
@@ -17,7 +16,7 @@ export default function BentoGrid({
         className
       )}
     >
-      {projects.map((project: Project, idx: number) => (
+      {projects.map((project, idx) => (
         <BentoItem key={idx} data={project} />
       ))}
     </div>

@@ -31,7 +31,7 @@ export const SERVICE_FEATURES_CTA_CARD: Card = {
   title: "Building a Scalable Design System for an SEO SaaS Platform",
   tag: "Case study",
   color: "light-green",
-  image: "/mockups/browser.png",
+  image: "/images/seosaas.png",
   href: "/work/designsystemseo",
 };
 
@@ -54,7 +54,7 @@ export const SERVICE_FIT_CTA_CARD: Card = {
   title: "Chatform: Designing an AI-Powered Help Desk MVP",
   tag: "Case study",
   color: "light-pink",
-  image: "/mockups/browser.png",
+  image: "/images/chat1.png",
   href: "/work/chatform",
 };
 
@@ -69,7 +69,7 @@ export const SERVICE_STEPS_CTA_CARD: Card = {
   title: "From Concept to MVP: UX/UI Design for an AI Audio Generation",
   tag: "Case study",
   color: "light-orange",
-  image: "/mockups/browser.png",
+  image: "/images/fisheye.png",
   href: "/work/aiaudio",
 };
 
