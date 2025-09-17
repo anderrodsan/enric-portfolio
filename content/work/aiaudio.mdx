@@ -13,141 +13,99 @@ finished: "true"
 ---
 
 <FullWidthImage
-  src="/images/fisheye.png"
+  src="/images/fish1.png"
   alt="Element Bolt Dashboard Interface"
 />
 
-# Overview.
+# Overview #
+Fish Audio is a cutting-edge platform for text-to-speech (TTS) and conversational AI. The goal was to design a user-friendly, web-based MVP that would make advanced AI audio creation accessible to a wide audience, from developers building voice apps to creators producing audiobooks, marketing assets, or multilingual content.
 
-In preparation for Neurent Medical’s Gen 3 product launch, I created a foundational wireframe design system in Figma. This system was designed with scalability, accessibility, and seamless developer handoff in mind, providing a streamlined, component-based approach to support Neurent’s dual-audience needs across both the patient and healthcare provider (HCP) journeys.
+# Project Goals #
 
-The design system’s wireframe setup will serve as the blueprint for Neurent’s website by providing a consistent and efficient structure. The focus here was on creating reusable, responsive components and a well-documented system that enables a seamless transition to high-fidelity design and development.
+Build an MVP that showcases the potential of AI audio creation.
+Create a scalable platform with intuitive workflows and clear navigation.
+Differentiate the product visually and experientially in a competitive space.
+Support both end-users (content creators) and developers (API integration).
 
-# The challenge.
+# The Challenge # 
 
-The original Handi-Lift website was outdated, heavy, and no longer reflected the evolving needs of the company or its users. Recent user feedback and site diagnostics revealed the following key issues:
+New Industry: AI audio generation is emerging, with fast-moving competitors.
+Differentiation: Identifying a USP and translating it into UX and visuals.
+Complexity: Balancing technical features (API, privacy controls) with simplicity and accessibility for non-technical users.
 
-## Problem:
-Neurent’s current dual-site structure is divided between patient and provider audiences, creating a fragmented experience. This redesign aimed to consolidate their online presence while adhering to accessibility and regulatory standards for healthcare.
+# My Role #
+I led the design process from research through high-fidelity prototypes. My responsibilities included:
+Conducting competitive research and mapping user flows.
+Designing wireframes and interactive prototypes.
+Developing a distinct UI style with custom icons and illustrations.
+Partnering with developers to ensure accurate implementation.
 
-## Project Goal:
-Delop a comprehensive, reusable wireframe design system in Figma, laying a scalable foundation for the new site. By setting up advanced wireframes with robust components, I ensured the design system would streamline future design work, reduce development time, and provide a cohesive, accessible experience across devices.
+# Project Management & Organization #
+We ran the project as a design-first MVP sprint, working in close alignment with the product team.
+Stakeholder Alignment: Held early workshops to define the core user journeys (voice model creation, API use, discovery features).
+Workflows: Mapped features into phased deliverables—starting with essential voice model and API management, then adding engagement features like leaderboards and profiles.
 
-## My role:
-As the UX Designer, I established the entire design system within Figma, leveraging best practices to ensure modularity, accessibility, and efficient developer handoff. This setup included establishing foundational styles, breakpoints atomic components, and in-depth documentation.
+# Design Process & Key Contributions #
 
-# Design System Setup
+## Workspace for Voice Models ##
+Problem: Users needed a clear way to create, manage, and control visibility of voice models.
+Process: Iterated on wireframes to balance data entry with creative freedom.
+Solution: A clean workspace with fields for title, description, tags, and audio samples, plus privacy options (public, unlisted, private).
+Outcome: Empowered users to control how their work is shared while tracking progress via a real-time activity feed.
 
-To create a design system suitable for wireframes, I focused on several best practices that promote consistency, scalability, and accessibility:
-
-## Foundation & Setup
-
-- <u>Core Styles:</u> Established color, typography, and spacing systems as Figma
-  Styles, such as Primary, Secondary, and Alert color palettes, along with standardized
-  heading and line height settings.
-- <u>Design Tokens:</u> Integrated Figma’s Tokens Plugin to create design tokens
-  for colors, typography, and spacing. This approach allows for easy updates, ensuring
-  consistent style application across components.
-- <u>Responsive Breakpoints:</u> Built responsive wrappers for layout elements, ensuring
-  seamless adaptation to screen size. By setting up breakpoints within constraints,
-  I enabled components to resize dynamically across mobile, tablet, and desktop layouts.
-
-<TwoColumnImages
-  images={[
-    {
-      src: "/images/neurent-main.png",
-      alt: "Workflow diagram",
-    },
-    {
-      src: "/images/neurent-main.png",
-      alt: "Component library",
-    },
-  ]}
+<FullWidthImage
+  src="/images/fish2.png"
+  alt="Element Bolt Dashboard Interface"
 />
 
-## Component Architecture
+## API Usage Dashboard ##
 
-- <u>Atomic Design Principles:</u> Following atomic design, I built base-level components
-  (e.g., buttons, input fields) and combined them into complex components (e.g.,
-  cards, modals) to maintain modularity and reusability.
-- <u>Variants and Component Properties:</u> Used Figma’s Variants to create multi-state
-  components, such as buttons with primary, secondary, hover, and active states,
-  adding boolean and text properties for customizability.
-- <u>Auto Layout:</u> Applied auto layout within frames to ensure content-adaptive
-  design, where components expand or contract based on content or screen size, critical
-  for responsive and user-centered wireframes.
+Problem: Developers required transparent access to quotas, costs, and documentation.
+Process: Studied SaaS usage dashboards to inform structure and hierarchy.
+Solution: An API dashboard showing usage as both numbers and visuals (monetary value + bar chart), with secure token generation.
+Outcome: Made complex data digestible, encouraging developers to optimize usage plans.
 
-<div style={{ marginTop: '30px', position: 'relative', width: '100%', maxWidth: '1100px', paddingTop: '56.25%', borderRadius: '10px', overflow: 'hidden', marginLeft: 'auto', marginRight: 'auto' }}>
-  <iframe 
-    src="https://embed.figma.com/design/h2uduBPcH39Tdkii7Pud9v/Enric-UX-%2F-Product-Design?node-id=2064-7874&embed-host=share"
-    style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', borderRadius: '10px' }}
-    frameBorder="0"
-    allowFullScreen
-  />
-</div>
-
-## Scalability & Consistency
-
-- <u>Global Components and Libraries:</u> Set up a Team Library, organizing components
-  by type and function with a clear naming convention for easy navigation. This ensures
-  all design assets are centralized, making the system scalable for future needs.
-- <u>Flexible Component Wrappers:</u> Built wrappers that can hold varying content
-  types without altering the main structure, ideal for modals and panels, ensuring
-  consistency without rigid layouts.
-- <u>Icon System:</u> Designed an icon component system, allowing icons to be swapped
-  seamlessly using instance properties, ensuring visual consistency and reducing
-  duplication.
-
-## Design System Governance
-
-- <u>Regular Audits & Updates:</u> Established a schedule for periodic audits to ensure the system remains aligned with Neurent’s evolving needs.
-- <u>Component Versioning:</u>Used Figma’s Team Library update notifications to document component changes, minimizing workflow disruptions and maintaining alignment across teams.
-
-# Key Deliverables & Impact.
-
-The advanced wireframe design system provided a structured, modular foundation that addressed Neurent’s goals, from enhanced usability to consistent, scalable design elements:
-
-- <u>Unified User Flow:</u> A streamlined layout for patients and HCPs with tailored
-  components, improving navigation and engagement.
-- <u>Conversion-Ready Layouts:</u> Optimized navigation elements and CTAs within
-  wireframes to enhance user experience and encourage conversions.
-- <u>Accessible, Responsive Structure:</u> A robust framework that adapts to different
-  screen sizes and meets WCAG 2.2 standards, providing an inclusive experience.
-
-<ThreeColumnImages
-  images={[
-    {
-      src: "/images/neurent-wi1.png",
-      alt: "Search interface",
-    },
-    {
-      src: "/images/neurent-wi2.png",
-      alt: "Chat interface",
-    },
-    {
-      src: "/images/neurent-wi3.png",
-      alt: "Control cards",
-    },
-  ]}
+<FullWidthImage
+  src="/images/fish3.png"
+  alt="Element Bolt Dashboard Interface"
 />
 
-<ThreeColumnImages
-  images={[
-    {
-      src: "/images/neurent-wi4.png",
-      alt: "Search interface",
-    },
-    {
-      src: "/images/neurent-wi5.png",
-      alt: "Chat interface",
-    },
-    {
-      src: "/images/neurent-wi6.png",
-      alt: "Control cards",
-    },
-  ]}
+## Leaderboard & User Profiles ##
+
+Problem: The platform needed mechanisms for engagement and recognition.
+Process: Explored gamification strategies while maintaining professional credibility.
+Solution: Designed a leaderboard with gold/silver/bronze badges and a profile UI highlighting user activity, likes, and shared models.
+Outcome: Boosted discoverability and community interaction, key for retention.
+
+<FullWidthImage
+  src="/images/fish4.png"
+  alt="Element Bolt Dashboard Interface"
+/>
+<FullWidthImage
+  src="/images/fish5.png"
+  alt="Element Bolt Dashboard Interface"
 />
 
-# Reflection & Next Steps.
+# Collaboration & Handoff #
+I worked closely with:
+Developers: Provided annotated prototypes, icon assets, and responsive guidelines.
+PMs: Prioritized features for the MVP and aligned on timelines.
+QA: Supported slicing and testing to ensure UI matched design intent across devices.
+# Final Outcome #
+The result was a responsive web platform with:
+Voice model creation and management workflows.
+Transparent API usage and pricing dashboard.
+Engaging community features (leaderboards, profiles).
+A consistent visual identity with custom icons and illustrations.
 
-This wireframe phase underscored the value of a well-structured, modular design system in accelerating development and ensuring consistency across devices. Moving forward, the high-fidelity phase will apply brand elements to this foundation, creating a polished, accessible digital presence ready for Neurent’s Gen 3 launch.
+# Results & Impact #
+
+Strategic Differentiation: Delivered a distinct user experience in a fast-evolving industry.
+User Empowerment: Balanced accessibility for non-technical creators with advanced tools for developers.
+Market Positioning: The MVP provided a strong foundation to attract early adopters and investors.
+
+# Reflection & Lessons Learned #
+
+What worked: Prioritizing clarity and usability made technical features approachable.
+What I’d improve: I would push for earlier user testing with real creators to validate engagement features like leaderboards.
+Key takeaway: In emerging industries, design can be the differentiator, making complex technology human-centered and approachable is what unlocks adoption.

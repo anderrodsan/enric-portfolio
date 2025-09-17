@@ -1,9 +1,9 @@
 ---
 id: 1
-cardTitle: "UX & Check-out Optimization."
+cardTitle: "Calibrate Navigation."
 type: "phone"
 color: "light-pink"
-title: "Humane AI: Mobile-First Checkout Optimization."
+title: "Calibrate Navigation."
 company: "Humane AI "
 role: "Project Manager"
 team: "Product Manager, QA, Developer, Strategist"
@@ -16,110 +16,87 @@ finished: "true"
   alt="Element Bolt Dashboard Interface"
 />
 
-# Overview.
+# Overview #
+As Calibrate grew from a direct-to-consumer product into a multi-audience business, its navigation failed to reflect new user journeys. I led the redesign of the site’s information architecture and navigation system to:
+Segment by audience (Individuals, Organizations, Employees)
+Guide users to the right content faster
+Introduce flexible CMS-powered editing
+Ensure accessibility, responsiveness, and SEO preservation
+# The Challenge #
+Confusing journeys: D2C-first nav didn’t serve employers or employees.
+Rigid CMS: Editors couldn’t update navs without dev support.
+Conversion risk: Misaligned journeys meant lost opportunities.
 
-The “Humane Website Build” project was a collaborative effort between Cantilever and Humane AI, with a focus on building a streamlined, component-based single-page layout and checkout flow.
-
-## My role: Project Manager.
-
-As Project Manager for Cantilever, I worked closely with the lead of UX design and Humane’s internal team, who managed final visual design with consulting input from our side. 
-
-While Cantilever led the UX, development, and final launch, the overall project oversight was handled by Humane's designated project manager, with me focusing specifically on Cantilever’s responsibilities, ensuring consistent project updates via a shared tracking system.
-
-Our initial design targeted a minimal viable product (V1), prioritizing the core components—mobile homepage, Product Detail Page (PDP), and purchase page—to establish an intuitive, efficient user journey.
-
-# The challenge.
-
-## Problem
-Humane AI's existing mobile experience lacked clarity in the PDP layout, resulting in a high bounce rate during checkout.
-
-## Project Goal
-Our primary goal was to simplify the user journey, enabling easy product discovery and a seamless checkout process that would increase conversions,particularly for mobile users.
-
-## My role
-Our primary goal was to simplify the user journey, enabling easy product discovery and a seamless checkout process that would increase conversions,particularly for mobile users.
-
-# Project Management and Organization.
-
-As Cantilever’s Project Manager, I ensured efficient task management, communication, and alignment on deliverables by collaborating with the Senior UX Designer to refine wireframes for accessibility, created detailed mockups, and streamlined the checkout flow based on user journey analysis.
-
-## 1. Coordination with Stakeholders
-Acting as the main point of contact, I ensured seamless communication between Cantilever’s team and Humane’s internal team, providing continuous updates on progress
-
-## 2. Organizing Design Sessions & Workshops
-I facilitated collaborative sessions and workshops, gathering input to align on UX decisions and component design.
-
-## 3. Weekly Meetings & Task Tracking
-Managed weekly status meetings to discuss progress, review designs, and confirm next steps. Clear task delegation was handled through Asana to keep the project on track.
-
-## 4. Prioritizing Key Deliverables
-Oversaw the development of core components,including the mobile homepage UX, PDP, and checkout pages, ensuring all deadlines were met and feedback was incorporated.
+# Process #
+1. Information Architecture	
+I reorganized the navigation into audience-specific buckets with a set of universal items (Blog, FAQ, Sign In, Am I Eligible?). This gave each user group a clear entry point without overloading the global nav.
+2. UX/UI Design
+Desktop Navigation States
+I designed a complete states matrix to ensure usability across hover, active, and keyboard navigation.
+Default State: Clean, minimal links with supporting descriptions.
+Hovered State: Visual promo card appears, highlighting featured content.
+Keyboard Focused State: High-contrast focus styles for accessibility.
 
 
-# Collaboration & UX Design Guidance.
-
-In collaboration with Cantilever’s Senior UX Designer, I provided guidance and feedback to meet Humane’s UX objectives.
-
-## Homepage
-
-- <u>Low-Fidelity Mockups:</u> We started with low-fidelity wireframes to establish
-  a clear user flow, focusing on mobile accessibility and ease of navigation.
-- <u>High-Fidelity Mockups:</u> Transitioned into high-fidelity designs, using Figma’s
-  components, variants, and auto-layout to ensure the design remained flexible across
-  screen sizes.
-
-## Outcome
-
-The mobile-optimized homepage enabled intuitive navigation, with an improved product display that facilitated quick discovery.
-
-# Product Detail & Purchase Pages (PDP and Checkout)
-
-## Responsive Wireframes & Component-Based Design
-We refined the layout of the
-Product Detail Page (PDP) to improve product information clarity and ease of selection,
-ensuring a consistent user experience across all screens. Both the PDP and Purchase
-Page utilized component-based designs in Figma, leveraging properties and variants for
-uniformity.
-## Optimized Checkout Flow
-For the Purchase Page, we focused on streamlining the
-checkout process, especially on mobile, to reduce user friction. Interactive, responsive
-wireframes showcased an optimized user journey, making it easy for developers to
-implement the design seamlessly.
-
-## Outcome
-The refined PDP and Purchase Page layouts provided an intuitive, responsive
-experience, enhancing both browsing and checkout usability to increase purchase completions.
+Desktop Dropdown in Context
+This shows how the dropdown fits into the real homepage environment.
+Dropdown overlays cleanly without obscuring core calls to action.
+Featured blog promo balances business needs with user navigation.
+Typography and spacing create clear visual hierarchy.
 
 
-# Collaboration & Handoff Process.
 
-To ensure a smooth transition from design to development:
+Mobile Dropdown (Light & Dark Themes)
+For mobile, I designed an accordion-style dropdown that scales across light and dark themes.
+Top-level groups expand/collapse with smooth transitions.
+Featured “Get Started” CTA is pinned for quick access.
+Typography and hit areas sized for touch accessibility.
+Responsive Flow (Dark Theme)
+A full end-to-end mobile flow showing the navigation lifecycle:
+Default State (Closed): Clean, unobtrusive menu button.
+Menu Opened: High-contrast panel slides in.
+Dropdown Expanded: Users drill down into audience-specific content.
+Active State: Selected link is highlighted for clarity.
 
-- <u>Figma Handoff with Annotations:</u> Delivered annotated high-fidelity wireframes,
-  detailing each design element for the development team.
-- <u>Regular Feedback Loop:</u> Coordinated feedback sessions with both the Senior
-  UX Designer and Humane’s team to align on real-time updates and business objectives
-- <u>Weekly Review & Tracking:</u> Conducted weekly Asana reviews, tracking task
-  completion and resolving any project blockers promptly.
+Responsive Flow (Light Theme)
+A parallel version for the light theme to ensure brand consistency across themes.
+Same structure and hierarchy as dark mode.
+Adjusted contrast and focus rings to maintain accessibility.
 
-# Final Outcome.
 
-The Humane Website Build project delivered a highly optimized, user-focused design for the mobile homepage, PDP, and checkout process. By leveraging Figma’s toolkit—including components, variants, auto-layout, and design tokens—we built a flexible, scalable design system that improved both product engagement and checkout completion rates.
+Featured Link Variations (With Imagery)
+I created featured link cards that supported both text and rich imagery.
+Default → Hover → Active → Focus states documented.
+Integrated imagery to promote blogs or campaigns.
+CTA placement consistent across all states.
 
-# Results & Impact.
 
-- <u>+25% Conversion Rate</u>: Mobile conversion rates increased by 25% due to checkout flow improvements.
-- <u>Enhanced Mobile Experience:</u> Optimized designs for mobile improved navigation
-  and ease of use, creating a smoother user journey.
-- <u>Improved PDP for Conversions:</u> Streamlined the PDP layout simplified product
-  browsing and selection.
-- <u>Higher Conversion Rates:</u> Early testing indicated increased conversions,
-  attributed to the optimized purchase flow and improved mobile usability.{" "}
 
-# Reflection & Lessons Learned.
+Featured Link Variations (Text Only)
+I also designed text-only variations for cases where no campaign image was available.
+Maintains hierarchy through typography and spacing.
+Full state documentation ensures accessibility parity.
+Minimal style reduces visual noise when imagery isn’t needed.
 
-This project reinforced the importance of iterative feedback in UX design and strengthened my ability to create mobile-first solutions that drive results. 
+3. Accessibility Considerations
+Accessibility was a core constraint from the start.This made the navigation inclusive, compliant, and consistent across all interaction methods.
+I ensured:
+Full keyboard navigation with clear focus states
+Proper ARIA roles for screen readers
+WCAG-compliant color contrast in light and dark themes
+Larger touch-friendly hit areas on mobile
+Documented all states (default, hover, active, focus) for consistency
 
-By maintaining organized weekly updates, structured feedback loops, and consistent stakeholder alignment, we delivered high-quality UX designs on schedule. 
+Outcome
+Clarity: Users reach audience-specific content faster.
+Efficiency: Editors can update navs in minutes.
+Growth-ready: Promo slots enabled campaigns directly in navigation.
+Accessibility: Full WCAG compliance across desktop and mobile.
+Reflection
+Win: Balanced business flexibility with clear UX.
+Challenge: SEO preservation during migration.
+Next time: Involve marketing earlier in content strategy.
+Lesson: Navigation isn’t just IA—it’s a strategic design system.
 
-Moving forward, I would continue to emphasize mobile-first design in checkout flows and homepage optimizations, especially for e-commerce-driven projects.
+
+
