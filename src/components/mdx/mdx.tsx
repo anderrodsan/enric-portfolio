@@ -4,7 +4,6 @@ import React from "react";
 import { cn } from "@/lib/utils";
 import { acornMedium } from "@/lib/custom-fonts";
 import { Lightbulb } from "lucide-react";
-import { iframe } from "framer-motion/client";
 
 function slugify(str: string) {
   return str
@@ -19,9 +18,8 @@ function slugify(str: string) {
 
 function createHeading(level: 1 | 2 | 3 | 4 | 5 | 6) {
   const Heading = ({ children }: { children: string }) => {
-    let slug = slugify(children);
+    const slug = slugify(children);
 
-    //different size classNames depending on the level
     const className = cn(
       acornMedium.className,
       "text-start text-light-green group mb-2 relative w-full max-w-[650px]",
@@ -31,10 +29,7 @@ function createHeading(level: 1 | 2 | 3 | 4 | 5 | 6) {
 
     return React.createElement(
       `h${level}`,
-      {
-        id: slug,
-        className: className,
-      },
+      { id: slug, className },
       [
         React.createElement("a", {
           href: `#${slug}`,
@@ -69,13 +64,13 @@ function MaxWidth({ children }: any) {
 // Full Width Image Component
 function FullWidthImage({ src, alt }: { src: string; alt: string }) {
   return (
-    <div className="rounded-2xl overflow-hidden max-w-[1200px] max-h-[650px]">
+    <div className="w-full flex justify-center my-8">
       <Image
         src={src}
         alt={alt}
-        width={1200}
-        height={650}
-        className="w-full object-cover rounded-2xl"
+        width={1920}
+        height={1080}
+        className="w-full h-auto rounded-2xl object-contain"
       />
     </div>
   );
@@ -147,10 +142,7 @@ function IFrame({ src }: { src: string }) {
   return (
     <div className="w-full flex flex-col items-center mt-10 mb-10">
       <iframe
-        style={{
-          border: "1px solid rgba(0, 0, 0, 0.1)",
-          borderRadius: "12px",
-        }}
+        style={{ border: "1px solid rgba(0, 0, 0, 0.1)", borderRadius: "12px" }}
         width={1200}
         height={650}
         src={src}
@@ -167,6 +159,8 @@ const components = {
   h4: createHeading(4),
   h5: createHeading(5),
   h6: createHeading(6),
+
+  // Paragraph wrapper (kept centered with the 650px content width)
   p: (props: any) => (
     <div className="flex flex-col items-center -my-5 w-full">
       <p
@@ -175,16 +169,34 @@ const components = {
       />
     </div>
   ),
-  li: (props: any) => (
-    <div className="flex flex-col items-center -my-5 w-full max-w-[650px] -ml-6 md:ml-0">
-      <ul className="w-full -mb-1">
-        <li
-          className="text-start w-full text-lg leading-relaxed text-white"
-          {...props}
-        />
+
+  // ✅ Proper list containers; no negative margins; one UL/OL wraps many LIs
+  ul: ({ children, ...rest }: any) => (
+    <div className="flex flex-col items-center w-full">
+      <ul
+        className="w-full max-w-[650px] list-disc pl-6 space-y-2 text-white"
+        {...rest}
+      >
+        {children}
       </ul>
     </div>
   ),
+  ol: ({ children, ...rest }: any) => (
+    <div className="flex flex-col items-center w-full">
+      <ol
+        className="w-full max-w-[650px] list-decimal pl-6 space-y-2 text-white"
+        {...rest}
+      >
+        {children}
+      </ol>
+    </div>
+  ),
+  li: ({ children, ...rest }: any) => (
+    <li className="text-start text-lg leading-relaxed" {...rest}>
+      {children}
+    </li>
+  ),
+
   FullWidthImage,
   TwoColumnImages,
   ThreeColumnImages,
@@ -196,10 +208,7 @@ const components = {
 export function CustomMDX(props: any) {
   return (
     <article className="prose dark:prose-invert max-w-none flex flex-col items-center">
-      <MDXRemote
-        {...props}
-        components={{ ...components, ...props.components }}
-      />
+      <MDXRemote {...props} components={{ ...components, ...props.components }} />
     </article>
   );
 }
