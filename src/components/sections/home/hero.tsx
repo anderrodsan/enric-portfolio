@@ -47,14 +47,11 @@ export default function Hero() {
 
         {/* Hero visual */}
         <div className="relative flex flex-col items-center justify-center max-w-5xl -mt-20 lg:-mt-28 overflow-hidden z-30 md:z-0">
-          {/* Custom ellipse */}
+          {/* Custom ellipse — responsive, keeps ellipse on mobile */}
           <svg
-            width="813"
-            height="406"
             viewBox="0 0 813 406"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-            className="absolute bottom-0 lg:w-[90%] z-[-1]"
+            preserveAspectRatio="xMidYMax meet"
+            className="absolute inset-x-0 bottom-0 w-full aspect-[813/406] max-w-[900px] md:max-w-none -z-10"
             aria-hidden="true"
           >
             <path
