@@ -16,8 +16,8 @@ export default function HorizontalHeadline() {
         Service.
       </h1>
 
-      {/* Subtitle + description stacked */}
-      <div className="flex flex-col items-center text-center gap-6 md:gap-8">
+      {/* Subtitle + description: left on mobile, centered on desktop */}
+      <div className="flex flex-col items-start text-left md:items-center md:text-center gap-6 md:gap-8">
         <h2
           className={cn(
             "text-3xl md:text-5xl font-bold text-light-green",
@@ -28,11 +28,16 @@ export default function HorizontalHeadline() {
           so you can focus on what matters.
         </h2>
 
-        <p className="text-[18px] md:text-[20px] max-w-[70ch]">
-          Starting at <span className="font-semibold">6,000 DKK/month</span>, get up to
-          <span className="font-semibold"> 10 hours</span> of expert product, UX &amp; UI design. <br />
-          Perfect for startups who need design help without the commitment of a full-time hire.
-        </p>
+        {/* Two real paragraphs; extra spacing only on mobile */}
+        <div className="w-full md:w-auto">
+          <p className="text-[18px] md:text-[20px] max-w-[70ch] mb-4 md:mb-0">
+            Starting at <span className="font-semibold">6,000 DKK/month</span>, get up to
+            <span className="font-semibold"> 10 hours</span> of expert product, UX &amp; UI design.
+          </p>
+          <p className="text-[18px] md:text-[20px] max-w-[70ch]">
+            Perfect for startups who need design help without the commitment of a full-time hire.
+          </p>
+        </div>
       </div>
     </div>
   );
