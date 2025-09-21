@@ -8,7 +8,7 @@ export default function ServiceFAQ() {
       <Subtitle>
         Frequently Asked <span className="hidden lg:inline">Questions</span>
       </Subtitle>
-      <div className="flex flex-col gap-4 w-full">
+      <div className="flex flex-col gap-4 w-full text-left">
         {FAQ.map((faq) => (
           <Accordion
             key={faq.title}
