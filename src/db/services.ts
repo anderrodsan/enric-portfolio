@@ -110,7 +110,7 @@ export const FAQ: Benefit[] = [
       "Startups, SaaS companies, and SMEs—usually teams with developers but no dedicated design resources. If you need quality design without the cost of a full-time hire or agency, this model is built for you.",
   },
   {
-    title: "How is this different from hiring an agency or full-time designer?",
+    title: "Why not agency or full-time?",
     description:
       "Agencies are often expensive and slow. Full-time hires cost 40–60k DKK/month plus overhead. With this setup, you get senior-level design at a predictable monthly cost, delivered fast and flexibly—without the hiring hassle.",
   },
