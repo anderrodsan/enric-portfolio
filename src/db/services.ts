@@ -80,7 +80,7 @@ export const FAQ: Benefit[] = [
       "Each month starts with a short discovery call to set priorities. From there, I deliver designs on a rolling basis. Most tasks are completed within 48 hours, with weekly updates to keep everything on track.",
   },
   {
-    title: "How long does it take to see results?",
+    title: "Time to see results??",
     description:
       "Quick tasks (like landing pages or UI fixes) are ready in 1–2 days. Bigger projects (like design systems or product flows) are broken into weekly milestones so you see progress without waiting months.",
   },
@@ -100,12 +100,12 @@ export const FAQ: Benefit[] = [
       "We keep it async-friendly: email, Loom, Figma, and Notion. Weekly check-ins ensure alignment, and I’m available for quick questions when needed—no endless meetings.",
   },
   {
-    title: "Do you work with developers directly?",
+    title: "Do you work with devs?",
     description:
       "Absolutely. I provide developer-ready specs, walkthrough videos, and join technical calls if needed. The goal is smooth handoffs, so your devs can focus on building, not guessing.",
   },
   {
-    title: "Who do you typically work with?",
+    title: "Who are your clients??",
     description:
       "Startups, SaaS companies, and SMEs—usually teams with developers but no dedicated design resources. If you need quality design without the cost of a full-time hire or agency, this model is built for you.",
   },
