@@ -15,10 +15,12 @@ export default function MobileMenu({
   activePath: string;
 }) {
   const [isOpen, setIsOpen] = useState(false);
+
   return (
-    <div className="fixed top-0 left-0 w-full h-full z-50 md:hidden">
+    <>
+      {/* Hamburger button - always visible and clickable */}
       <button
-        className="absolute top-5 right-5 z-50"
+        className="fixed top-5 right-5 z-[60] md:hidden"
         onClick={() => setIsOpen(!isOpen)}
       >
         <GlassCard
@@ -33,37 +35,37 @@ export default function MobileMenu({
           )}
         </GlassCard>
       </button>
-      {/** the overlay sidebar */}
-      <div
-        className={cn(
-          "h-full w-full bg-[#16231E] transition ease-in-out duration-300 z-40",
-          isOpen ? "opacity-100" : "opacity-0"
-        )}
-      >
-        <ul className="flex flex-col items-center h-full gap-10 pt-24">
-          {paths.map((path) => (
-            <Link
-              href={path.path}
-              key={path.name}
-              onClick={() => setTimeout(() => setIsOpen(false), 300)}
-            >
-              <p
-                className={cn(
-                  "text-3xl font-bold",
-                  activePath === path.path && "underline"
-                )}
-              >
-                {path.name}
-              </p>
-            </Link>
-          ))}
-          <BookMeeting
-            title="Contact"
-            className="text-3xl"
-            onClick={() => setIsOpen(false)}
-          />
-        </ul>
-      </div>
-    </div>
+
+      {/* Overlay sidebar - only when open */}
+      {isOpen && (
+        <div className="fixed top-0 left-0 w-full h-full z-50 md:hidden">
+          <div className="h-full w-full bg-[#16231E] transition ease-in-out duration-300">
+            <ul className="flex flex-col items-center h-full gap-10 pt-24">
+              {paths.map((path) => (
+                <Link
+                  href={path.path}
+                  key={path.name}
+                  onClick={() => setTimeout(() => setIsOpen(false), 300)}
+                >
+                  <p
+                    className={cn(
+                      "text-3xl font-bold",
+                      activePath === path.path && "underline"
+                    )}
+                  >
+                    {path.name}
+                  </p>
+                </Link>
+              ))}
+              <BookMeeting
+                title="Contact"
+                className="text-3xl"
+                onClick={() => setIsOpen(false)}
+              />
+            </ul>
+          </div>
+        </div>
+      )}
+    </>
   );
 }
