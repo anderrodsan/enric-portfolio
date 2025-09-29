@@ -5,9 +5,11 @@ import { getCalApi } from "@calcom/embed-react";
 export default function BookMeeting({
   title,
   className,
+  onClick,
 }: {
   title: string;
   className?: string;
+  onClick?: () => void;
 }) {
   useEffect(() => {
     (async function () {
@@ -25,6 +27,7 @@ export default function BookMeeting({
 
   return (
     <button
+      onClick={onClick}
       className={className}
       data-cal-namespace=""
       data-cal-link="enric-clemente-pttwxh/30min"

@@ -17,7 +17,6 @@ export default function GlassNavBar() {
     { name: "Services", path: "/services" },
     { name: "Portfolio", path: "/work" },
     { name: "Snapshots", path: "/bites" },
-    { name: "Contact", path: "/contact" }, // kept for mobile
   ];
 
   // Remove "Contact" from desktop nav to avoid duplication with BookMeeting

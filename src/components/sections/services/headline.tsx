@@ -20,7 +20,7 @@ export default function HorizontalHeadline() {
       <div className="flex flex-col items-start text-left md:items-center md:text-center gap-6 md:gap-8 w-full">
         <h2
           className={cn(
-            "text-3xl md:text-5xl font-bold text-light-green w-full",
+            "text-3xl md:text-5xl font-bold text-light-green w-full tracking-tight md:tracking-normal",
             acornRegular.className
           )}
         >

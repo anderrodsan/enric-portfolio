@@ -5,6 +5,7 @@ import { Menu, X } from "lucide-react";
 import GlassCard from "./glass-card";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
+import BookMeeting from "./book-meeting";
 
 export default function MobileMenu({
   paths,
@@ -56,6 +57,11 @@ export default function MobileMenu({
               </p>
             </Link>
           ))}
+          <BookMeeting
+            title="Contact"
+            className="text-3xl"
+            onClick={() => setIsOpen(false)}
+          />
         </ul>
       </div>
     </div>
