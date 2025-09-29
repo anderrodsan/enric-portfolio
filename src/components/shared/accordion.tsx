@@ -14,15 +14,13 @@ export default function Accordion({ title, description }: AccordionProps) {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="w-full">
+    <button className="w-full" onClick={() => setIsOpen(!isOpen)}>
       <GlassCard
         className="p-4 lg:p-5 lg:px-8 lg:py-6 w-full"
         borderRadius="rounded-[18px] lg:rounded-[28px]"
+        hoverEffect
       >
-        <button
-          onClick={() => setIsOpen(!isOpen)}
-          className="w-full flex items-center justify-between"
-        >
+        <div className="w-full flex items-ceºnter justify-between">
           <h3 className="text-lg lg:text-2xl font-semibold">{title}</h3>
           <div className="flex items-center justify-center bg-white rounded-full h-10 w-10 scale-75 lg:scale-100">
             <ArrowRight
@@ -33,7 +31,7 @@ export default function Accordion({ title, description }: AccordionProps) {
               )}
             />
           </div>
-        </button>
+        </div>
 
         <div
           className={cn(
@@ -42,9 +40,9 @@ export default function Accordion({ title, description }: AccordionProps) {
           )}
         >
           <div className="my-4 h-0.5 bg-white/20 mr-20" />
-          <p className="text-lg lg:text-2xl">{description}</p>
+          <p className="text-lg lg:text-2xl text-start">{description}</p>
         </div>
       </GlassCard>
-    </div>
+    </button>
   );
 }

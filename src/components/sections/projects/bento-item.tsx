@@ -58,7 +58,7 @@ export default function BentoItem({ data, className }: Props) {
           </p>
           <h2
             className={cn(
-              "text-2xl sm:text-[28px] text-end",
+              "text-2xl sm:text-[28px] text-end w-full",
               data?.color === "black" ? "text-white" : "text-background",
               acornMedium.className
             )}

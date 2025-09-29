@@ -55,7 +55,13 @@ export default function Background() {
   );
 }
 
-function Title({ children, className }: { children: React.ReactNode; className?: string }) {
+function Title({
+  children,
+  className,
+}: {
+  children: React.ReactNode;
+  className?: string;
+}) {
   return (
     <h1
       className={cn(

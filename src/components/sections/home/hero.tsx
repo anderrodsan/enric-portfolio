@@ -39,8 +39,9 @@ export default function Hero() {
             borderRadius="rounded-[28px] md:rounded-[48px]"
           >
             <p className="md:max-w-[22ch] text-wrap text-lg lg:text-2xl">
-              I help teams stuck with unclear, slow, or inconsistent design get fast, polished,
-              developer-ready UX/UI—without the hassle of hiring full-time.
+              I help teams stuck with unclear, slow, or inconsistent design get
+              fast, polished, developer-ready UX/UI—without the hassle of hiring
+              full-time.
             </p>
           </GlassCard>
         </div>
@@ -108,7 +109,10 @@ function HeroTitle() {
 
       {/* Line 1 */}
       <div className="flex items-center justify-center gap-2 md:gap-[22px]">
-        <Title gradient={false} className="text-5xl sm:text-6xl lg:text-8xl leading-[1.2]">
+        <Title
+          gradient={false}
+          className="text-[3.2rem] sm:text-6xl lg:text-8xl leading-[1.2]"
+        >
           I&apos;m
         </Title>
         <Link
@@ -118,7 +122,7 @@ function HeroTitle() {
         >
           <Title
             gradient={false}
-            className="text-5xl sm:text-6xl lg:text-8xl leading-[1.2] group-hover:text-[#EFB594] transition-colors"
+            className="text-[3.2rem] sm:text-6xl lg:text-8xl leading-[1.2] group-hover:text-[#EFB594] transition-colors"
           >
             Enric.
           </Title>
@@ -137,17 +141,20 @@ function HeroTitle() {
 
       {/* Line 2 */}
       <div className="flex items-center justify-center gap-2 md:gap-[22px] -mt-4">
-        <Title gradient={false} className="text-5xl sm:text-6xl lg:text-8xl leading-[1.2]">
+        <Title
+          gradient={false}
+          className="text-[3.1rem] sm:text-6xl lg:text-8xl leading-[1.2] whitespace-nowrap"
+        >
           Product
         </Title>
         <Link
-          href={"/about"}
+          href={"/services"}
           className="group cursor-pointer relative focus:outline-none focus-visible:ring-2 focus-visible:ring-white/40 rounded-lg"
           aria-label="See work — Product Designer"
         >
           <Title
             gradient={false}
-            className="text-5xl sm:text-6xl lg:text-8xl leading-[1.2] group-hover:text-[#D094E5] transition-colors"
+            className="text-[3.2rem] sm:text-6xl lg:text-8xl leading-[1.2] group-hover:text-[#D094E5] transition-colors"
           >
             Designer.
           </Title>
@@ -187,8 +194,12 @@ function ReviewsMini({ className }: { className?: string }) {
     >
       <div className="flex items-center gap-2">
         <Stars rating={rating} />
-        <span className="text-base lg:text-lg font-medium">{rating.toFixed(1)}/5</span>
-        <span className="text-base lg:text-lg text-white/70">({total}+ reviews)</span>
+        <span className="text-base lg:text-lg font-medium">
+          {rating.toFixed(1)}/5
+        </span>
+        <span className="text-base lg:text-lg text-white/70">
+          ({total}+ reviews)
+        </span>
       </div>
     </div>
   );
@@ -204,10 +215,17 @@ function Stars({ rating }: { rating: number }) {
     <div className="flex items-center gap-1" aria-hidden="true">
       {Array.from({ length: count }).map((_, i) => {
         if (i < full) {
-          return <Star key={i} className="h-4 w-4 fill-current text-yellow-300" />;
+          return (
+            <Star key={i} className="h-4 w-4 fill-current text-yellow-300" />
+          );
         }
         if (i === full && hasHalf) {
-          return <StarHalf key={i} className="h-4 w-4 fill-current text-yellow-300" />;
+          return (
+            <StarHalf
+              key={i}
+              className="h-4 w-4 fill-current text-yellow-300"
+            />
+          );
         }
         return <Star key={i} className="h-4 w-4 text-yellow-300" />;
       })}

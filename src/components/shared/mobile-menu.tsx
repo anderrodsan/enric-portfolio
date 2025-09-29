@@ -15,7 +15,7 @@ export default function MobileMenu({
 }) {
   const [isOpen, setIsOpen] = useState(false);
   return (
-    <div className="fixed top-0 left-0 w-full h-full z-50 sm:hidden">
+    <div className="fixed top-0 left-0 w-full h-full z-50 md:hidden">
       <button
         className="absolute top-5 right-5 z-50"
         onClick={() => setIsOpen(!isOpen)}

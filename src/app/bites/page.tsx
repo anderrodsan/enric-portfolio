@@ -6,14 +6,54 @@ import Title from "@/components/shared/title";
 // ----- Data -----
 const bites = [
   // Videos (1–8)
-  { id: 1, type: "video" as const, src: "/video/video1.mp4", poster: "/images/image1.jpeg" },
-  { id: 2, type: "video" as const, src: "/video/video2.mp4", poster: "/images/image2.jpeg" },
-  { id: 3, type: "video" as const, src: "/video/video3.mp4", poster: "/images/image3.avif" },
-  { id: 4, type: "video" as const, src: "/video/video4.mp4", poster: "/images/image4.jpeg" },
-  { id: 5, type: "video" as const, src: "/video/video5.mp4", poster: "/images/image5.jpeg" },
-  { id: 6, type: "video" as const, src: "/video/video6.mp4", poster: "/images/image6.jpeg" },
-  { id: 7, type: "video" as const, src: "/video/video7.mp4", poster: "/images/image7.jpeg" },
-  { id: 8, type: "video" as const, src: "/video/video8.mp4", poster: "/images/image8.jpeg" },
+  {
+    id: 1,
+    type: "video" as const,
+    src: "/video/video1.mp4",
+    poster: "/images/image1.jpeg",
+  },
+  {
+    id: 2,
+    type: "video" as const,
+    src: "/video/video2.mp4",
+    poster: "/images/image2.jpeg",
+  },
+  {
+    id: 3,
+    type: "video" as const,
+    src: "/video/video3.mp4",
+    poster: "/images/image3.avif",
+  },
+  {
+    id: 4,
+    type: "video" as const,
+    src: "/video/video4.mp4",
+    poster: "/images/image4.jpeg",
+  },
+  {
+    id: 5,
+    type: "video" as const,
+    src: "/video/video5.mp4",
+    poster: "/images/image5.jpeg",
+  },
+  {
+    id: 6,
+    type: "video" as const,
+    src: "/video/video6.mp4",
+    poster: "/images/image6.jpeg",
+  },
+  {
+    id: 7,
+    type: "video" as const,
+    src: "/video/video7.mp4",
+    poster: "/images/image7.jpeg",
+  },
+  {
+    id: 8,
+    type: "video" as const,
+    src: "/video/video8.mp4",
+    poster: "/images/image8.jpeg",
+  },
 
   // Images (9–24)
   { id: 9, type: "image" as const, src: "/images/image1.jpeg" },
@@ -92,12 +132,13 @@ export default function BitesPage() {
           Snapshots.
         </Title>
         <p className="text-[18px] sm:text-[20px] md:text-[23px] text-center">
-        A living gallery of my craft. Scroll, wander, and discover my work in motion.
+          A living gallery of my craft. Scroll, wander, and discover my work in
+          motion.
         </p>
       </div>
 
       {/* Grid: 1 col on mobile, 2 cols on small+ */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 px-5 md:px-20 w-full max-w-[1600px]">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 px-5 md:px-20 py-12 md:py-16 w-full max-w-[1600px]">
         {ordered.map((item) =>
           item.type === "video" ? (
             <video

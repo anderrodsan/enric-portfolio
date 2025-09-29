@@ -33,7 +33,7 @@ export function CompanyLogos() {
     },
   ];
   return (
-    <div className="flex md:flex-wrap justify-center w-full py-12 items-center gap-2 lg:gap-10 px-5 md:px-20 max-w-[1400px]">
+    <div className="flex flex-wrap justify-center w-full py-12 items-center gap-2 lg:gap-10 px-5 md:px-20 max-w-[1400px]">
       {LOGOS.map((logo) => (
         <div
           className="overflow-hidden h-auto relative pb-5 last:hidden md:last:block scale-[0.8] md:scale-10"
@@ -45,7 +45,7 @@ export function CompanyLogos() {
             alt={logo.name}
             width={100}
             height={100}
-            className="w-28 lg:w-40 h-auto object-contain"
+            className="w-40 h-auto object-contain"
           />
           <Link
             href={logo.href}

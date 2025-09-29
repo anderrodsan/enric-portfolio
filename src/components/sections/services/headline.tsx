@@ -5,7 +5,7 @@ import { cn } from "@/lib/utils";
 
 export default function HorizontalHeadline() {
   return (
-    <div className="w-full max-w-screen-lg mx-auto px-5 md:px-10">
+    <div className="w-full max-w-screen-lg mx-auto">
       {/* 9xl title centered */}
       <h1
         className={cn(
@@ -31,11 +31,14 @@ export default function HorizontalHeadline() {
         {/* Two real paragraphs; extra spacing only on mobile */}
         <div className="w-full">
           <p className="text-[18px] md:text-[20px] w-full mb-4 md:mb-0">
-            Starting at <span className="font-semibold">6,000 DKK/month</span>, get up to
-            <span className="font-semibold"> 10 hours</span> of expert product, UX &amp; UI design.
+            Starting at <span className="font-semibold">6,000 DKK/month</span>,
+            get up to
+            <span className="font-semibold"> 10 hours</span> of expert product,
+            UX &amp; UI design.
           </p>
           <p className="text-[18px] md:text-[20px] w-full">
-            Perfect for startups who need design help without the commitment of a full-time hire.
+            Perfect for startups who need design help without the commitment of
+            a full-time hire.
           </p>
         </div>
       </div>

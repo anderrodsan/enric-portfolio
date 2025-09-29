@@ -60,18 +60,18 @@ function HeroLinkItemMobile({ label, isActive, href }: HeroLinkItemProps) {
           "flex justify-center items-center gap-2 w-full h-14",
           isActive && "bg-[#5A8F7D]"
         )}
-        borderRadius="rounded-2xl"
+        borderRadius="rounded-full"
       >
         <p
           className={cn(
             "text-xl font-medium whitespace-nowrap capitalize font-acorn leading-[100%] tracking-[0.03em] text-center align-middle py-2",
-            acornRegular.className
+            acornMedium.className
           )}
         >
           {label}
         </p>
         <div
-          className={`flex justify-center items-center p-1 rounded-full bg-white text-[#5A8F7D]`}
+          className={`flex justify-center items-center p-1 rounded-full bg-white`}
         >
           <ArrowUpRight size={16} className="text-black/80" strokeWidth={2} />
         </div>
