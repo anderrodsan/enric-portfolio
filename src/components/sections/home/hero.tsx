@@ -10,8 +10,8 @@ import Socials from "@/components/shared/socials";
 import { cn } from "@/lib/utils";
 
 const METRICS = [
-  "+50 projects completed",
-  "+20 clients satisfied",
+  "+50 projects done",
+  "+20 satisfied clients",
   "Based in København",
 ];
 
@@ -48,7 +48,6 @@ export default function Hero() {
 
         {/* Hero visual */}
         <div className="relative flex flex-col items-center justify-center max-w-5xl -mt-20 lg:-mt-28 overflow-hidden z-30 md:z-0">
-          {/* Custom ellipse — responsive, keeps ellipse on mobile */}
           <svg
             viewBox="0 0 813 406"
             preserveAspectRatio="xMidYMax meet"
@@ -92,7 +91,6 @@ export default function Hero() {
             </GlassCard>
           ))}
 
-          {/* Reviews stars + text */}
           <ReviewsMini />
         </div>
       </div>
@@ -117,7 +115,7 @@ function HeroTitle() {
         </Title>
         <Link
           href={"/about"}
-          className="group cursor-pointer relative focus:outline-none focus-visible:ring-2 focus-visible:ring-white/40 rounded-lg"
+          className="group relative cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-white/40 rounded-lg"
           aria-label="Go to About — Enric"
         >
           <Title
@@ -126,7 +124,6 @@ function HeroTitle() {
           >
             Enric.
           </Title>
-          {/* Hover bubble (desktop only) */}
           <div className="hidden lg:block scale-0 group-hover:scale-100 transition-transform duration-300 absolute top-0 left-[45%] -translate-y-[20%] group-hover:-translate-y-[72%] opacity-0 group-hover:opacity-100">
             <Image
               src="/images/enric-headshot.png"
@@ -159,7 +156,6 @@ function HeroTitle() {
             Designer.
           </Title>
 
-          {/* Hover cards (desktop only) */}
           <Image
             alt="Selected project 1"
             src="/images/hero-card1.png"
@@ -167,6 +163,7 @@ function HeroTitle() {
             height={100}
             className="hidden lg:block absolute bottom-5 -right-10 translate-x-[50%] opacity-0 group-hover:opacity-100 translate-y-[0%] group-hover:-translate-y-[50%] rotate-[25deg] group-hover:rotate-0 transition duration-500 rounded-xl z-10 shadow-xl"
           />
+
           <Image
             alt="Selected project 2"
             src="/images/hero-card2.png"

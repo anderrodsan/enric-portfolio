@@ -39,7 +39,7 @@ export default function Footer() {
             </Link>
           </span>
         </p>
-        <p className="text-center">© 2024</p>
+        <p className="text-center">© 2025</p>
       </div>
     </footer>
   );
