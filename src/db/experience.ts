@@ -5,7 +5,7 @@ export const experience: Experience[] = [
     id: 0,
     title: "Product Designer",
     type: "Full-time",
-    company: "Eye10: Affordable SEO SaaS.",
+    company: "Affordable SEO SaaS.",
     logo: "/images/logos/klikko.png",
     startDate: "March 24",
     endDate: null,
