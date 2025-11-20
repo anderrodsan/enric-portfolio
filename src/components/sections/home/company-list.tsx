@@ -17,11 +17,6 @@ export function CompanyLogos() {
       href: "/work",
     },
     {
-      name: "eye10",
-      tag: "Case study",
-      href: "/work",
-    },
-    {
       name: "milestone-systems",
       tag: "Case study",
       href: "/work",
