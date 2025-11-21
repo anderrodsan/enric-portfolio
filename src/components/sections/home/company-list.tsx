@@ -1,3 +1,5 @@
+"use client";
+
 import { cn } from "@/lib/utils";
 import { acornMedium, acornRegular } from "@/lib/custom-fonts";
 import { ArrowUpRight } from "lucide-react";
@@ -16,9 +18,13 @@ export function CompanyLogos() {
     { name: "national-children-museum", tag: "Case study", href: "/work" },
   ];
 
+  // Defining the exact complex style, but REPLACING GRADIENT with fixed background
+  const consistentFlatGlassStyle = "relative border-2 border-transparent backdrop-blur-md bg-white/5 hover:outline hover:outline-4 hover:outline-white hover:outline-offset-[-2px] transition-all rounded-[24px] w-full p-5 h-full";
+
+
   return (
     <section className="w-full flex flex-col items-center px-5 md:px-20 max-w-[1400px] mx-auto pb-20">
-      {/* Logos row */}
+      {/* Logos row (unchanged) */}
       <div className="flex flex-wrap justify-center w-full py-12 items-center gap-2 lg:gap-10">
         {LOGOS.map((logo) => (
           <div
@@ -57,41 +63,45 @@ export function CompanyLogos() {
       </div>
 
       {/* -------------------------------------------------- */}
-      {/* Testimonials under logos                           */}
+      {/* Testimonials under logos (FLAT BACKGROUND APPLIED) */}
       {/* -------------------------------------------------- */}
 
       <section
         className="w-full flex justify-center mt-6 md:mt-10"
         aria-label="Client testimonials"
       >
-        <div className="w-full max-w-[900px] flex flex-col md:flex-row gap-10 md:gap-16">
+        {/* Reduced max-width for less prominence */}
+        <div className="w-full max-w-[800px] flex flex-col md:flex-row gap-8 md:gap-10">
           
-          {/* Testimonial 1 */}
-          <article className="flex-1 flex flex-col gap-4">
-            <div className="flex items-center gap-4">
+          {/* Testimonial 1 - Applying the consistent flat glass style */}
+          <article className={cn("flex-1 flex flex-col gap-3", consistentFlatGlassStyle)}>
+            <div className="flex items-center gap-3">
+              {/* Reduced Avatar Size */}
               <Image
-                src="/images/shopie2.png"
-                width={56}
-                height={56}
+                src="/images/shopie3.png"
+                width={40}
+                height={40}
                 alt="Sophie"
                 className="rounded-full shrink-0"
               />
               <div>
+                {/* Reduced Name/Role Text Size */}
                 <p
                   className={cn(
-                    "font-medium text-base md:text-lg",
+                    "font-semibold text-sm",
                     productSans.className
                   )}
                 >
                   Ida
                 </p>
-                <p className="text-sm text-white/70">Product Lead FinTech</p>
+                <p className="text-xs text-white/60">Product Lead FinTech</p>
               </div>
             </div>
 
+            {/* Quote Text Size Adjusted, ITALIC REMOVED */}
             <p
               className={cn(
-                "text-sm md:text-base lg:text-lg leading-relaxed text-white/90",
+                "text-sm leading-relaxed text-white/90", 
                 productSans.className
               )}
             >
@@ -99,37 +109,37 @@ export function CompanyLogos() {
             </p>
           </article>
 
-          {/* Divider */}
-          <div className="hidden md:block w-px bg-white/10" />
-
-          {/* Testimonial 2 */}
-          <article className="flex-1 flex flex-col gap-4">
-            <div className="flex items-center gap-4">
+          {/* Testimonial 2 - Applying the consistent flat glass style */}
+          <article className={cn("flex-1 flex flex-col gap-3", consistentFlatGlassStyle)}>
+            <div className="flex items-center gap-3">
+              {/* Reduced Avatar Size */}
               <Image
-                src="/images/milan2.png"
-                width={56}
-                height={56}
+                src="/images/milan3.png"
+                width={40}
+                height={40}
                 alt="Milan Bakker"
                 className="rounded-full shrink-0"
               />
               <div>
+                {/* Reduced Name/Role Text Size */}
                 <p
                   className={cn(
-                    "font-medium text-base md:text-lg",
+                    "font-semibold text-sm",
                     productSans.className
                   )}
                 >
                   Oliver 
                 </p>
-                <p className="text-sm text-white/70">
+                <p className="text-xs text-white/60">
                   Founder of SaaS StartUp
                 </p>
               </div>
             </div>
 
+            {/* Quote Text Size Adjusted, ITALIC REMOVED */}
             <p
               className={cn(
-                "text-sm md:text-base lg:text-lg leading-relaxed text-white/90",
+                "text-sm leading-relaxed text-white/90",
                 productSans.className
               )}
             >

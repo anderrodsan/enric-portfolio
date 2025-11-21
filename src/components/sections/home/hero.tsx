@@ -9,11 +9,12 @@ import Link from "next/link";
 import Socials from "@/components/shared/socials";
 import { cn } from "@/lib/utils";
 
-// Updated data structure for impact
+// Updated data structure for impact (4 metrics for 2x2 grid)
 const METRICS = [
   { value: "50+", label: "Projects done" },
   { value: "20+", label: "Satisfied clients" },
   { value: "København", label: "Based in" },
+  { value: "10+", label: "Countries" }, // New 4th Metric
 ];
 
 export default function Hero() {
@@ -24,7 +25,7 @@ export default function Hero() {
       <HeroTitle />
 
       <div className="relative flex flex-col items-center justify-center gap-2 lg:gap-[22px] w-full">
-        {/* Left: Lead value card */}
+        {/* Left: Lead value card (UPDATED TEXT AND LIVE ELEMENT) */}
         <div className="relative md:absolute top-0 left-0 z-10 py-3 lg:py-0 w-full max-w-xl md:w-auto">
           <Image
             src="/svg/corner-lines.svg"
@@ -36,14 +37,25 @@ export default function Hero() {
           />
           <GlassCard
             hoverEffect
-            className="p-6 md:p-8 w-full lg:w-auto"
+            className="p-6 md:p-8 w-full lg:w-auto flex flex-col gap-3"
             borderRadius="rounded-[28px] md:rounded-[48px]"
           >
-            <p className="md:max-w-[22ch] text-wrap text-lg lg:text-2xl text-white">
-              I help teams stuck with unclear, slow, or inconsistent design get
-              fast, polished, developer-ready UX/UI—without the hassle of hiring
-              full-time.
+            {/* Removed Tagline: Design & Velocity Partner */}
+            
+            {/* Quote: Removed all bolding */}
+            <p className="md:max-w-[28ch] text-wrap text-lg lg:text-xl font-medium text-white/90">
+                I help founders and team bring their products and websites to life with clear, polished, developer ready design.
             </p>
+            
+            {/* Live Element Hint: Updated emoji and sentence */}
+            <div className="flex items-center gap-2 text-white/70">
+                <span className="text-xl animate-pulse">
+                🚀
+                </span>
+                <span className="text-sm">
+                    Ready to launch your vision.
+                </span>
+            </div>
           </GlassCard>
         </div>
 
@@ -77,27 +89,32 @@ export default function Hero() {
           <HeroLinks />
         </div>
 
-        {/* Right: Metrics + Reviews (Original Vertical Stack, slightly reduced font size) */}
-        <div className="hidden md:block md:absolute top-0 right-0 space-y-3 w-full md:w-auto">
-          {METRICS.map((metric) => (
-            <GlassCard
-              key={metric.label}
-              hoverEffect
-              className="py-4 px-8 flex flex-col items-center justify-center w-full lg:w-auto min-w-[200px]"
-              borderRadius="rounded-[28px]"
-            >
-              {/* Big Bold Value (REDUCED SIZE HERE) */}
-              <span className="text-2xl lg:text-3xl font-bold text-white tracking-tight leading-none">
-                {metric.value}
-              </span>
-              {/* Small Label */}
-              <span className="text-sm font-medium text-white/60 mt-1">
-                {metric.label}
-              </span>
-            </GlassCard>
-          ))}
-
-          <ReviewsMini />
+        {/* Right: Metrics + Reviews (2x2 Grid) */}
+        <div className="hidden md:block md:absolute top-0 right-0 w-full md:w-auto">
+          {/* Metrics Grid */}
+          <div className="grid grid-cols-2 gap-3 w-full">
+            {METRICS.map((metric) => (
+              <GlassCard
+                key={metric.label}
+                hoverEffect
+                // Center content for grid item
+                className="py-4 px-5 flex flex-col items-center justify-center min-w-[100px]"
+                borderRadius="rounded-[28px]"
+              >
+                {/* Value: Slightly reduced size for grid fit */}
+                <span className="text-xl lg:text-2xl font-bold text-white tracking-tight leading-none">
+                  {metric.value}
+                </span>
+                {/* Small Label */}
+                <span className="text-xs font-medium text-white/60 mt-1 text-center">
+                  {metric.label}
+                </span>
+              </GlassCard>
+            ))}
+          </div>
+          
+          {/* Reviews Mini (Below the 2x2 Grid) */}
+          <ReviewsMini className="mt-3" />
         </div>
       </div>
     </div>
@@ -109,7 +126,7 @@ function HeroTitle() {
     <div className="relative flex flex-col justify-center items-center text-center">
       {/* Top Badge: Greeting + Status */}
       <div className="mb-8 inline-flex flex-wrap items-center justify-center gap-x-3 gap-y-1 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm md:text-base font-medium text-white backdrop-blur-md">
-        <span>Hej! I&apos;m Enric</span>
+        <span>Based in Copenhagen</span>
         <span className="hidden sm:block h-4 w-px bg-white/20" /> {/* Separator */}
         <span className="flex items-center gap-2 text-white/80">
           <span className="relative flex h-2 w-2">
@@ -120,7 +137,7 @@ function HeroTitle() {
         </span>
       </div>
 
-      {/* Title Line 1 (ORIGINAL) */}
+      {/* Title Line 1 (I'm Enric.) */}
       <div className="flex items-center justify-center gap-2 md:gap-[22px]">
         <Title
           gradient={false}
@@ -151,7 +168,7 @@ function HeroTitle() {
         </Link>
       </div>
 
-      {/* Title Line 2 (ORIGINAL) */}
+      {/* Title Line 2 (Product Designer.) */}
       <div className="flex items-center justify-center gap-2 md:gap-[22px] -mt-4">
         <Title
           gradient={false}
@@ -199,7 +216,7 @@ function ReviewsMini({ className }: { className?: string }) {
   return (
     <div
       className={cn(
-        "mt-3 flex items-center justify-center w-full lg:w-auto min-h-[64px]",
+        "flex items-center justify-end w-full lg:w-auto min-h-[64px]",
         className
       )}
       aria-label={`Client reviews: ${rating} out of 5 from ${total} reviews`}
