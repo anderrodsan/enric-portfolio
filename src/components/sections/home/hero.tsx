@@ -9,10 +9,11 @@ import Link from "next/link";
 import Socials from "@/components/shared/socials";
 import { cn } from "@/lib/utils";
 
+// Updated data structure for impact
 const METRICS = [
-  "+50 projects done",
-  "+20 satisfied clients",
-  "Based in København",
+  { value: "50+", label: "Projects done" },
+  { value: "20+", label: "Satisfied clients" },
+  { value: "København", label: "Based in" },
 ];
 
 export default function Hero() {
@@ -23,7 +24,7 @@ export default function Hero() {
       <HeroTitle />
 
       <div className="relative flex flex-col items-center justify-center gap-2 lg:gap-[22px] w-full">
-        {/* Lead value card */}
+        {/* Left: Lead value card */}
         <div className="relative md:absolute top-0 left-0 z-10 py-3 lg:py-0 w-full max-w-xl md:w-auto">
           <Image
             src="/svg/corner-lines.svg"
@@ -38,7 +39,7 @@ export default function Hero() {
             className="p-6 md:p-8 w-full lg:w-auto"
             borderRadius="rounded-[28px] md:rounded-[48px]"
           >
-            <p className="md:max-w-[22ch] text-wrap text-lg lg:text-2xl">
+            <p className="md:max-w-[22ch] text-wrap text-lg lg:text-2xl text-white">
               I help teams stuck with unclear, slow, or inconsistent design get
               fast, polished, developer-ready UX/UI—without the hassle of hiring
               full-time.
@@ -46,7 +47,7 @@ export default function Hero() {
           </GlassCard>
         </div>
 
-        {/* Hero visual */}
+        {/* Center: Hero visual */}
         <div className="relative flex flex-col items-center justify-center max-w-5xl -mt-20 lg:-mt-28 overflow-hidden z-30 md:z-0">
           <svg
             viewBox="0 0 813 406"
@@ -71,22 +72,27 @@ export default function Hero() {
           />
         </div>
 
-        {/* CTAs */}
+        {/* Bottom: CTAs */}
         <div className="md:absolute bottom-10 w-full flex items-center justify-center pt-3 lg:pt-0">
           <HeroLinks />
         </div>
 
-        {/* Metrics + Reviews */}
+        {/* Right: Metrics + Reviews (Original Vertical Stack, slightly reduced font size) */}
         <div className="hidden md:block md:absolute top-0 right-0 space-y-3 w-full md:w-auto">
           {METRICS.map((metric) => (
             <GlassCard
-              key={metric}
+              key={metric.label}
               hoverEffect
-              className="py-3 px-[18px] flex flex-col items-center w-full lg:w-auto"
+              className="py-4 px-8 flex flex-col items-center justify-center w-full lg:w-auto min-w-[200px]"
               borderRadius="rounded-[28px]"
             >
-              <span className="text-lg lg:text-2xl font-medium text-center w-full">
-                {metric}
+              {/* Big Bold Value (REDUCED SIZE HERE) */}
+              <span className="text-2xl lg:text-3xl font-bold text-white tracking-tight leading-none">
+                {metric.value}
+              </span>
+              {/* Small Label */}
+              <span className="text-sm font-medium text-white/60 mt-1">
+                {metric.label}
               </span>
             </GlassCard>
           ))}
@@ -101,11 +107,20 @@ export default function Hero() {
 function HeroTitle() {
   return (
     <div className="relative flex flex-col justify-center items-center text-center">
-      <span className="text-[20px] leading-[28px] lg:text-[28px] font-medium md:leading-[40px] mb-4">
-        Hej!
-      </span>
+      {/* Top Badge: Greeting + Status */}
+      <div className="mb-8 inline-flex flex-wrap items-center justify-center gap-x-3 gap-y-1 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm md:text-base font-medium text-white backdrop-blur-md">
+        <span>Hej! I&apos;m Enric</span>
+        <span className="hidden sm:block h-4 w-px bg-white/20" /> {/* Separator */}
+        <span className="flex items-center gap-2 text-white/80">
+          <span className="relative flex h-2 w-2">
+            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+            <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+          </span>
+          Open for new projects
+        </span>
+      </div>
 
-      {/* Line 1 */}
+      {/* Title Line 1 (ORIGINAL) */}
       <div className="flex items-center justify-center gap-2 md:gap-[22px]">
         <Title
           gradient={false}
@@ -136,7 +151,7 @@ function HeroTitle() {
         </Link>
       </div>
 
-      {/* Line 2 */}
+      {/* Title Line 2 (ORIGINAL) */}
       <div className="flex items-center justify-center gap-2 md:gap-[22px] -mt-4">
         <Title
           gradient={false}
@@ -191,7 +206,7 @@ function ReviewsMini({ className }: { className?: string }) {
     >
       <div className="flex items-center gap-2">
         <Stars rating={rating} />
-        <span className="text-base lg:text-lg font-medium">
+        <span className="text-base lg:text-lg font-medium text-white">
           {rating.toFixed(1)}/5
         </span>
         <span className="text-base lg:text-lg text-white/70">
