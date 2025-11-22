@@ -8,64 +8,117 @@ import React from "react";
 
 export default function Intro() {
   return (
-    <div className="flex flex-col gap-16 w-full">
-      {/* Chunk 1 — text only, horizontal on md+ */}
-      <div className="flex flex-col md:flex-row items-start justify-between gap-6 md:gap-12">
-        <h1
-          className={cn(
-            "text-3xl md:text-5xl font-bold text-light-green md:w-1/2",
-            acornRegular.className
-          )}
-        >
-          I&apos;m a Designer based in Copenhagen.
-        </h1>
-        <div className="flex flex-col gap-4 md:w-1/2">
-          <p className="md:text-[20px]">
-            I am passionate about solving problems with design and technology and
-            transforming new ideas into meaningful results.
+    // Reduced main gap for mobile (gap-8) while keeping desktop gap (md:gap-12).
+    <div className="flex flex-col gap-8 md:gap-12 w-full"> 
+      
+      {/* ======================================================= */}
+      {/* 🎯 Section 1 & 2: Title and Description (Horizontally Aligned on MD+) */}
+      {/* ======================================================= */}
+      {/* Container: Stacks on mobile, splits 50/50 on desktop */}
+      <div className="flex flex-col md:flex-row items-start justify-between gap-6 md:gap-12 w-full">
+        
+        {/* Left Half: Title */}
+        {/* Title is left-aligned on desktop, centered on mobile for better visual flow */}
+        <div className="w-full md:w-1/2 flex items-start text-center md:text-left">
+          <h1
+            className={cn(
+              "text-3xl md:text-5xl font-bold text-light-green w-full",
+              acornRegular.className
+            )}
+          >
+            {/* UPDATED TITLE HERE: More comprehensive statement */}
+            I build Websites, Products, and User Experiences.
+          </h1>
+        </div>
+
+        {/* Right Half: Description Paragraphs */}
+        {/* Text is left-aligned in its 50% column on desktop, but centered on mobile */}
+        <div className="flex flex-col gap-4 w-full md:w-1/2 text-center md:text-left">
+          <p className="md:text-[20px] text-white/90">
+            I partner with founders to solve complex problems, turning ambiguous ideas into polished, effective products that deliver measurable results.
           </p>
-          <p className="md:text-[20px]">
-            I enjoy working together with smart, creative, international, and
-            passionate people determined to achieve more than required and challenge
-            the status quo.
+          <p className="md:text-[20px] text-white/90">
+            I thrive when collaborating with ambitious teams that prioritize user empathy and are determined to build impactful digital experiences that stand out.
           </p>
         </div>
       </div>
 
-      {/* Full-width image between chunks with hover/focus overlay */}
-      <div
-        className="group relative w-full rounded-2xl overflow-hidden shadow-lg aspect-[16/9] md:aspect-[21/9] outline-none"
-        tabIndex={0} // enables keyboard focus to reveal overlay
-        aria-label="Enric portrait with additional information on hover"
-      >
-        <Image
-          src="/images/uganda.jpeg"
-          alt="Enric portrait"
-          fill
-          sizes="100vw"
-          className="object-cover"
-          priority={false}
-        />
+      {/* ======================================================= */}
+      {/* 📸 Section 3: Two Separate, Horizontally Aligned Images */}
+      {/* ======================================================= */}
+      <div className="flex flex-col md:flex-row gap-6 w-full">
+        
+        {/* Image 1 Container (Retains Hover Effect) */}
+        <div
+          className={cn(
+              "group relative w-full md:w-1/2 rounded-[24px] overflow-hidden shadow-lg outline-none",
+              "border border-white/10 aspect-video" 
+          )}
+          tabIndex={0}
+          aria-label="Image of Enric in Gulu, Uganda with additional information on hover"
+        >
+          <Image
+            src="/images/uganda.jpeg"
+            alt="Enric in Gulu, Uganda"
+            fill
+            sizes="(min-width: 768px) 50vw, 100vw"
+            className="object-cover"
+            priority={false}
+          />
 
-        {/* Overlay (appears on hover or keyboard focus) */}
-        <div className="pointer-events-none absolute inset-0 bg-black/80 opacity-0 transition-opacity duration-300 group-hover:opacity-100 group-focus:opacity-100">
-          <div className="absolute inset-0 flex items-center justify-center px-6">
-            <div className="max-w-[70ch] text-center text-white">
-              <h3 className="text-xl md:text-2xl font-semibold mb-3">
-              Research in Gulu, Uganda
-              </h3>
-              <p className="text-sm md:text-base leading-relaxed">
-              In Gulu, I helped improve Master’s programs through workshops and
-        hybrid teaching methods. This experience showed me how empathy and
-        human-centered design make technology meaningful by addressing real
-        human needs.
-              </p>
+          {/* Overlay for Image 1 (Group Hover Effect) */}
+          <div className="pointer-events-none absolute inset-0 bg-black/80 opacity-0 transition-opacity duration-300 group-hover:opacity-100 group-focus:opacity-100">
+            <div className="absolute inset-0 flex items-center justify-center px-6">
+              <div className="max-w-[70ch] text-center text-white">
+                <h3 className="text-xl md:text-2xl font-semibold mb-3">
+                Research in Gulu, Uganda
+                </h3>
+                <p className="text-sm md:text-base leading-relaxed">
+                Workshops and hybrid teaching methods in Gulu, Uganda.
+                </p>
+              </div>
             </div>
           </div>
         </div>
+
+        {/* Image 2 Container (Hover Effect REMOVED) */}
+        <div
+          className={cn(
+              "relative w-full md:w-1/2 rounded-[24px] overflow-hidden shadow-lg outline-none", 
+              "border border-white/10 aspect-video" 
+          )}
+          tabIndex={0} 
+          aria-label="Second image: Enric conducting research" 
+        >
+          <Image
+            src="/images/enriquepastor.png" // Placeholder for a second image
+            alt="Enric conducting research"
+            fill
+            sizes="(min-width: 768px) 50vw, 100vw"
+            className="object-cover"
+            priority={false}
+          />
+
+          {/* Overlay for Image 2 (No Hover Effect) */}
+          <div className="pointer-events-none absolute inset-0 bg-black/80 opacity-0 transition-opacity duration-300"> 
+            <div className="absolute inset-0 flex items-center justify-center px-6">
+              <div className="max-w-[70ch] text-center text-white">
+                <h3 className="text-xl md:text-2xl font-semibold mb-3">
+                Field Work Insights
+                </h3>
+                <p className="text-sm md:text-base leading-relaxed">
+                Applying human-centered design principles in real-world scenarios.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
       </div>
 
-      {/* Chunk 2 — text only, horizontal on md+ */}
+      {/* ======================================================= */}
+      {/* 💡 Section 4: Human-Centered Design */}
+      {/* ======================================================= */}
       <div className="flex flex-col md:flex-row items-start justify-between gap-6 md:gap-12">
         <h1
           className={cn(
@@ -76,8 +129,8 @@ export default function Intro() {
           Focused on Human-Centered Design.
         </h1>
         <div className="md:w-1/2">
-          <p className="md:text-[20px]">
-            For me, design is about people — the clarity it brings and the ease it adds
+          <p className="md:text-[20px] text-white/90">
+            For me, design is about people, the clarity it brings and the ease it adds
             to daily life. I value empathy, honesty, and collaboration, and believe the
             best work stays open, adaptable, and grounded in real human needs.
           </p>

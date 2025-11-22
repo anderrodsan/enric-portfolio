@@ -1,3 +1,4 @@
+// src/components/sections/hero/hero.tsx
 "use client";
 
 import GlassCard from "@/components/shared/glass-card";
@@ -19,12 +20,13 @@ const METRICS = [
 
 export default function Hero() {
   return (
-    <div className="flex flex-col items-center gap-10 md:gap-20 px-5 mt-4 lg:mx-20 lg:mt-14 max-w-6xl w-full">
+    <div className="flex flex-col items-center gap-8 md:gap-20 px-5 mt-4 lg:mx-20 lg:mt-14 max-w-6xl w-full"> {/* Reduced mobile gap from gap-10 to gap-8 */}
       <Socials className="hidden lg:flex absolute top-14 right-20" />
 
       <HeroTitle />
 
-      <div className="relative flex flex-col items-center justify-center gap-2 lg:gap-[22px] w-full">
+      {/* Main Content Area Container: Reduced mobile gap from gap-2 to gap-1 */}
+      <div className="relative flex flex-col items-center justify-center gap-1 lg:gap-[22px] w-full">
         {/* Left: Lead value card (UPDATED TEXT AND LIVE ELEMENT) */}
         <div className="relative md:absolute top-0 left-0 z-10 py-3 lg:py-0 w-full max-w-xl md:w-auto">
           <Image
@@ -37,13 +39,13 @@ export default function Hero() {
           />
           <GlassCard
             hoverEffect
-            className="p-6 md:p-8 w-full lg:w-auto flex flex-col gap-3"
+            className="p-5 md:p-8 w-full lg:w-auto flex flex-col gap-3" // Adjusted padding p-6 -> p-5
             borderRadius="rounded-[28px] md:rounded-[48px]"
           >
             {/* Removed Tagline: Design & Velocity Partner */}
             
-            {/* Quote: Removed all bolding */}
-            <p className="md:max-w-[28ch] text-wrap text-lg lg:text-xl font-medium text-white/90">
+            {/* Quote: Reduced font size slightly for better mobile wrap */}
+            <p className="md:max-w-[28ch] text-base sm:text-lg lg:text-xl font-medium text-white/90">
                 I help founders and team bring their products and websites to life with clear, polished, developer ready design.
             </p>
             
@@ -60,7 +62,8 @@ export default function Hero() {
         </div>
 
         {/* Center: Hero visual */}
-        <div className="relative flex flex-col items-center justify-center max-w-5xl -mt-20 lg:-mt-28 overflow-hidden z-30 md:z-0">
+        {/* Adjusted negative margin for mobile: -mt-10 vs -mt-20 */}
+        <div className="relative flex flex-col items-center justify-center max-w-5xl -mt-10 lg:-mt-28 overflow-hidden z-30 md:z-0">
           <svg
             viewBox="0 0 813 406"
             preserveAspectRatio="xMidYMax meet"
@@ -137,11 +140,11 @@ function HeroTitle() {
         </span>
       </div>
 
-      {/* Title Line 1 (I'm Enric.) */}
+      {/* Title Line 1 (I'm Enric.) - Adjusted size: text-[3rem] vs text-[3.2rem] */}
       <div className="flex items-center justify-center gap-2 md:gap-[22px]">
         <Title
           gradient={false}
-          className="text-[3.2rem] sm:text-6xl lg:text-8xl leading-[1.2]"
+          className="text-[3rem] sm:text-6xl lg:text-8xl leading-[1.2]"
         >
           I&apos;m
         </Title>
@@ -152,7 +155,7 @@ function HeroTitle() {
         >
           <Title
             gradient={false}
-            className="text-[3.2rem] sm:text-6xl lg:text-8xl leading-[1.2] group-hover:text-[#EFB594] transition-colors"
+            className="text-[3rem] sm:text-6xl lg:text-8xl leading-[1.2] group-hover:text-[#EFB594] transition-colors"
           >
             Enric.
           </Title>
@@ -168,11 +171,11 @@ function HeroTitle() {
         </Link>
       </div>
 
-      {/* Title Line 2 (Product Designer.) */}
-      <div className="flex items-center justify-center gap-2 md:gap-[22px] -mt-4">
+      {/* Title Line 2 (Product Designer.) - Adjusted size and margin: -mt-3 vs -mt-4 */}
+      <div className="flex items-center justify-center gap-2 md:gap-[22px] -mt-3">
         <Title
           gradient={false}
-          className="text-[3.1rem] sm:text-6xl lg:text-8xl leading-[1.2] whitespace-nowrap"
+          className="text-[3rem] sm:text-6xl lg:text-8xl leading-[1.2] whitespace-nowrap"
         >
           Product
         </Title>
@@ -183,7 +186,7 @@ function HeroTitle() {
         >
           <Title
             gradient={false}
-            className="text-[3.2rem] sm:text-6xl lg:text-8xl leading-[1.2] group-hover:text-[#D094E5] transition-colors"
+            className="text-[3rem] sm:text-6xl lg:text-8xl leading-[1.2] group-hover:text-[#D094E5] transition-colors"
           >
             Designer.
           </Title>

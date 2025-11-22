@@ -13,11 +13,11 @@ export const experience: Experience[] = [
   {
     id: 1,
     title: "UX Designer & Project Manager",
-    type: "Freelance",
+    type: "Contractor",
     company: "Cantilever: Websites & Product Design",
     logo: "/images/logos/cantilever.png",
     startDate: "Jan 22",
-    endDate: "March 24",
+    endDate: "December 2026",
   },
   {
     id: 2,
