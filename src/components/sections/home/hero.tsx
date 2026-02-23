@@ -177,7 +177,7 @@ function HeroTitle() {
           gradient={false}
           className="text-[3rem] sm:text-6xl lg:text-8xl leading-[1.2] whitespace-nowrap"
         >
-          Product
+          Website
         </Title>
         <Link
           href={"/services"}

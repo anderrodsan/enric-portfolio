@@ -29,7 +29,7 @@ export default function Hero() {
         </div>
         <div className="flex items-center justify-center gap-2 md:gap-[22px] -mt-4">
           <Title className="text-5xl sm:text-6xl md:text-7xl leading-[1.2]">
-            A Product
+            A Product & Website
           </Title>
           <Link href={"/about"} className="group cursor-pointer relative">
             <Title className="text-5xl sm:text-6xl md:text-7xl leading-[1.2] group-hover:text-[#D094E5] transition-all">
@@ -74,7 +74,7 @@ export default function Hero() {
       </div>
 
       <p className="text-[18px] sm:text-[20px] md:text-[23px] leading-[22px] sm:leading-[30px] md:leading-[35px] text-center md:text-balance max-w-[32ch] md:max-w-[65ch]">
-        I&apos;m a Product Designer, passionate about crafting experiences that are
+        I&apos;m a Product & Website Designer, passionate about crafting experiences that are
         engaging, accessible, and user-centric.
       </p>
     </div>
