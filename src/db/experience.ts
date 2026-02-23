@@ -3,7 +3,7 @@ import { Experience } from "@/lib/types";
 export const experience: Experience[] = [
   {
     id: 1,
-    title: "User Experince & Website Designer & Project Manager",
+    title: "UX & Website Designer & Project Manager",
     type: "Full-time",
     company: "Cantilever: Websites & Product Design",
     logo: "/images/logos/cantilever.png",
