@@ -17,7 +17,7 @@ export const experience: Experience[] = [
     company: "Cantilever: Websites & Product Design",
     logo: "/images/logos/cantilever.png",
     startDate: "Jan 22",
-    endDate: "March 24",
+    endDate: null,
   },
   {
     id: 2,
